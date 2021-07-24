@@ -65,7 +65,8 @@ public class HttpTunnelServlet extends GuacamoleHTTPTunnelServlet {
             );
             conf = configuration;
             GuacamoleTunnel tunnel = new SimpleGuacamoleTunnel(socket);
-            return tunnel;
+            return tunnel
+                    ;
         }
 
 }
