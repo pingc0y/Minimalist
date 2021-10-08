@@ -1,0 +1,20 @@
+{
+	"code": 0,
+	"msg": null,
+	"count": 2,
+	"data": [{
+		"id": "1317401149287956480",
+		"text": "男",
+		"option": "boy",
+		"mark": "user_sex",
+		"status": "0"
+	}, {
+
+		"params": null,
+		"id": "1317402976670711808",
+		"text": "女",
+		"option": "girl",
+		"mark": "user_sex",
+		"status": "0"
+	}]
+}

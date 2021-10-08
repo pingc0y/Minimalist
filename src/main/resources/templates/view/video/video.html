@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>会话管理</title>
+		<link rel="stylesheet" th:href="@{/static/component/pear/css/pear.css}" />
+		<style>
+
+		</style>
+	</head>
+	<body class="pear-container">
+
+	<div class="layui-card">
+		<div class="layui-card-body">
+			<form class="layui-form" action="javascript:void(0);">
+				<div class="layui-form-item">
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">用户名</label>
+						<div class="layui-input-inline">
+							<input type="text" name="userName" placeholder="" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">资产名称</label>
+						<div class="layui-input-inline">
+							<input type="text" name="assetsName" placeholder="" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">资产用户</label>
+						<div class="layui-input-inline">
+							<input type="text" name="assetsUserName" placeholder="" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">开始时间</label>
+						<div class="layui-input-inline">
+							<input type="text" name="createTime"  id="createTime" class="layui-input"  placeholder="yyyy-MM-dd HH:mm:ss">
+						</div>
+					</div>
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">结束时间</label>
+						<div class="layui-input-inline">
+							<input type="text" name="updateTime"  id="updateTime" class="layui-input"  placeholder="yyyy-MM-dd HH:mm:ss">
+						</div>
+					</div>
+					<div class="layui-form-item layui-inline">
+						<button class="pear-btn pear-btn-md pear-btn-primary" lay-submit lay-filter="user-query">
+							<i class="layui-icon layui-icon-search"></i>
+							查询
+						</button>
+						<button type="reset" class="pear-btn pear-btn-md">
+							<i class="layui-icon layui-icon-refresh"></i>
+							重置
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="layui-card">
+		<div class="layui-card-body">
+			<table id="assets-table" lay-filter="assets-table"></table>
+		</div>
+	</div>
+
+	</script>
+	<script type="text/html" id="user-bar">
+		<button  class="pear-btn pear-btn-primary pear-btn-sm" lay-event="edit"><i class="layui-icon layui-icon-link"></i></button>
+	</script>
+
+	<script th:src="@{/static/component/pear/layui/layui.js}"></script>
+	<script th:src="@{/static/component/pear/pear.js}"></script>
+		<script>
+			layui.use(['table', 'form', 'jquery','laydate'], function() {
+				let table = layui.table;
+				let form = layui.form;
+				let laydate = layui.laydate;
+				let $ = layui.jquery;
+				//日期时间选择器
+				laydate.render({
+					elem: '#createTime'
+					,type: 'datetime'
+				});
+				//日期时间选择器
+				laydate.render({
+					elem: '#updateTime'
+					,type: 'datetime'
+				});
+
+				let cols = [
+					[{
+						type: 'checkbox',
+						fixed: 'left'
+					},
+						{
+							title: '用户名',
+							field: 'userName',
+							align: 'center',
+							// width: 200,
+						},
+						{
+						title: '资产名称',
+						field: 'assetsName',
+						align: 'center',
+						// width: 150,
+						//fixed: 'left'
+						},
+						{
+							title: '资产用户',
+							field: 'assetsUserName',
+							align: 'center',
+							// width: 150,
+							//fixed: 'left'
+						},
+						{
+							title: '开始时间',
+							field: 'createTime',
+							align: 'center',
+							// width: 100,
+							//fixed: 'left'
+						}
+						,
+						{
+							title: '修改时间',
+							field: 'updateTime',
+							align: 'center',
+							// width: 100,
+							//fixed: 'left'
+						},
+						{
+							title: '操作',
+							toolbar: '#user-bar',
+							align: 'center',
+							fixed: 'right'
+						}
+					]
+				]
+
+				laydate.render({
+					elem: '#test16',
+					type: 'datetime',
+					range: '到',
+					format: 'yyyy-MM-dd HH:mm:ss',
+					trigger: 'click'
+				});
+
+				table.render({
+					elem: '#assets-table',
+					url: '/video/selectAll',
+					page: true,
+					cols: cols,
+					skin: 'line',
+					toolbar: '#user-toolbar',
+					defaultToolbar: [{
+						layEvent: 'refresh',
+						icon: 'layui-icon-refresh',
+					}, 'filter', 'print', 'exports']
+				});
+
+				//监听列表操作
+				table.on('tool(assets-table)', function(obj) {
+					if (obj.event === 'remove') {
+						window.remove(obj);
+					} else if (obj.event === 'edit') {
+						window.edit(obj);
+					}
+				});
+
+
+
+
+				form.on('submit(user-query)', function(data) {
+					table.reload('assets-table', {
+						where: data.field
+					})
+					return false;
+				});
+
+				form.on('switch(user-enable)', function(obj) {
+					layer.tips(this.value + ' ' + this.name + ':' + obj.elem.checked, obj.othis);
+				});
+				//修改
+				window.edit = function(obj) {
+					var split;
+
+					var pathh = obj.data['path']
+
+					split = pathh.split("\\");
+
+					window.open("/view/video/play?path="+split[split.length-2]+"/"+split[split.length-1]);
+				}
+
+				window.refresh = function(
+
+						param) {
+					table.reload('assets-table');
+				}
+			})
+		</script>
+	</body>
+</html>

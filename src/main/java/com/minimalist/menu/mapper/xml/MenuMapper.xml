@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.minimalist.menu.mapper.MenuMapper">
+    <resultMap type="com.minimalist.menu.entity.Menu" id="menu">
+    <id property="id" column="id"/>
+    <result property="hiherId" column="hiher_id"/>
+    <result property="title" column="title"/>
+    <result property="type" column="type"/>
+    <result property="opentype" column="opentype"/>
+    <result property="icon" column="icon"/>
+    <result property="href" column="href"/>
+    <!--关联查询-->
+    <association property="children" column="id" select="com.minimalist.menu.mapper.MenuMapper.selectByHiherId"/>
+    </resultMap>
+    <select id="selectAll" resultMap="menu" >
+        select * from menu  where  hiher_id = 0
+    </select>
+    <select id="selectByHiherId" resultMap="menu">
+    select * from menu where hiher_id = #{hiherId}
+    </select>
+
+</mapper>

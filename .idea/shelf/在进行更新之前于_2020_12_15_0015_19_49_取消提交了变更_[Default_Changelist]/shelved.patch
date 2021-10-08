@@ -1,0 +1,184 @@
+Index: src/main/java/com/mtx/mtxUser/controller/MtxUserController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.mtx.mtxUser.controller;\r\n\r\n\r\n\r\nimport com.mtx.common.json.Result;\r\nimport com.mtx.common.json.ResultUtil;\r\nimport com.mtx.mtxUser.entity.MtxUser;\r\nimport com.mtx.mtxUser.service.impl.MtxUserServiceImpl;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.web.bind.annotation.RequestMapping;\r\n\r\nimport org.springframework.web.bind.annotation.RestController;\r\n\r\nimport java.sql.ResultSet;\r\nimport java.util.List;\r\n\r\n/**\r\n * <p>\r\n * 用户表 前端控制器\r\n * </p>\r\n *\r\n * @author Pingc\r\n * @since 2020-12-11\r\n */\r\n@RestController\r\n@RequestMapping(\"/mtxUser\")\r\npublic class MtxUserController {\r\n\r\n    @Autowired\r\n    MtxUserServiceImpl mtxUserServiceImpl;\r\n\r\n    @RequestMapping(\"getAllUser\")\r\n    public Result getAllUser(){\r\n        List<MtxUser> allUser = mtxUserServiceImpl.getAllUser();\r\n        return ResultUtil.success(allUser,allUser.size());\r\n    }\r\n\r\n}\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/mtx/mtxUser/controller/MtxUserController.java b/src/main/java/com/mtx/mtxUser/controller/MtxUserController.java
+--- a/src/main/java/com/mtx/mtxUser/controller/MtxUserController.java	(revision 3b46b6c212245996a29616a1e180070b6a13a47c)
++++ b/src/main/java/com/mtx/mtxUser/controller/MtxUserController.java	(date 1608030261812)
+@@ -11,7 +11,6 @@
+ 
+ import org.springframework.web.bind.annotation.RestController;
+ 
+-import java.sql.ResultSet;
+ import java.util.List;
+ 
+ /**
+Index: src/main/resources/templates/view/student/student.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html xmlns:th=\"http://www.thymeleaf.org\">\r\n\t<head>\r\n\t\t<meta charset=\"utf-8\">\r\n\t\t<title>学生管理</title>\r\n\t\t<link rel=\"stylesheet\" th:href=\"@{/static/component/pear/css/pear.css}\" />\r\n\t\t<style>\r\n\r\n\t\t</style>\r\n\t</head>\r\n\t<body class=\"pear-container\">\r\n\t\t<div class=\"layui-card\">\r\n\t\t\t<div class=\"layui-card-body\">\r\n\t\t\t\t<form class=\"layui-form\" action=\"\">\r\n\t\t\t\t\t<div class=\"layui-form-item\">\r\n\t\t\t\t\t\t<div class=\"layui-form-item layui-inline\">\r\n\t\t\t\t\t\t\t<label class=\"layui-form-label\">用户名</label>\r\n\t\t\t\t\t\t\t<div class=\"layui-input-inline\">\r\n\t\t\t\t\t\t\t\t<input type=\"text\" name=\"realName\" placeholder=\"\" class=\"layui-input\">\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"layui-form-item layui-inline\">\r\n\t\t\t\t\t\t\t<label class=\"layui-form-label\">性别</label>\r\n\t\t\t\t\t\t\t<div class=\"layui-input-inline\">\r\n\t\t\t\t\t\t\t\t<input type=\"text\" name=\"realName\" placeholder=\"\" class=\"layui-input\">\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"layui-form-item layui-inline\">\r\n\t\t\t\t\t\t\t<label class=\"layui-form-label\">邮箱</label>\r\n\t\t\t\t\t\t\t<div class=\"layui-input-inline\">\r\n\t\t\t\t\t\t\t\t<input type=\"text\" name=\"realName\" placeholder=\"\" class=\"layui-input\">\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"layui-form-item layui-inline\">\r\n\t\t\t\t\t\t\t<button class=\"pear-btn pear-btn-md pear-btn-primary\" lay-submit lay-filter=\"user-query\">\r\n\t\t\t\t\t\t\t\t<i class=\"layui-icon layui-icon-search\"></i>\r\n\t\t\t\t\t\t\t\t查询\r\n\t\t\t\t\t\t\t</button>\r\n\t\t\t\t\t\t\t<button type=\"reset\" class=\"pear-btn pear-btn-md\">\r\n\t\t\t\t\t\t\t\t<i class=\"layui-icon layui-icon-refresh\"></i>\r\n\t\t\t\t\t\t\t\t重置\r\n\t\t\t\t\t\t\t</button>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</form>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"layui-card\">\r\n\t\t\t<div class=\"layui-card-body\">\r\n\t\t\t\t<table id=\"user-table\" lay-filter=\"user-table\"></table>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\r\n\t\t<script type=\"text/html\" id=\"user-toolbar\">\r\n\t\t\t<button class=\"pear-btn pear-btn-primary pear-btn-md\" lay-event=\"add\">\r\n\t\t        <i class=\"layui-icon layui-icon-add-1\"></i>\r\n\t\t        新增\r\n\t\t    </button>\r\n\t\t    <button class=\"pear-btn pear-btn-danger pear-btn-md\" lay-event=\"batchRemove\">\r\n\t\t        <i class=\"layui-icon layui-icon-delete\"></i>\r\n\t\t        删除\r\n\t\t    </button>\r\n\t\t</script>\r\n\r\n\t\t<script type=\"text/html\" id=\"user-bar\">\r\n\t\t\t<button class=\"pear-btn pear-btn-primary pear-btn-sm\" lay-event=\"edit\"><i class=\"layui-icon layui-icon-edit\"></i></button>\r\n\t\t    <button class=\"pear-btn pear-btn-danger pear-btn-sm\" lay-event=\"remove\"><i class=\"layui-icon layui-icon-delete\"></i></button>\r\n\t\t</script>\r\n\r\n\t\t<script type=\"text/html\" id=\"user-enable\">\r\n\t\t\t<input type=\"checkbox\" name=\"enable\" value=\"{{d.id}}\" lay-skin=\"switch\" lay-text=\"启用|禁用\" lay-filter=\"user-enable\" checked = \"{{ d.enable == 0 ? 'true' : 'false' }}\">\r\n\t\t</script>\r\n\r\n\t\t<script type=\"text/html\" id=\"user-sex\">\r\n\t\t\t{{#if (d.sex == 1) { }}\r\n\t\t    <span>男</span>\r\n\t\t    {{# }else if(d.sex == 2){ }}\r\n\t\t    <span>女</span>\r\n\t\t    {{# } }}\r\n\t\t</script>\r\n\r\n\t\t<script type=\"text/html\" id=\"user-login\">\r\n\t\t\t{{#if (d.login == 0) { }}\r\n\t\t    <span>在线</span>\r\n\t\t    {{# }else if(d.sex == 1){ }}\r\n\t\t    <span>离线</span>\r\n\t\t    {{# } }}\r\n\t\t</script>\r\n\r\n\t\t<script type=\"text/html\" id=\"user-createTime\">\r\n\t\t\t{{layui.util.toDateString(d.createTime, 'yyyy-MM-dd')}}\r\n\t\t</script>\r\n\r\n\t\t<script th:src=\"@{/static/component/pear/layui/layui.js}\"></script>\r\n\t\t<script th:src=\"@{/static/component/pear/pear.js}\"></script>\r\n\t\t<script>\r\n\t\t\tlayui.use(['table', 'form', 'jquery'], function() {\r\n\t\t\t\tlet table = layui.table;\r\n\t\t\t\tlet form = layui.form;\r\n\t\t\t\tlet $ = layui.jquery;\r\n\r\n\t\t\t\tlet MODULE_PATH = \"operate/\";\r\n\r\n\t\t\t\tlet cols = [\r\n\t\t\t\t\t[{\r\n\t\t\t\t\t\t\ttype: 'checkbox'\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\ttitle: '学生届次',\r\n\t\t\t\t\t\t\tfield: 'studentSession',\r\n\t\t\t\t\t\t\talign: 'center'\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\ttitle: '学生姓名',\r\n\t\t\t\t\t\t\tfield: 'studentName',\r\n\t\t\t\t\t\t\talign: 'center',\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\ttitle: '性别',\r\n\t\t\t\t\t\t\tfield: 'studentSex',\r\n\t\t\t\t\t\t\talign: 'center'\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\ttitle: '民族',\r\n\t\t\t\t\t\t\tfield: 'studentClan',\r\n\t\t\t\t\t\t\talign: 'center'\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\ttitle: '学生身份证',\r\n\t\t\t\t\t\t\tfield: 'studentIdcard',\r\n\t\t\t\t\t\t\talign: 'center'\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\ttitle: '学生电话',\r\n\t\t\t\t\t\t\tfield: 'studentPhone',\r\n\t\t\t\t\t\t\talign: 'center'\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\ttitle: '在读状态',\r\n\t\t\t\t\t\t\tfield: 'studentReadingStatus',\r\n\t\t\t\t\t\t\talign: 'center'\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\ttitle: '项目类型',\r\n\t\t\t\t\t\t\tfield: 'studentProject',\r\n\t\t\t\t\t\t\talign: 'center'\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\ttitle: '渠道来源',\r\n\t\t\t\t\t\t\tfield: 'studentChannelSource',\r\n\t\t\t\t\t\t\talign: 'center'\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\ttitle: '启用',\r\n\t\t\t\t\t\t\tfield: 'enable',\r\n\t\t\t\t\t\t\talign: 'center',\r\n\t\t\t\t\t\t\ttemplet: '#user-enable'\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\ttitle: '登录',\r\n\t\t\t\t\t\t\tfield: 'login',\r\n\t\t\t\t\t\t\talign: 'center',\r\n\t\t\t\t\t\t\ttemplet: '#user-login'\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\ttitle: '创建时间',\r\n\t\t\t\t\t\t\tfield: 'studentCartetime',\r\n\t\t\t\t\t\t\talign: 'center',\r\n\t\t\t\t\t\t\ttemplet: '#user-createTime'\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\ttitle: '操作',\r\n\t\t\t\t\t\t\ttoolbar: '#user-bar',\r\n\t\t\t\t\t\t\talign: 'center',\r\n\t\t\t\t\t\t\twidth: 130\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t]\r\n\r\n\t\t\t\ttable.render({\r\n\t\t\t\t\telem: '#user-table',\r\n\t\t\t\t\turl: '/mtxStudent/getAllStudent',\r\n\t\t\t\t\tpage: true,\r\n\t\t\t\t\tcols: cols,\r\n\t\t\t\t\tskin: 'line',\r\n\t\t\t\t\ttoolbar: '#user-toolbar',\r\n\t\t\t\t\tdefaultToolbar: [{\r\n\t\t\t\t\t\tlayEvent: 'refresh',\r\n\t\t\t\t\t\ticon: 'layui-icon-refresh',\r\n\t\t\t\t\t}, 'filter', 'print', 'exports']\r\n\t\t\t\t});\r\n\r\n\t\t\t\ttable.on('tool(user-table)', function(obj) {\r\n\t\t\t\t\tif (obj.event === 'remove') {\r\n\t\t\t\t\t\twindow.remove(obj);\r\n\t\t\t\t\t} else if (obj.event === 'edit') {\r\n\t\t\t\t\t\twindow.edit(obj);\r\n\t\t\t\t\t}\r\n\t\t\t\t});\r\n\r\n\t\t\t\ttable.on('toolbar(user-table)', function(obj) {\r\n\t\t\t\t\tif (obj.event === 'add') {\r\n\t\t\t\t\t\twindow.add();\r\n\t\t\t\t\t} else if (obj.event === 'refresh') {\r\n\t\t\t\t\t\twindow.refresh();\r\n\t\t\t\t\t} else if (obj.event === 'batchRemove') {\r\n\t\t\t\t\t\twindow.batchRemove(obj);\r\n\t\t\t\t\t}\r\n\t\t\t\t});\r\n\r\n\t\t\t\tform.on('submit(user-query)', function(data) {\r\n\t\t\t\t\ttable.reload('user-table', {\r\n\t\t\t\t\t\twhere: data.field\r\n\t\t\t\t\t})\r\n\t\t\t\t\treturn false;\r\n\t\t\t\t});\r\n\r\n\t\t\t\tform.on('switch(user-enable)', function(obj) {\r\n\t\t\t\t\tlayer.tips(this.value + ' ' + this.name + '：' + obj.elem.checked, obj.othis);\r\n\t\t\t\t});\r\n\r\n\t\t\t\twindow.add = function() {\r\n\t\t\t\t\tlayer.open({\r\n\t\t\t\t\t\ttype: 2,\r\n\t\t\t\t\t\ttitle: '新增',\r\n\t\t\t\t\t\tshade: 0.1,\r\n\t\t\t\t\t\tarea: ['500px', '400px'],\r\n\t\t\t\t\t\tcontent: MODULE_PATH + 'add.html'\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\r\n\t\t\t\twindow.edit = function(obj) {\r\n\t\t\t\t\tlayer.open({\r\n\t\t\t\t\t\ttype: 2,\r\n\t\t\t\t\t\ttitle: '修改',\r\n\t\t\t\t\t\tshade: 0.1,\r\n\t\t\t\t\t\tarea: ['500px', '400px'],\r\n\t\t\t\t\t\tcontent: MODULE_PATH + 'edit.html'\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\r\n\t\t\t\twindow.remove = function(obj) {\r\n\t\t\t\t\tlayer.confirm('确定要删除该用户', {\r\n\t\t\t\t\t\ticon: 3,\r\n\t\t\t\t\t\ttitle: '提示'\r\n\t\t\t\t\t}, function(index) {\r\n\t\t\t\t\t\tlayer.close(index);\r\n\t\t\t\t\t\tlet loading = layer.load();\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\turl: MODULE_PATH + \"remove/\" + obj.data['userId'],\r\n\t\t\t\t\t\t\tdataType: 'json',\r\n\t\t\t\t\t\t\ttype: 'delete',\r\n\t\t\t\t\t\t\tsuccess: function(result) {\r\n\t\t\t\t\t\t\t\tlayer.close(loading);\r\n\t\t\t\t\t\t\t\tif (result.success) {\r\n\t\t\t\t\t\t\t\t\tlayer.msg(result.msg, {\r\n\t\t\t\t\t\t\t\t\t\ticon: 1,\r\n\t\t\t\t\t\t\t\t\t\ttime: 1000\r\n\t\t\t\t\t\t\t\t\t}, function() {\r\n\t\t\t\t\t\t\t\t\t\tobj.del();\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t} else {\r\n\t\t\t\t\t\t\t\t\tlayer.msg(result.msg, {\r\n\t\t\t\t\t\t\t\t\t\ticon: 2,\r\n\t\t\t\t\t\t\t\t\t\ttime: 1000\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t})\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\r\n\t\t\t\twindow.batchRemove = function(obj) {\r\n\t\t\t\t\tlet data = table.checkStatus(obj.config.id).data;\r\n\t\t\t\t\tif (data.length === 0) {\r\n\t\t\t\t\t\tlayer.msg(\"未选中数据\", {\r\n\t\t\t\t\t\t\ticon: 3,\r\n\t\t\t\t\t\t\ttime: 1000\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t\treturn false;\r\n\t\t\t\t\t}\r\n\t\t\t\t\tlet ids = \"\";\r\n\t\t\t\t\tfor (let i = 0; i < data.length; i++) {\r\n\t\t\t\t\t\tids += data[i].userId + \",\";\r\n\t\t\t\t\t}\r\n\t\t\t\t\tids = ids.substr(0, ids.length - 1);\r\n\t\t\t\t\tlayer.confirm('确定要删除这些用户', {\r\n\t\t\t\t\t\ticon: 3,\r\n\t\t\t\t\t\ttitle: '提示'\r\n\t\t\t\t\t}, function(index) {\r\n\t\t\t\t\t\tlayer.close(index);\r\n\t\t\t\t\t\tlet loading = layer.load();\r\n\t\t\t\t\t\t$.ajax({\r\n\t\t\t\t\t\t\turl: MODULE_PATH + \"batchRemove/\" + ids,\r\n\t\t\t\t\t\t\tdataType: 'json',\r\n\t\t\t\t\t\t\ttype: 'delete',\r\n\t\t\t\t\t\t\tsuccess: function(result) {\r\n\t\t\t\t\t\t\t\tlayer.close(loading);\r\n\t\t\t\t\t\t\t\tif (result.success) {\r\n\t\t\t\t\t\t\t\t\tlayer.msg(result.msg, {\r\n\t\t\t\t\t\t\t\t\t\ticon: 1,\r\n\t\t\t\t\t\t\t\t\t\ttime: 1000\r\n\t\t\t\t\t\t\t\t\t}, function() {\r\n\t\t\t\t\t\t\t\t\t\ttable.reload('user-table');\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t} else {\r\n\t\t\t\t\t\t\t\t\tlayer.msg(result.msg, {\r\n\t\t\t\t\t\t\t\t\t\ticon: 2,\r\n\t\t\t\t\t\t\t\t\t\ttime: 1000\r\n\t\t\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t})\r\n\t\t\t\t\t});\r\n\t\t\t\t}\r\n\r\n\t\t\t\twindow.refresh = function(param) {\r\n\t\t\t\t\ttable.reload('user-table');\r\n\t\t\t\t}\r\n\t\t\t})\r\n\t\t</script>\r\n\t</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates/view/student/student.html b/src/main/resources/templates/view/student/student.html
+--- a/src/main/resources/templates/view/student/student.html	(revision 3b46b6c212245996a29616a1e180070b6a13a47c)
++++ b/src/main/resources/templates/view/student/student.html	(date 1608032533201)
+@@ -107,7 +107,7 @@
+ 						},
+ 						{
+ 							title: '学生届次',
+-							field: 'studentSession',
++							field: 'sessionText',
+ 							align: 'center'
+ 						},
+ 						{
+@@ -117,12 +117,12 @@
+ 						},
+ 						{
+ 							title: '性别',
+-							field: 'studentSex',
++							field: 'sexText',
+ 							align: 'center'
+ 						},
+ 						{
+ 							title: '民族',
+-							field: 'studentClan',
++							field: 'clanText',
+ 							align: 'center'
+ 						},
+ 						{
+@@ -137,12 +137,22 @@
+ 						},
+ 						{
+ 							title: '在读状态',
+-							field: 'studentReadingStatus',
++							field: 'statusText',
+ 							align: 'center'
+ 						},
+ 						{
+ 							title: '项目类型',
+-							field: 'studentProject',
++							field: 'proText',
++							align: 'center'
++						},
++						{
++							title: '高校名称',
++							field: 'collegesName',
++							align: 'center'
++						},
++						{
++							title: '专业名称',
++							field: 'professionName',
+ 							align: 'center'
+ 						},
+ 						{
+@@ -155,6 +165,12 @@
+ 							field: 'enable',
+ 							align: 'center',
+ 							templet: '#user-enable'
++						},
++						{
++						title: '启用',
++						field: 'enable',
++						align: 'center',
++						templet: '#user-enable'
+ 						},
+ 						{
+ 							title: '登录',
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"BranchesTreeState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"605e99e2-1d81-4400-ac77-f3524e53faf1\" name=\"Default Changelist\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/mtx-student-system.iml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/controller/MtxUserController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/controller/MtxUserController.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Merge.Settings\">\r\n    <option name=\"BRANCH\" value=\"origin/master\" />\r\n  </component>\r\n  <component name=\"Git.Pull.Settings\">\r\n    <option name=\"BRANCH\" value=\"master\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_TAGS\">\r\n      <GitPushTagMode>\r\n        <option name=\"argument\" value=\"--tags\" />\r\n        <option name=\"title\" value=\"All\" />\r\n      </GitPushTagMode>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"localRepository\" value=\"D:\\lib_repo\\repository\" />\r\n        <option name=\"userSettingsFile\" value=\"D:\\apache-maven-3.6.3\\conf\\settings.xml\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n    <option name=\"importingSettings\">\r\n      <MavenImportingSettings>\r\n        <option name=\"jdkForImporter\" value=\"1.8\" />\r\n        <option name=\"vmOptionsForImporter\" value=\"-Xmx1024m\" />\r\n      </MavenImportingSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1lW1CxgkiTagUrbUBpdjSuoS4Fr\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\r\n    <property name=\"last_directory_selection\" value=\"$PROJECT_DIR$/src/main/java/com\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/src/main/resources/templates/view/student/operate\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\r\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"nodejs_interpreter_path.stuck_in_default_project\" value=\"undefined stuck path\" />\r\n    <property name=\"nodejs_npm_path_reset_for_default_project\" value=\"true\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n    <property name=\"project.structure.last.edited\" value=\"模块\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n    <property name=\"restartRequiresConfirmation\" value=\"false\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.lookFeel\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"E:\\项目\\stu_system_manage\\src\\main\\resources\\templates\\view\\student\" />\r\n      <recent name=\"E:\\项目\\stu_system_manage\\src\\main\\resources\\static\" />\r\n      <recent name=\"E:\\项目\\stu_system_manage\\src\\main\\resources\\static\\component\\pear\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"com.mtx.controller.admin.user\" />\r\n    </key>\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"E:\\项目\\stu_system_manage\\src\\main\\resources\\templates\\view\\student\\operate\" />\r\n      <recent name=\"E:\\项目\\stu_system_manage\\src\\main\\resources\\templates\\view\\student\" />\r\n      <recent name=\"E:\\项目\\stu_system_manage\\src\\main\\resources\\templates\\view\" />\r\n      <recent name=\"E:\\项目\\stu_system_manage\\src\\main\\java\\com\\mtx\\common\\json\" />\r\n      <recent name=\"E:\\项目\\stu_system_manage\\src\\main\\resources\\static\\component\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"JUnit.test.text\">\r\n    <configuration name=\"Application\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.Application\" />\r\n      <module name=\"stu_system_manage\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"text\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"text\" />\r\n      <module name=\"mtx-student-system\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"ArquillianJUnit\" factoryName=\"\" nameIsGenerated=\"true\">\r\n      <option name=\"arquillianRunConfiguration\">\r\n        <value>\r\n          <option name=\"containerStateName\" value=\"\" />\r\n        </value>\r\n      </option>\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"test.text\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"mtx-student-system\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"com\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.test\" />\r\n      <option name=\"METHOD_NAME\" value=\"text\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.test.text\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"605e99e2-1d81-4400-ac77-f3524e53faf1\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1607697911432</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1607697911432</updated>\r\n      <workItem from=\"1607697914667\" duration=\"1736000\" />\r\n      <workItem from=\"1607742840160\" duration=\"611000\" />\r\n      <workItem from=\"1607910597499\" duration=\"6656000\" />\r\n      <workItem from=\"1607926364525\" duration=\"13513000\" />\r\n      <workItem from=\"1607946549342\" duration=\"346000\" />\r\n      <workItem from=\"1607996464504\" duration=\"4854000\" />\r\n      <workItem from=\"1608011202168\" duration=\"503000\" />\r\n      <workItem from=\"1608029220027\" duration=\"87000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"第一次\">\r\n      <created>1607698047022</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1607698047022</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"提交测试,添加了一个banner\">\r\n      <created>1607742970484</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1607742970484</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"提交测试,添加了一个banner\">\r\n      <created>1607755790564</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1607755790564</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"学生查询与部分修改\">\r\n      <created>1607767696836</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1607767696836</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"前端js,css,image整合到static&#10;前端首页访问&#10;首页controller&#10;用户模块controller&#10;新增菜单表 mtx_menu mtx_menu_children&#10;功能菜单: 学生管理,教务管理\">\r\n      <created>1607946372853</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1607946372853</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"前端js,css,image整合到static&#10;前端首页访问&#10;首页controller&#10;用户模块controller&#10;新增菜单表 mtx_menu mtx_menu_children&#10;功能菜单: 学生管理,教务管理\">\r\n      <created>1608011242038</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1608011242038</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"1\">\r\n          <value>\r\n            <State>\r\n              <option name=\"SHOW_ONLY_AFFECTED_CHANGES\" value=\"true\" />\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"HEAD\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                  <entry key=\"roots\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"$PROJECT_DIR$\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"OPEN_GENERIC_TABS\">\r\n      <map>\r\n        <entry key=\"1\" value=\"TOOL_WINDOW\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"origin/master\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"第一次\" />\r\n    <MESSAGE value=\"提交测试,添加了一个banner\" />\r\n    <MESSAGE value=\"学生查询与部分修改\" />\r\n    <MESSAGE value=\".\" />\r\n    <MESSAGE value=\"前端js,css,image整合到static&#10;前端首页访问&#10;首页controller&#10;用户模块controller&#10;新增菜单表 mtx_menu mtx_menu_children&#10;功能菜单: 学生管理,教务管理\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"前端js,css,image整合到static&#10;前端首页访问&#10;首页controller&#10;用户模块controller&#10;新增菜单表 mtx_menu mtx_menu_children&#10;功能菜单: 学生管理,教务管理\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3b46b6c212245996a29616a1e180070b6a13a47c)
++++ b/.idea/workspace.xml	(date 1608032953481)
+@@ -8,9 +8,10 @@
+     <select />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="">
+-      <change beforePath="$PROJECT_DIR$/mtx-student-system.iml" beforeDir="false" />
++    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="修正">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/controller/MtxUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/controller/MtxUserController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/student.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/student.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -99,16 +100,12 @@
+       <recent name="E:\项目\stu_system_manage\src\main\resources\static\component" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="JUnit.test.text">
++  <component name="RunManager" selected="应用程序.Application">
+     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
++      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+       <option name="MAIN_CLASS_NAME" value="com.Application" />
+-      <module name="stu_system_manage" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="com.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
++      <module name="mtx-student-system" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+@@ -147,8 +144,14 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
++    <list>
++      <item itemvalue="JUnit.test.text" />
++      <item itemvalue="应用程序.Application" />
++      <item itemvalue="应用程序.text" />
++    </list>
+     <recent_temporary>
+       <list>
++        <item itemvalue="应用程序.Application" />
+         <item itemvalue="JUnit.test.text" />
+       </list>
+     </recent_temporary>
+@@ -168,7 +171,7 @@
+       <workItem from="1607946549342" duration="346000" />
+       <workItem from="1607996464504" duration="4854000" />
+       <workItem from="1608011202168" duration="503000" />
+-      <workItem from="1608029220027" duration="87000" />
++      <workItem from="1608029220027" duration="2465000" />
+     </task>
+     <task id="LOCAL-00001" summary="第一次">
+       <created>1607698047022</created>
+@@ -212,7 +215,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1608011242038</updated>
+     </task>
+-    <option name="localTasksCounter" value="7" />
++    <task id="LOCAL-00007" summary="修正">
++      <created>1608030131104</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1608030131104</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -282,6 +292,7 @@
+     <MESSAGE value="学生查询与部分修改" />
+     <MESSAGE value="." />
+     <MESSAGE value="前端js,css,image整合到static&#10;前端首页访问&#10;首页controller&#10;用户模块controller&#10;新增菜单表 mtx_menu mtx_menu_children&#10;功能菜单: 学生管理,教务管理" />
+-    <option name="LAST_COMMIT_MESSAGE" value="前端js,css,image整合到static&#10;前端首页访问&#10;首页controller&#10;用户模块controller&#10;新增菜单表 mtx_menu mtx_menu_children&#10;功能菜单: 学生管理,教务管理" />
++    <MESSAGE value="修正" />
++    <option name="LAST_COMMIT_MESSAGE" value="修正" />
+   </component>
+ </project>
+\ No newline at end of file

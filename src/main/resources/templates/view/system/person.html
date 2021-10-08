@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" th:href="@{/static/component/pear/css/pear.css}" />
+		<link rel="stylesheet" th:href="@{/static/admin/css/other/person.css}" />
+	</head>
+	<body class="pear-container">
+		<div class="layui-row layui-col-space10">
+			<div class="layui-col-md3">
+				<div class="layui-card">
+					<div class="layui-card-body" style="padding: 25px;">
+						<div class="text-center layui-text">
+							<div class="user-info-head" id="userInfoHead">
+								<img th:src="@{/static/admin/images/avatar.png}" width="115px" height="115px" alt="">
+							</div>
+							<h2 style="padding-top: 20px;font-size: 20px;" th:text="${user.name}">就眠仪式</h2>
+							<p style="padding-top: 8px;margin-top: 10px;font-size: 13.5px;">China ， 中国</p>
+						</div>
+					</div>
+					<div style="height: 45px;border-top: 1px whitesmoke solid;text-align: center;line-height: 45px;font-size: 13.5px;">
+						<span>茫茫星辰大海,可是我们的远方的光芒啊~!</span>
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-md9">
+				<div class="layui-card">
+					<div class="layui-card-header">个人信息</div>
+					<div class="layui-card-body">
+						<div class="layui-tab layui-tab-brief">
+							<div class="layui-tab-content">
+								<div class="layui-tab-item layui-show">
+									<br>
+									名称&nbsp; : &nbsp;<span th:text="${user.name}"></span>
+									<br>
+									<br>
+									账户&nbsp; : &nbsp;<span th:text="${user.username}"></span>
+									<br>
+									<br>
+									住址&nbsp; : &nbsp;<span> 中国 &nbsp;&nbsp;广东省&nbsp;&nbsp; 深圳市 </span>
+									<br>
+									<br>
+									<br>
+									<button class="layui-btn layui-btn-normal layui-btn-sm" id="edit" style="background-color: #5FB878;">
+										更改密码
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		<script th:src="@{/static/component/pear/layui/layui.js}"></script>
+		<script>
+			layui.use(['element','jquery','layer'], function() {
+				let element = layui.element;
+				let $ = layui.jquery;
+				let layer = layui.layer;
+				let id = "[[${user.userId}]]"
+
+				let MODULE_PATH = "operate/";
+				$("#edit").click(function(){
+					layer.open({
+						type: 2,
+						title: '修改密码',
+						shade: 0.3,
+						anim: 2,
+						area: ['500px', '500px'],
+						content: MODULE_PATH  + 'person/edit/' + id
+					});
+				});
+
+			})
+		</script>
+	</body>
+</html>

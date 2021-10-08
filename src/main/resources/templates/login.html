@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>Minimalist</title>
+		<link rel="icon" type="image/icon" th:href="@{/static/admin/images/favicon.ico}">
+		<link rel="stylesheet" th:href="@{/static/component/pear/css/pear.css}" />
+		<link rel="stylesheet" th:href="@{/static/admin/css/other/login.css}" />
+
+	</head>
+    <!-- 代 码 结 构 -->
+	<body th:background="@{/static/admin/images/background2.svg}" style="background-size: cover;">
+		<form class="layui-form" action="javascript:void(0);">
+			<div class="layui-form-item">
+				<img class="logo" th:href="@{/static/admin/images/logo.png}" />
+				<div class="title">Minimalist</div>
+				<div class="desc">
+				<!--空内容 一-->
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<input placeholder="请输入你的账号" hover class="layui-input"  name="username" />
+			</div>
+			<div class="layui-form-item">
+				<input placeholder="请输入你的密码" hover class="layui-input" type="password" name="password" />
+			</div>
+			<div class="layui-form-item">
+				<input placeholder="请输入验证码" name="validateCode" hover class="code layui-input layui-input-inline" style="width: 185px"  />
+				<img th:src="@{/view/system/getValidateCode}"onclick="this.src=this.src+'?d='+Math.random();" title="点击刷新"  class="codeImage" id="changeCode"/>
+			</div>
+			<div class="layui-form-item">
+				<input type="checkbox" name="" title="记住密码" lay-skin="primary" checked>
+			</div>
+			<div class="layui-form-item">
+				<button class="pear-btn pear-btn-success login" lay-submit lay-filter="login">
+					登 录
+				</button>
+			</div>
+		</form>
+		<!-- 资 源 引 入 -->
+		<script th:src="@{/static/component/pear/layui/layui.js}"></script>
+		<script th:src="@{/static/component/pear/pear.js}"></script>
+		<script>
+			layui.use(['form','jquery','button'], function() {
+				var form = layui.form;
+				var button = layui.button;
+				var $ = layui.jquery;
+
+					// 登 录 提 交
+					form.on('submit(login)', function(data){
+						// debugger
+						let name = $("input[name='username']").val();
+						let pwd = $("input[name='password']").val();
+						let code = $("input[name='validateCode']").val();
+					if (name === ''){
+						layer.msg('用户名不能为空');
+						return false;
+					}
+
+					if (pwd === ''){
+						layer.msg('密码不能为空');
+						return  false;
+					}
+						if (code === ''){
+							layer.msg('验证码不能为空');
+							return  false;
+						}
+
+						let loader = layer.load();
+						let btn = button.load({elem: '.login'});
+					$.ajax({
+						url:'/user/login',
+						data:data.field,
+						type:"post",
+						dataType:'json',
+						success:function(result){
+							layer.close(loader);
+							btn.stop(function(){
+								if(result.code == 0){
+									layer.msg("登录成功",{icon:1,time:1000},function(){
+										//成功调整
+										location.href = "/index";
+									})
+								}else{
+									layer.msg(result.msg,{icon:2,time:1000},function(){
+										//重新加载验证码
+										document.getElementById("changeCode").src="/view/system/getValidateCode" + "?" + Math.random();
+									});
+								}
+							})
+						}
+					});
+				});
+
+
+			})
+		</script>
+	</body>
+</html>

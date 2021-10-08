@@ -1,0 +1,1778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="完善terminal部分">
+      <change afterPath="$PROJECT_DIR$/.idea/GrepConsole.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/mtx_student_system_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_Release.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_12_12_13_27_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_12_12_13_27__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_12_12_13_29_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_12_12_13_29__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_12_15_19_19_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_12_15_19_19__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2020_12_15_0015_19_49_取消提交了变更_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2020_12_16_0016_19_58_取消提交了变更_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2020_12_17_0017_9_48_取消提交了变更_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/stu_system_manage.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/aop/LogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assets/controller/AssetsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assets/entity/Assets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assets/mapper/AssetsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assets/mapper/xml/AssetsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assets/service/AssetsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assets/service/impl/AssetsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/controller/AssetsAuthorizationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/entity/AssetsAuthorization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/mapper/AssetsAuthorizationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/mapper/xml/AssetsAuthorizationMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/service/AssetsAuthorizationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/service/impl/AssetsAuthorizationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsMy/controller/AssetsMyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsMy/entity/AssetsMy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsMy/service/AssetsMyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsMy/service/impl/AssetsMyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsUser/controller/AssetsUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsUser/entity/AssetsUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsUser/mapper/AssetsUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsUser/mapper/xml/AssetsUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsUser/service/AssetsUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsUser/service/impl/AssetsUserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/config/FileConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/config/MybatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/config/ShiroConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/AssetsAuthorizationWebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/AssetsMyWebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/AssetsUserWebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/AssetsWebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/SystemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/TerminalWebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/UserGroupWebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/UserWebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/VideoWebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/file/controller/FileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/log/controller/LogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/log/entity/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/log/mapper/LogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/log/mapper/xml/LogMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/log/service/LogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/log/service/impl/LogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/menu/controller/MenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/menu/entity/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/menu/mapper/MenuMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/menu/mapper/xml/MenuMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/menu/service/MenuService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/menu/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/scheduled/MyScheduled.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/shiro/ShiroRunnerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/shiro/ShiroUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/shiro/UserRealm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/HttpTunnelServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/timing/UserIsTiming.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/user/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/user/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/user/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/user/mapper/xml/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/user/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/controller/UserGroupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/entity/UserGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/mapper/UserGroupMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/mapper/xml/UserGroupMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/service/UserGroupService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/service/impl/UserGroupServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/ApplicationContextHeader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/DateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/FileUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/GeneratorValidateCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/IpAndAddrUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/ReflectUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/ResultUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/TelnetUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/TransformUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/UUIDUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/video/entity/Video.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/css/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/css/load.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/css/other/console1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/css/other/console2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/css/other/department.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/css/other/error.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/css/other/icon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/css/other/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/css/other/person.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/css/other/result.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/card.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/dataTree2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/demo1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/dictData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/dictType.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/document.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/dtree.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/loginLog.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/menu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/operateLog.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/organization.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/organizationtree.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/power.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/role.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/table.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/data/user.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/403.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/404.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/500.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/act.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/background.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/background2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/captcha.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/show.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/toux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/axios.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/card.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/dropdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/dtree/dtree.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/dtree/dtree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/dtree/font/dtreefont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/dtree/font/dtreefont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/dtree/font/dtreefont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/dtree/font/dtreefont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/dtree/font/dtreefont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/dtree/font/icons.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/frame.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/iconPicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/label.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/link.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/loading.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/notice.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/step.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/tab.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/tag.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/topBar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/treetable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear.all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/font/iconfont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/font/iconfont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/font/iconfont.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/font/iconfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/css/layui.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/css/modules/layer/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/css/modules/layer/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/font/iconfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/10.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/11.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/12.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/13.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/14.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/15.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/17.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/18.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/19.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/20.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/21.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/22.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/23.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/25.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/26.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/27.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/28.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/29.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/30.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/31.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/33.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/34.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/35.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/36.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/37.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/38.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/39.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/40.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/41.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/42.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/43.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/44.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/45.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/46.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/47.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/48.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/49.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/50.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/51.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/52.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/53.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/54.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/55.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/56.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/57.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/58.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/59.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/60.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/61.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/62.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/63.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/64.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/65.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/66.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/67.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/68.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/69.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/70.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/71.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/images/face/9.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/colorpicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/element.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/flow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/laydate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/layedit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/laypage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/laytpl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/rate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/transfer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/lay/modules/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/layui.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/layui/layui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/area.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/count.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/design.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/drawer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/dtree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/echartsTheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/frame.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/hash.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/iconPicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/loading.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/notice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/popup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/step.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/jquery.tinymce.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/langs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/langs/zh_CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/license.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/advlist/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/advlist/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/anchor/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/anchor/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/autolink/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/autolink/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/autoresize/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/autoresize/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/autosave/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/autosave/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/bbcode/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/bbcode/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/charmap/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/charmap/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/code/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/code/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/codesample/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/codesample/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/colorpicker/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/colorpicker/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/contextmenu/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/contextmenu/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/directionality/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/directionality/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/emoticons/js/emojis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/emoticons/js/emojis.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/emoticons/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/emoticons/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/fullpage/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/fullpage/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/fullscreen/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/fullscreen/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/help/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/help/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/hr/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/hr/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/image/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/image/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/imagetools/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/imagetools/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/importcss/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/importcss/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/indent2em/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/indent2em/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/insertdatetime/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/insertdatetime/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/legacyoutput/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/legacyoutput/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/link/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/link/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/lists/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/lists/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/media/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/media/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/nonbreaking/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/nonbreaking/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/noneditable/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/noneditable/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/pagebreak/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/pagebreak/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/paste/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/paste/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/preview/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/preview/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/print/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/print/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/quickbars/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/quickbars/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/save/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/save/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/searchreplace/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/searchreplace/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/spellchecker/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/spellchecker/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/tabfocus/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/tabfocus/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/table/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/table/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/template/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/template/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/textcolor/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/textcolor/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/textpattern/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/textpattern/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/toc/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/toc/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/visualblocks/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/visualblocks/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/visualchars/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/visualchars/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/wordcount/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/plugins/wordcount/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/content/dark/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/content/dark/content.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/content/dark/content.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/content/default/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/content/default/content.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/content/default/content.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/content/document/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/content/document/content.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/content/document/content.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/content/writer/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/content/writer/content.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/content/writer/content.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.inline.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.inline.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.inline.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.mobile.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.mobile.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/fonts/tinymce-mobile.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/skin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/skin.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/skin.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/skin.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/skin.mobile.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/skin.mobile.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.inline.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.inline.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.inline.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.mobile.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.mobile.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/fonts/tinymce-mobile.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/skin.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/skin.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/skin.min1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/skin.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/skin.mobile.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/skin.mobile.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/themes/mobile/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/themes/mobile/theme.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/themes/silver/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/themes/silver/theme.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/tinymce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/tinymce/tinymce/tinymce.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/topBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/modules/treetable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/pear.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/pear.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/component/xm-select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/config/pear.config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/echarts/echarts.common.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/echarts/echarts.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/echarts/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/extend/dropdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/extend/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/guacamole/js-snackbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/guacamole/js-snackbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/guacamole/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/script/column1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/script/column2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/script/column3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/script/column4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/script/line1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/script/line2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/script/line3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/script/line4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assets/assets.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assets/operate/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assets/operate/drawer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsAuthorization/assetsAuthorization.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsAuthorization/operate/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsAuthorization/operate/drawer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsMy/assetsMy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/assetsUser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/drawer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/console/console.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/error/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/error/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/error/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/system/logging.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/system/person.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/system/space.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/user/operate/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/user/operate/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/user/user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/operate/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/operate/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/userGroup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/video/play.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/view/video/video.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/aop/LogAspect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assets/controller/AssetsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assets/entity/Assets.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assets/mapper/AssetsMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assets/mapper/xml/AssetsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assets/service/AssetsService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assets/service/impl/AssetsServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsAuthorization/controller/AssetsAuthorizationController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsAuthorization/entity/AssetsAuthorization.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsAuthorization/mapper/AssetsAuthorizationMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsAuthorization/mapper/xml/AssetsAuthorizationMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsAuthorization/service/AssetsAuthorizationService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsAuthorization/service/impl/AssetsAuthorizationServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsMy/controller/AssetsMyController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsMy/entity/AssetsMy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsMy/service/AssetsMyService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsMy/service/impl/AssetsMyServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsUser/controller/AssetsUserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsUser/entity/AssetsUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsUser/mapper/AssetsUserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsUser/mapper/xml/AssetsUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsUser/service/AssetsUserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/assetsUser/service/impl/AssetsUserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/config/MybatisPlusConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/config/ShiroConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/controller/AssetsAuthorizationWebController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/controller/AssetsMyWebController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/controller/AssetsUserWebController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/controller/AssetsWebController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/controller/IndexController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/controller/SystemController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/controller/TerminalWebController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/controller/UserGroupWebController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/controller/UserWebController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/log/controller/LogController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/log/entity/Log.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/log/mapper/LogMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/log/mapper/xml/LogMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/log/service/LogService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/log/service/impl/LogServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/menu/controller/MenuController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/menu/entity/Menu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/menu/mapper/MenuMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/menu/mapper/xml/MenuMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/menu/service/MenuService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/menu/service/impl/MenuServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/shiro/ShiroRunnerImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/shiro/ShiroUp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/shiro/UserRealm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/terminal/servlet/HttpTunnelServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/timing/UserIsTiming.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/user/controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/user/entity/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/user/mapper/UserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/user/mapper/xml/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/user/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/user/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/userGroup/controller/UserGroupController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/userGroup/entity/UserGroup.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/userGroup/mapper/UserGroupMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/userGroup/mapper/xml/UserGroupMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/userGroup/service/UserGroupService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/userGroup/service/impl/UserGroupServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/util/ApplicationContextHeader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/util/GeneratorValidateCode$ImgFontByte.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/util/GeneratorValidateCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/util/IpAndAddrUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/util/ReflectUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/util/Result.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/util/ResultUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/util/TelnetUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/util/TransformUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/minimalist/util/UUIDUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/css/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/css/load.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/css/other/console1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/css/other/console2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/css/other/department.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/css/other/error.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/css/other/icon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/css/other/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/css/other/person.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/css/other/result.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/card.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/dataTree2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/demo1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/dictData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/dictType.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/document.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/dtree.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/loginLog.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/menu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/operateLog.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/organization.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/organizationtree.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/power.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/role.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/table.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/data/user.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/403.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/404.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/500.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/act.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/background.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/background2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/captcha.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/show.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/admin/images/toux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/axios.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/card.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/dropdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/dtree/dtree.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/dtree/dtree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/dtree/font/dtreefont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/dtree/font/dtreefont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/dtree/font/dtreefont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/dtree/font/dtreefont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/dtree/font/dtreefont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/dtree/font/icons.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/frame.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/iconPicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/label.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/link.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/loading.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/notice.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/step.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/tab.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/tag.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/topBar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear-module/treetable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear.all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/pear.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/font/iconfont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/font/iconfont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/font/iconfont.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/font/iconfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/css/layui.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/css/modules/layer/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/css/modules/layer/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/font/iconfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/10.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/11.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/12.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/13.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/14.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/15.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/17.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/18.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/19.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/20.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/21.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/22.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/23.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/25.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/26.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/27.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/28.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/29.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/30.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/31.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/33.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/34.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/35.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/36.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/37.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/38.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/39.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/40.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/41.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/42.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/43.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/44.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/45.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/46.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/47.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/48.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/49.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/50.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/51.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/52.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/53.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/54.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/55.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/56.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/57.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/58.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/59.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/60.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/61.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/62.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/63.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/64.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/65.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/66.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/67.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/68.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/69.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/70.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/71.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/images/face/9.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/colorpicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/element.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/flow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/laydate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/layedit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/laypage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/laytpl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/rate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/transfer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/lay/modules/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/layui.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/layui/layui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/area.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/count.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/design.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/drawer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/dtree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/echartsTheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/frame.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/hash.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/iconPicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/loading.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/notice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/popup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/step.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/jquery.tinymce.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/langs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/langs/zh_CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/license.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/advlist/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/advlist/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/anchor/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/anchor/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/autolink/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/autolink/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/autoresize/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/autoresize/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/autosave/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/autosave/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/bbcode/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/bbcode/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/charmap/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/charmap/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/code/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/code/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/codesample/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/codesample/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/colorpicker/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/colorpicker/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/contextmenu/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/contextmenu/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/directionality/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/directionality/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/emoticons/js/emojis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/emoticons/js/emojis.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/emoticons/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/emoticons/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/fullpage/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/fullpage/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/fullscreen/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/fullscreen/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/help/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/help/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/hr/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/hr/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/image/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/image/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/imagetools/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/imagetools/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/importcss/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/importcss/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/indent2em/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/indent2em/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/insertdatetime/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/insertdatetime/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/legacyoutput/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/legacyoutput/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/link/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/link/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/lists/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/lists/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/media/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/media/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/nonbreaking/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/nonbreaking/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/noneditable/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/noneditable/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/pagebreak/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/pagebreak/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/paste/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/paste/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/preview/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/preview/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/print/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/print/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/quickbars/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/quickbars/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/save/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/save/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/searchreplace/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/searchreplace/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/spellchecker/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/spellchecker/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/tabfocus/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/tabfocus/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/table/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/table/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/template/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/template/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/textcolor/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/textcolor/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/textpattern/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/textpattern/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/toc/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/toc/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/visualblocks/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/visualblocks/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/visualchars/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/visualchars/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/wordcount/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/plugins/wordcount/plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/content/dark/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/content/dark/content.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/content/dark/content.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/content/default/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/content/default/content.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/content/default/content.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/content/document/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/content/document/content.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/content/document/content.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/content/writer/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/content/writer/content.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/content/writer/content.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.inline.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.inline.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.inline.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.mobile.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/content.mobile.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/fonts/tinymce-mobile.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/skin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/skin.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/skin.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/skin.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/skin.mobile.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide-dark/skin.mobile.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.inline.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.inline.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.inline.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.mobile.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/content.mobile.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/fonts/tinymce-mobile.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/skin.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/skin.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/skin.min1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/skin.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/skin.mobile.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/skins/ui/oxide/skin.mobile.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/themes/mobile/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/themes/mobile/theme.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/themes/silver/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/themes/silver/theme.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/tinymce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/tinymce/tinymce/tinymce.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/topBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/modules/treetable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/pear.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/pear/pear.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/component/xm-select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/config/pear.config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/echarts/echarts.common.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/echarts/echarts.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/echarts/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/extend/dropdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/extend/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/guacamole/dot.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/guacamole/guacamole.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/guacamole/js-snackbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/guacamole/js-snackbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/guacamole/playback.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/guacamole/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/script/column1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/script/column2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/script/column3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/script/column4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/script/line1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/script/line2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/script/line3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/script/line4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/assets/assets.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/assets/operate/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/assets/operate/drawer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/assetsAuthorization/assetsAuthorization.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/assetsAuthorization/operate/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/assetsAuthorization/operate/drawer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/assetsMy/assetsMy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/assetsUser/assetsUser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/assetsUser/operate/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/assetsUser/operate/drawer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/console/console.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/error/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/error/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/error/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/system/logging.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/system/person.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/system/space.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/terminal/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/terminal/terminal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/user/operate/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/user/operate/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/user/user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/userGroup/operate/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/userGroup/operate/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/view/userGroup/userGroup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/guacamole/all.main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/guacamole/all.main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/guacamole/playback.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/guacamole/playback.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/minimalist/config/WebSocketConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/minimalist/servlet/HttpTunnelServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/client.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/guacamole/playback.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/guacamole/playback.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dot.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/guacamole/dot.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/guacamole.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/guacamole/guacamole.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/guacamole/all.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/guacamole/all.main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/guacamole/playback.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/guacamole/playback.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/play.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="XML File" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="master" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\lib_repo\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx1024m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lW1CxgkiTagUrbUBpdjSuoS4Fr" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="MyBatisLogPluginindexNum" value="487" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/view/video" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\javaxm\minimalist\src\main\resources\templates\view\video" />
+      <recent name="D:\javaxm\minimalist\src\main\java\com\minimalist\video" />
+      <recent name="D:\javaxm\minimalist\src\main\resources\static\js\guacamole" />
+      <recent name="D:\javaxm\minimalist\target\classes\static\admin\images" />
+      <recent name="D:\javaxm\minimalist\src\main\resources\static\admin\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\javaxm\minimalist\src\main\resources\static\admin\images" />
+      <recent name="D:\javaxm\minimalist\src\main\resources\templates\view\user" />
+      <recent name="D:\javaxm\minimalist\src\main\resources\templates\view\system\operate" />
+      <recent name="D:\javaxm\minimalist\src\main\resources\templates\view\assetsAuthorization" />
+      <recent name="E:\项目\mtx_project\src\main\resources\templates\view\system\operate\user" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.minimalist.video.controller" />
+      <recent name="com.minimalist.controller" />
+      <recent name="com.minimalist.terminal.controller" />
+      <recent name="com.minimalist.terminal.servlet" />
+      <recent name="com.mtx.mtxLog.mapper" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Application" />
+      <module name="mtx-student-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="text" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="text" />
+      <module name="mtx-student-system" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="minimalist" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Application" />
+      <item itemvalue="Application.text" />
+      <item itemvalue="Spring Boot.Application" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.text" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="" />
+      <created>1607697911432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607697911432</updated>
+      <workItem from="1607697914667" duration="1736000" />
+      <workItem from="1607742840160" duration="611000" />
+      <workItem from="1607910597499" duration="6656000" />
+      <workItem from="1607926364525" duration="13513000" />
+      <workItem from="1607946549342" duration="346000" />
+      <workItem from="1607996464504" duration="4854000" />
+      <workItem from="1608011202168" duration="503000" />
+      <workItem from="1608029220027" duration="87000" />
+      <workItem from="1608083590221" duration="67000" />
+      <workItem from="1608135465162" duration="4749000" />
+      <workItem from="1608185699510" duration="7432000" />
+      <workItem from="1608256536326" duration="25943000" />
+      <workItem from="1608350903493" duration="7860000" />
+      <workItem from="1608444391453" duration="33000" />
+      <workItem from="1608514889520" duration="7301000" />
+      <workItem from="1608529027359" duration="1644000" />
+      <workItem from="1608601525620" duration="471000" />
+      <workItem from="1608602023028" duration="1680000" />
+      <workItem from="1608604009147" duration="9697000" />
+      <workItem from="1608690761039" duration="22679000" />
+      <workItem from="1608774691407" duration="5093000" />
+      <workItem from="1608860735912" duration="9151000" />
+      <workItem from="1609057606461" duration="386000" />
+      <workItem from="1609058266965" duration="6797000" />
+      <workItem from="1609124570478" duration="5359000" />
+      <workItem from="1609143538625" duration="22000" />
+      <workItem from="1609143726306" duration="3000" />
+      <workItem from="1609143990641" duration="968000" />
+      <workItem from="1609145631552" duration="489000" />
+      <workItem from="1609146656010" duration="4937000" />
+      <workItem from="1609250743815" duration="645000" />
+      <workItem from="1609307774687" duration="12353000" />
+      <workItem from="1609322832924" duration="8178000" />
+      <workItem from="1609397253957" duration="16681000" />
+      <workItem from="1609734947775" duration="645000" />
+      <workItem from="1609740384574" duration="21043000" />
+      <workItem from="1609763662240" duration="22000" />
+      <workItem from="1609763697804" duration="98000" />
+      <workItem from="1609763814396" duration="815000" />
+      <workItem from="1609820994880" duration="20558000" />
+      <workItem from="1609909447902" duration="22743000" />
+      <workItem from="1609936203490" duration="243000" />
+      <workItem from="1609943747312" duration="2468000" />
+      <workItem from="1610000539462" duration="32928000" />
+      <workItem from="1610086056012" duration="20760000" />
+      <workItem from="1610168663831" duration="28407000" />
+      <workItem from="1610209638903" duration="6560000" />
+      <workItem from="1610286990212" duration="601000" />
+      <workItem from="1610293251627" duration="270000" />
+      <workItem from="1610339286011" duration="993000" />
+      <workItem from="1610347536375" duration="921000" />
+      <workItem from="1610349579572" duration="3958000" />
+      <workItem from="1610371002377" duration="1722000" />
+      <workItem from="1610606932478" duration="2186000" />
+      <workItem from="1611043077114" duration="605000" />
+      <workItem from="1611234532721" duration="1041000" />
+      <workItem from="1611236116864" duration="1331000" />
+      <workItem from="1611244223014" duration="4514000" />
+      <workItem from="1611591911960" duration="989000" />
+      <workItem from="1611681143861" duration="3737000" />
+      <workItem from="1611722145246" duration="4431000" />
+      <workItem from="1611727341250" duration="538000" />
+      <workItem from="1611752407231" duration="410000" />
+      <workItem from="1612009749400" duration="9000" />
+      <workItem from="1614759063120" duration="158000" />
+      <workItem from="1626783965959" duration="499000" />
+      <workItem from="1626854145406" duration="2402000" />
+      <workItem from="1627150374397" duration="972000" />
+      <workItem from="1627269828978" duration="5789000" />
+      <workItem from="1627279913178" duration="9095000" />
+      <workItem from="1627366213558" duration="11718000" />
+      <workItem from="1627386840576" duration="2227000" />
+      <workItem from="1627445187885" duration="11778000" />
+      <workItem from="1627470164814" duration="9106000" />
+      <workItem from="1627479413684" duration="2000" />
+      <workItem from="1627481791373" duration="5894000" />
+      <workItem from="1627539108814" duration="18798000" />
+      <workItem from="1627570487227" duration="6011000" />
+      <workItem from="1627611392863" duration="6949000" />
+      <workItem from="1627627683519" duration="2939000" />
+      <workItem from="1627631587843" duration="2762000" />
+      <workItem from="1627697808044" duration="13742000" />
+      <workItem from="1627721408121" duration="861000" />
+      <workItem from="1627724086734" duration="5316000" />
+      <workItem from="1627730373118" duration="10321000" />
+      <workItem from="1627753203678" duration="1309000" />
+      <workItem from="1627884735857" duration="58000" />
+      <workItem from="1627884818879" duration="2453000" />
+      <workItem from="1627893509773" duration="4772000" />
+      <workItem from="1627954956329" duration="19285000" />
+      <workItem from="1628045753994" duration="26587000" />
+      <workItem from="1628083412906" duration="135000" />
+      <workItem from="1628128209531" duration="17025000" />
+      <workItem from="1628220328854" duration="11496000" />
+      <workItem from="1628489725100" duration="5122000" />
+      <workItem from="1629703587671" duration="195000" />
+      <workItem from="1629703809609" duration="379000" />
+      <workItem from="1631929700471" duration="164000" />
+      <workItem from="1633589418447" duration="4186000" />
+      <workItem from="1633599076089" duration="4287000" />
+      <workItem from="1633656357965" duration="27303000" />
+    </task>
+    <task id="LOCAL-00004" summary="学生查询与部分修改">
+      <created>1607767696836</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607767696836</updated>
+    </task>
+    <task id="LOCAL-00005" summary="前端js,css,image整合到static&#10;前端首页访问&#10;首页controller&#10;用户模块controller&#10;新增菜单表 mtx_menu mtx_menu_children&#10;功能菜单: 学生管理,教务管理">
+      <created>1607946372853</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607946372853</updated>
+    </task>
+    <task id="LOCAL-00006" summary="前端js,css,image整合到static&#10;前端首页访问&#10;首页controller&#10;用户模块controller&#10;新增菜单表 mtx_menu mtx_menu_children&#10;功能菜单: 学生管理,教务管理">
+      <created>1608011242038</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608011242038</updated>
+    </task>
+    <task id="LOCAL-00007" summary="去除无用部分">
+      <created>1608110800969</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608110800969</updated>
+    </task>
+    <task id="LOCAL-00008" summary="去除无用部分">
+      <created>1608139711934</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608139711934</updated>
+    </task>
+    <task id="LOCAL-00009" summary="教务管理视图部分">
+      <created>1608297153545</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608297153546</updated>
+    </task>
+    <task id="LOCAL-00010" summary="教务管理视图部分">
+      <created>1608298040175</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1608298040175</updated>
+    </task>
+    <task id="LOCAL-00011" summary="学员左右边固定,班主任字段增加">
+      <created>1608356098683</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608356098683</updated>
+    </task>
+    <task id="LOCAL-00012" summary="学员左右边固定,班主任字段增加">
+      <created>1608371142423</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1608371142423</updated>
+    </task>
+    <task id="LOCAL-00013" summary="所有学员查询功能完善">
+      <created>1608375647151</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1608375647151</updated>
+    </task>
+    <task id="LOCAL-00014" summary="分班提交ajax">
+      <created>1608386354010</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1608386354010</updated>
+    </task>
+    <task id="LOCAL-00015" summary="分班提交ajax">
+      <created>1608444419553</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1608444419553</updated>
+    </task>
+    <task id="LOCAL-00016" summary="分班提交修复成功后无反应,提交成功后刷新父页面">
+      <created>1608529757665</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1608529757665</updated>
+    </task>
+    <task id="LOCAL-00017" summary="搜索条件新增2个">
+      <created>1608531472878</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1608531472878</updated>
+    </task>
+    <task id="LOCAL-00018" summary="数据表格数据不对齐修复, 更换数据库">
+      <created>1608722500868</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1608722500868</updated>
+    </task>
+    <task id="LOCAL-00019" summary="数据库连接时间添加">
+      <created>1608722980388</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1608722980388</updated>
+    </task>
+    <task id="LOCAL-00020" summary="录取按钮实现,毕业按钮修改,异动页面添加(根据异动类型加载不同的异动内容)">
+      <created>1608813105408</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1608813105408</updated>
+    </task>
+    <task id="LOCAL-00021" summary="抽屉">
+      <created>1609058494725</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1609058494725</updated>
+    </task>
+    <task id="LOCAL-00022" summary="字典编辑">
+      <created>1609250783750</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1609250783750</updated>
+    </task>
+    <task id="LOCAL-00023" summary="菜单入库">
+      <created>1609313106193</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1609313106193</updated>
+    </task>
+    <task id="LOCAL-00024" summary="redis缓存">
+      <created>1609328656092</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1609328656092</updated>
+    </task>
+    <task id="LOCAL-00025" summary="redis缓存">
+      <created>1609328728145</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1609328728145</updated>
+    </task>
+    <task id="LOCAL-00026" summary="学生信息修改显示问题">
+      <created>1609331005998</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1609331005998</updated>
+    </task>
+    <task id="LOCAL-00027" summary="权限功能实现">
+      <created>1609413976015</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1609413976015</updated>
+    </task>
+    <task id="LOCAL-00028" summary="角色设置权限部分">
+      <created>1609761794687</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1609761794687</updated>
+    </task>
+    <task id="LOCAL-00029" summary="角色设置权限部分">
+      <created>1609821019690</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1609821019690</updated>
+    </task>
+    <task id="LOCAL-00030" summary="行为日志统计">
+      <created>1609834326593</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1609834326593</updated>
+    </task>
+    <task id="LOCAL-00031" summary="用户新增">
+      <created>1609836145581</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1609836145581</updated>
+    </task>
+    <task id="LOCAL-00032" summary="异动获取">
+      <created>1609837167865</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1609837167865</updated>
+    </task>
+    <task id="LOCAL-00033" summary="分班按钮权限管理">
+      <created>1609843281352</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1609843281352</updated>
+    </task>
+    <task id="LOCAL-00034" summary="角色增删改视图">
+      <created>1609926333638</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1609926333638</updated>
+    </task>
+    <task id="LOCAL-00035" summary="学生普通修改，咨询记录">
+      <created>1609936239962</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1609936239962</updated>
+    </task>
+    <task id="LOCAL-00036" summary="表单添加学员">
+      <created>1610008695734</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1610008695734</updated>
+    </task>
+    <task id="LOCAL-00037" summary="院校部分">
+      <created>1610017611942</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1610017611942</updated>
+    </task>
+    <task id="LOCAL-00038" summary="院校与专业新增修改">
+      <created>1610033004891</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1610033004891</updated>
+    </task>
+    <task id="LOCAL-00039" summary="查询院校与专业完善">
+      <created>1610088395574</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1610088395575</updated>
+    </task>
+    <task id="LOCAL-00040" summary="学员批量导入，验证部分完善">
+      <created>1610092314217</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1610092314217</updated>
+    </task>
+    <task id="LOCAL-00041" summary="学员批量导入数据库部分完善">
+      <created>1610108776002</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1610108776002</updated>
+    </task>
+    <task id="LOCAL-00042" summary="学员批量导入完全体">
+      <created>1610168753798</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1610168753798</updated>
+    </task>
+    <task id="LOCAL-00043" summary="异动部分完成">
+      <created>1610197806932</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1610197806932</updated>
+    </task>
+    <task id="LOCAL-00044" summary="异动部分完成">
+      <created>1610206925047</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1610206925047</updated>
+    </task>
+    <task id="LOCAL-00045" summary="还剩部分删除，与用户基本信息部分">
+      <created>1610215948869</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1610215948869</updated>
+    </task>
+    <task id="LOCAL-00046" summary="还剩部分删除，与用户基本信息部分">
+      <created>1610216189057</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1610216189057</updated>
+    </task>
+    <task id="LOCAL-00047" summary="图形报表，柱形完成。">
+      <created>1611248662293</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1611248662293</updated>
+    </task>
+    <task id="LOCAL-00048" summary="图形报表，部分完成。">
+      <created>1611684784516</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1611684784516</updated>
+    </task>
+    <task id="LOCAL-00049" summary="图形报表完成">
+      <created>1611726758949</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1611726758949</updated>
+    </task>
+    <task id="LOCAL-00050" summary="图形报表完成,补bug">
+      <created>1611752781658</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1611752781659</updated>
+    </task>
+    <task id="LOCAL-00051" summary="资产部分完成">
+      <created>1628083524486</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1628083524487</updated>
+    </task>
+    <task id="LOCAL-00052" summary="完善terminal部分">
+      <created>1628494959814</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1628494959815</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="学生信息修改显示问题" />
+    <MESSAGE value="权限功能实现" />
+    <MESSAGE value="角色设置权限部分" />
+    <MESSAGE value="行为日志统计" />
+    <MESSAGE value="用户新增" />
+    <MESSAGE value="异动获取" />
+    <MESSAGE value="分班按钮权限管理" />
+    <MESSAGE value="角色增删改视图" />
+    <MESSAGE value="学生普通修改，咨询记录" />
+    <MESSAGE value="表单添加学员" />
+    <MESSAGE value="院校部分" />
+    <MESSAGE value="院校与专业新增修改" />
+    <MESSAGE value="查询院校与专业完善" />
+    <MESSAGE value="学员批量导入，验证部分完善" />
+    <MESSAGE value="学员批量导入数据库部分完善" />
+    <MESSAGE value="学员批量导入完全体" />
+    <MESSAGE value="异动部分完成" />
+    <MESSAGE value="还剩部分删除，与用户基本信息部分" />
+    <MESSAGE value="图形报表，柱形完成。" />
+    <MESSAGE value="图形报表，部分完成。" />
+    <MESSAGE value="图形报表完成" />
+    <MESSAGE value="图形报表完成,补bug" />
+    <MESSAGE value="资产列表完成" />
+    <MESSAGE value="资产部分完成" />
+    <MESSAGE value="完善terminal部分" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善terminal部分" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.ConcurrentModificationException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.beans.factory.UnsatisfiedDependencyException" package="org.springframework.beans.factory" />
+          <option name="timeStamp" value="5" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

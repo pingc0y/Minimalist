@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>我的资产</title>
+		<link rel="stylesheet" th:href="@{/static/component/pear/css/pear.css}" />
+		<style>
+
+		</style>
+	</head>
+	<body class="pear-container">
+
+	<div class="layui-card">
+		<div class="layui-card-body">
+			<form class="layui-form" action="javascript:void(0);">
+				<div class="layui-form-item">
+					<!--主机名-->
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">主机名</label>
+						<div class="layui-input-inline">
+							<input type="text" name="hostname" placeholder="" class="layui-input">
+						</div>
+					</div>
+					<!--ip/域名-->
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">ip/域名</label>
+						<div class="layui-input-inline">
+							<input type="text" name="address" placeholder="" class="layui-input">
+						</div>
+					</div>
+					<!--协议-->
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">协议</label>
+						<div class="layui-input-inline">
+							<select name="protocol" lay-verify="">
+								<option value="">请选择</option>
+								<option value="rdp">rdp</option>
+								<option value="ssh">ssh</option>
+								<option value="vnc">vnc</option>
+								<option value="telnet">telnet</option>
+							</select>
+						</div>
+					</div>
+					<!--端口-->
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">端口</label>
+						<div class="layui-input-inline">
+							<input type="text" name="port" placeholder="" class="layui-input">
+						</div>
+					</div>
+					<!--激活-->
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">激活</label>
+						<div class="layui-input-inline">
+							<select name="activate" lay-verify="">
+								<option value="">请选择</option>
+								<option value="0">是</option>
+								<option value="1">否</option>
+							</select>
+						</div>
+					</div>
+					<div class="layui-form-item layui-inline">
+						<button class="pear-btn pear-btn-md pear-btn-primary" lay-submit lay-filter="user-query">
+							<i class="layui-icon layui-icon-search"></i>
+							查询
+						</button>
+						<button type="reset" class="pear-btn pear-btn-md">
+							<i class="layui-icon layui-icon-refresh"></i>
+							重置
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="layui-card">
+		<div class="layui-card-body">
+			<table id="assets-table" lay-filter="assets-table"></table>
+		</div>
+	</div>
+
+	</script>
+	<script type="text/html" id="user-bar">
+		<button  class="pear-btn pear-btn-primary pear-btn-sm" lay-event="edit"><i class="layui-icon layui-icon-link"></i></button>
+	</script>
+	<script type="text/html" id="createTime">
+		{{layui.util.toDateString(d.cartetime, 'yyyy-MM-dd')}}
+	</script>
+
+	<script type="text/html" id="activate">
+		{{# if (d.activate == 0) { }}
+		已激活
+		{{# }else { }}
+		已禁用
+		{{#   }}}
+	</script>
+	<script type="text/html" id="status">
+		{{# if (d.status == 0) { }}
+		连接畅通
+		{{# }else { }}
+		不可连接
+		{{#   }}}
+	</script>
+
+
+	<script th:src="@{/static/component/pear/layui/layui.js}"></script>
+	<script th:src="@{/static/component/pear/pear.js}"></script>
+		<script>
+			layui.use(['table', 'form', 'jquery','laydate'], function() {
+				let table = layui.table;
+				let form = layui.form;
+				let laydate = layui.laydate;
+				let $ = layui.jquery;
+
+				let MODULE_PATH = "operate/";
+
+
+
+				let cols = [
+					[{
+						type: 'checkbox',
+						fixed: 'left'
+					},
+						{
+							title: '主机名',
+							field: 'hostname',
+							align: 'center',
+							// width: 200,
+						},
+						{
+						title: 'IP/域名',
+						field: 'address',
+						align: 'center',
+						// width: 150,
+						//fixed: 'left'
+						},
+						{
+							title: '协议',
+							field: 'protocol',
+							align: 'center',
+							// width: 150,
+							//fixed: 'left'
+						},
+						{
+							title: '端口',
+							field: 'port',
+							align: 'center',
+							// width: 100,
+							//fixed: 'left'
+						}
+						,
+						{
+						title: '备注',
+						field: 'remark',
+						align: 'center',
+						// width: 100,
+						//fixed: 'left'
+					}
+					,
+						{
+						title: '连接状态',
+						field: 'status',
+						align: 'center',
+						// width: 100,
+						templet: '#status'
+						//fixed: 'left'
+					},
+						{
+							title: '激活',
+							field: 'activate',
+							align: 'center',
+							// width: 100,
+							templet: '#activate'
+							//fixed: 'left'
+						},
+						{
+							title: '创建时间',
+							field: 'createTime',
+							align: 'center',
+							// width: 100,
+							templet: '#createTime'
+							//fixed: 'left'
+						},
+						{
+							title: '操作',
+							toolbar: '#user-bar',
+							align: 'center',
+							fixed: 'right'
+						}
+					]
+				]
+
+				laydate.render({
+					elem: '#test16',
+					type: 'datetime',
+					range: '到',
+					format: 'yyyy-MM-dd HH:mm:ss',
+					trigger: 'click'
+				});
+
+				table.render({
+					elem: '#assets-table',
+					url: '/assetsMy/selectAll',
+					page: true,
+					cols: cols,
+					skin: 'line',
+					toolbar: '#user-toolbar',
+					defaultToolbar: [{
+						layEvent: 'refresh',
+						icon: 'layui-icon-refresh',
+					}, 'filter', 'print', 'exports']
+				});
+
+				//监听列表操作
+				table.on('tool(assets-table)', function(obj) {
+					if (obj.event === 'remove') {
+						window.remove(obj);
+					} else if (obj.event === 'edit') {
+						window.edit(obj);
+					}
+				});
+
+
+
+
+				form.on('submit(user-query)', function(data) {
+					table.reload('assets-table', {
+						where: data.field
+					})
+					return false;
+				});
+
+				form.on('switch(user-enable)', function(obj) {
+					layer.tips(this.value + ' ' + this.name + ':' + obj.elem.checked, obj.othis);
+				});
+				//修改
+				window.edit = function(obj) {
+					window.open("/view/terminal/terminal?assets="+obj.data['assetsId']+"&assetsUser="+obj.data['assetsUserId'],"_blank");
+				}
+
+				window.refresh = function(
+
+						param) {
+					table.reload('assets-table');
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>新增</title>
+    <link rel="stylesheet" th:href="@{/static/component/pear/css/pear.css}" />
+
+    <script th:src="@{/static/component/pear/layui/layui.js}"></script>
+    <script th:src="@{/static/component/pear/pear.js}"></script>
+    <script th:src="@{/static/component/xm-select.js}"></script>
+    <script th:src="@{/static/component/axios.min.js}"></script>
+    <style>
+        .xx{
+            position: absolute;
+            width:700px;
+        }
+        .xx2{
+            position: absolute;
+            left:700px;
+        }
+        .layui-form-label{
+            width: 99px;
+        }
+        @media screen and (max-width: 1400px) {
+            .xx{
+                position: absolute;
+                width:700px;
+            }
+            .xx2{
+                position: absolute;
+                left:665px;
+            }
+        }
+    </style>
+
+</head>
+<body class="pear-container">
+
+<!-- 主体部分 -->
+<div class="layui-form xx"  action="javascript:void(0);" >
+    <div class="content">
+        <form class="layui-form" action="javascript:void(0);" onsubmit="return false">
+            <div class="left">
+                <div class="layui-form-item layui-inline">
+                    <label class="layui-form-label">名称</label>
+                    <div class="layui-input-inline" style="width: 500px">
+                        <input type="text"  name="name" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <label class="layui-form-label">用户</label>
+                    <div class="layui-input-inline" style="width: 500px">
+                    <div id="user">
+                    </div>
+                </div>
+                </div>
+
+
+                <div class="layui-form-item layui-inline">
+                    <label class="layui-form-label">用户组</label>
+                    <div class="layui-input-inline" style="width: 500px">
+                        <div id="userGroup">
+                    </div>
+                </div>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <label class="layui-form-label">资产</label>
+                    <div class="layui-input-inline" style="width: 500px">
+                        <div id="assets">
+                    </div>
+                </div>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <label class="layui-form-label">资产用户</label>
+                    <div class="layui-input-inline" style="width: 500px">
+                        <div id="assetsUser">
+                    </div>
+                </div>
+                </div>
+
+                <div class="layui-form-item layui-inline">
+                    <label class="layui-form-label">生效时间</label>
+                    <div class="layui-input-inline">
+                        <input type="text"  name="startTime"  id="startTime" class="layui-input">
+                    </div>
+                </div>
+                <br/>
+                <div class="layui-form-item layui-inline">
+                    <label class="layui-form-label">失效时间</label>
+                    <div class="layui-input-inline">
+                        <input type="text"  name="endTime"  id="endTime"  class="layui-input">
+                    </div>
+                </div>
+                <br/>
+                <div class="layui-form-item layui-inline">
+                    <label class="layui-form-label">激活</label>
+                    <div class="layui-input-inline">
+                        <input type="checkbox" th:value="0" name="activate" lay-skin="switch" lay-text="ON|OFF" checked="" >
+                        <div class="layui-unselect layui-form-switch layui-form-onswitch" lay-skin="_switch"><em>ON</em><i></i></div>
+                    </div>
+                </div>
+                <br/>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit="" lay-filter="ordinarysubmit">提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+</div>
+</div>
+
+<script>
+    layui.use(['form', 'jquery','layer','laydate'], function(){
+        let form = layui.form;
+        let $ = layui.jquery;
+        let layer = layui.layer;
+        let laydate = layui.laydate;
+        laydate.render({
+            elem: '#time' //指定元素
+        });
+        form.on('submit(ordinarysubmit)',function (data) {
+            var userId = user.getValue("valueStr");
+            var userGroupId = userGroup.getValue("valueStr");
+            var assetsId = assets.getValue("valueStr");
+            var assetsUserId = assetsUser.getValue("valueStr");
+            data.field.userId = JSON.stringify(userId, null, 2);
+            data.field.assetsId = JSON.stringify(assetsId, null, 2);
+            data.field.userGroupId = JSON.stringify(userGroupId, null, 2);
+            data.field.assetsUserId = JSON.stringify(assetsUserId, null, 2);
+            $.ajax({
+                url: '/assetsAuthorization/add',
+                dataType: 'json',
+                data:JSON.stringify(data.field),
+                contentType:'application/json',
+                type: 'post',
+                success:function(data){
+                    if(data.code != 0){
+                        layer.msg(data.msg,{icon: 5,time: 2000});//失败的表情
+                    }else{
+                        layer.msg(data.msg, {
+                            icon: 6,//成功的表情
+                            time: 2000 //1秒关闭（如果不配置，默认是3秒）
+                        }, function(){
+                            parent.layer.close(parent.layer.getFrameIndex(window.name));//关闭当前页
+                            parent.layui.table.reload("assetsAuthorization-table");
+                        });
+
+                    }
+
+                }
+            })
+        })
+
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#startTime' //指定元素
+            ,trigger: 'click'
+        });
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#endTime' //指定元素
+            ,trigger: 'click'
+        });
+
+    });
+
+
+    //用户
+    var user = xmSelect.render({
+        el: '#user',
+        autoRow: true,
+        toolbar: { show: true },
+        filterable: true,
+        remoteSearch: true,
+        remoteMethod: function(val, cb, show){
+            //这里如果val为空, 则不触发搜索
+            if(!val){
+                return cb([]);
+            }
+            //这里引入了一个第三方插件axios, 相当于$.ajax
+            axios({
+                method: 'get',
+                url: '/user/selectByName',
+                params: {
+                    name: val,
+                }
+            }).then(response => {
+                var res = response.data;
+                cb(res.data)
+            }).catch(err => {
+                cb([]);
+            });
+        },
+    })
+
+    //用户组
+    var userGroup = xmSelect.render({
+        el: '#userGroup',
+        autoRow: true,
+        toolbar: { show: true },
+        filterable: true,
+        remoteSearch: true,
+        remoteMethod: function(val, cb, show){
+            //这里如果val为空, 则不触发搜索
+            if(!val){
+                return cb([]);
+            }
+            //这里引入了一个第三方插件axios, 相当于$.ajax
+            axios({
+                method: 'get',
+                url: '/userGroup/selectByName',
+                params: {
+                    name: val,
+                }
+            }).then(response => {
+                var res = response.data;
+                cb(res.data)
+            }).catch(err => {
+                cb([]);
+            });
+        },
+    })
+
+    //资产
+    var assets = xmSelect.render({
+        el: '#assets',
+        autoRow: true,
+        toolbar: { show: true },
+        radio : true,
+        clickClose: true,
+        filterable: true,
+        remoteSearch: true,
+        remoteMethod: function(val, cb, show){
+            //这里如果val为空, 则不触发搜索
+            if(!val){
+                return cb([]);
+            }
+            //这里引入了一个第三方插件axios, 相当于$.ajax
+            axios({
+                method: 'get',
+                url: '/assets/selectByName',
+                params: {
+                    name: val
+                }
+            }).then(response => {
+                var res = response.data;
+                cb(res.data)
+            }).catch(err => {
+                cb([]);
+            });
+        },
+    })
+
+    //资产用户
+    var assetsUser = xmSelect.render({
+        el: '#assetsUser',
+        autoRow: true,
+        toolbar: { show: true },
+        filterable: true,
+        remoteSearch: true,
+        remoteMethod: function(val, cb, show){
+            //这里如果val为空, 则不触发搜索
+            if(!val){
+                return cb([]);
+            }
+            //这里引入了一个第三方插件axios, 相当于$.ajax
+            axios({
+                method: 'get',
+                url: '/assetsUser/selectByName',
+                params: {
+                    name: val
+                }
+            }).then(response => {
+                var res = response.data;
+                cb(res.data)
+            }).catch(err => {
+                cb([]);
+            });
+        },
+    })
+
+
+
+
+</script>
+</body>
+</html>

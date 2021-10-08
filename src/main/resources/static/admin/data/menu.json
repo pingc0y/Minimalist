@@ -1,0 +1,279 @@
+[
+	{
+		"id":1,
+		"title":"工作空间",
+		"type":0,
+		"icon":"layui-icon layui-icon-console",
+		"href":"",
+		"children":[
+			{
+				"id":14,
+				"title":"百度一下",
+				"icon":"layui-icon layui-icon-console",
+				"type":1,
+				"openType":"_iframe",
+				"href":"http://www.baidu.com"
+			}
+		]
+	},
+	{
+		"id":"system",
+		"title":"系统管理",
+		"icon":"layui-icon layui-icon-set-fill",
+		"type":0,
+		"href":"",
+		"children":[
+			{
+				"id":601,
+				"title":"用户管理",
+				"icon":"layui-icon layui-icon-face-smile",
+				"type":1,
+				"openType":"_iframe",
+				"href":"/view/system/user"
+			},
+			{
+				"id":602,
+				"title":"角色管理",
+				"icon":"layui-icon layui-icon-face-cry",
+				"type":1,
+				"openType":"_iframe",
+				"href":"/view/system/role"
+			},
+			{
+				"id":603,
+				"title":"权限管理",
+				"icon":"layui-icon layui-icon-face-cry",
+				"type":1,
+				"openType":"_iframe",
+				"href":"/view/system/power"
+			},
+			{
+				"id":604,
+				"title":"部门管理",
+				"icon":"layui-icon layui-icon-face-cry",
+				"type":1,
+				"openType":"_iframe",
+				"href":"view/system/deptment"
+			},
+			{
+				"id":605,
+				"title":"行为日志",
+				"icon":"layui-icon layui-icon-face-cry",
+				"type":1,
+				"openType":"_iframe",
+				"href":"view/system/logging"
+			},
+			{
+				"id":606,
+				"title":"数据字典",
+				"icon":"layui-icon layui-icon-face-cry",
+				"type":1,
+				"openType":"_iframe",
+				"href":"view/system/dict"
+			}
+		]
+	},
+	{
+		"id":"student",
+		"title":"学生管理",
+		"icon":"layui-icon layui-icon-user",
+		"type":0,
+		"href":"",
+		"children":[
+			{
+				"id":666,
+				"title":"所有学员",
+				"icon":"layui-icon layui-icon-face-smile",
+				"type":1,
+				"openType":"_iframe",
+				"href":"/view/student/student"
+			},
+			{
+				"id":667,
+				"title":"自考学员",
+				"icon":"layui-icon layui-icon-face-smile",
+				"type":1,
+				"openType":"_iframe",
+				"href":"/view/student/selfstudy"
+			},
+			{
+				"id":668,
+				"title":"成考学员",
+				"icon":"layui-icon layui-icon-face-smile",
+				"type":1,
+				"openType":"_iframe",
+				"href":"/view/student/adult"
+			},
+			{
+				"id":669,
+				"title":"开放学员",
+				"icon":"layui-icon layui-icon-face-smile",
+				"type":1,
+				"openType":"_iframe",
+				"href":"/view/student/open"
+			},
+			{
+				"id":670,
+				"title":"远程学员",
+				"icon":"layui-icon layui-icon-face-smile",
+				"type":1,
+				"openType":"_iframe",
+				"href":"/view/student/remote"
+			}
+		]
+	},
+	{
+		"id":"Educational",
+		"title":"教务管理",
+		"icon":"layui-icon layui-icon-user",
+		"type":0,
+		"href":"",
+		"children":[
+			{
+				"id":909,
+				"title":"录取管理",
+				"icon":"layui-icon layui-icon-console",
+				"type":0,
+				"children":[
+					{
+						"id":9091,
+						"title":"成考录取管理",
+						"icon":"layui-icon layui-icon-face-smile",
+						"type":1,
+						"openType":"_iframe",
+						"href":"view/educational/adultEnroll"
+					},
+					{
+						"id":9094,
+						"title":"远程录取管理",
+						"icon":"layui-icon layui-icon-face-cry",
+						"type":1,
+						"openType":"_iframe",
+						"href":"view/educational/remoteEnroll"
+					},
+					{
+						"id":9092,
+						"title":"开放录取管理",
+						"icon":"layui-icon layui-icon-face-cry",
+						"type":1,
+						"openType":"_iframe",
+						"href":"view/educational/openEnroll"
+					}
+				]
+			},
+			{
+				"id":203,
+				"title":"毕业管理",
+				"icon":"layui-icon layui-icon-console",
+				"type":0,
+				"children":[
+					{
+						"id":2031,
+						"title":"成考毕业管理",
+						"icon":"layui-icon layui-icon-face-cry",
+						"type":1,
+						"openType":"_iframe",
+						"href":"view/educational/adultFinish"
+					},
+					{
+						"id":2032,
+						"title":"远程毕业管理",
+						"icon":"layui-icon layui-icon-face-cry",
+						"type":1,
+						"openType":"_iframe",
+						"href":"view/educational/remoteFinish"
+					},
+					{
+						"id":2033,
+						"title":"开放毕业管理",
+						"icon":"layui-icon layui-icon-face-cry",
+						"type":1,
+						"openType":"_iframe",
+						"href":"view/educational/openFinish"
+					},
+					{
+						"id":2034,
+						"title":"自考毕业管理",
+						"icon":"layui-icon layui-icon-face-cry",
+						"type":1,
+						"openType":"_iframe",
+						"href":"view/educational/selfstudyFinish"
+					}
+				]
+			},
+			{
+				"id":202,
+				"title":"我的工作台",
+				"icon":"layui-icon layui-icon-console",
+				"type":0,
+				"children":[
+					{
+						"id":2021,
+						"title":"我的学员",
+						"icon":"layui-icon layui-icon-face-cry",
+						"type":1,
+						"openType":"_iframe",
+						"href":"view/educational/myStudent"
+					},
+					{
+						"id":2022,
+						"title":"我的工单",
+						"icon":"layui-icon layui-icon-face-cry",
+						"type":1,
+						"openType":"_iframe",
+						"href":"view/educational/myWorkOrder"
+					}
+				]
+			},
+			{
+				"id":204,
+				"title":"学员异动管理",
+				"icon":"layui-icon layui-icon-console",
+				"type":0,
+				"children":[
+					{
+						"id":2041,
+						"title":"转专业",
+						"icon":"layui-icon layui-icon-face-cry",
+						"type":1,
+						"openType":"_iframe",
+						"href":"view/educational/switchMajor"
+					},
+					{
+						"id":2042,
+						"title":"修改学员信息",
+						"icon":"layui-icon layui-icon-face-cry",
+						"type":1,
+						"openType":"_iframe",
+						"href":"view/educational/updateStudent"
+					},
+					{
+						"id":2044,
+						"title":"修改在读状态",
+						"icon":"layui-icon layui-icon-face-cry",
+						"type":1,
+						"openType":"_iframe",
+						"href":"view/educational/updateStatus"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id":"code",
+		"title":"开发工具",
+		"icon":"layui-icon layui-icon-util",
+		"type":0,
+		"href":"",
+		"children":[
+			{
+				"id":801,
+				"title":"表单构建",
+				"icon":"layui-icon layui-icon-util",
+				"type":1,
+				"openType":"_iframe",
+				"href":"component/code/index"
+			}
+		]
+	}
+]

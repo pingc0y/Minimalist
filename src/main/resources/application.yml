@@ -58,3 +58,10 @@ server:
         http-only: true
         timeout: 36000000
 
+guacamole:
+  guacd:
+    host: 127.0.0.1
+    port: 4822
+
+upload:
+  path: \\wsl.localhost\Ubuntu\opt\minimalist\video\

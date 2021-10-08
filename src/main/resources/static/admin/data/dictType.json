@@ -1,0 +1,30 @@
+{
+	"code": 0,
+	"msg": null,
+	"count": 6,
+	"data": [{
+		"type": "用户状态",
+		"mark": "user_status",
+		"status": "0"
+	}, {
+		"type": "登录类型",
+		"mark": "login",
+		"status": "0"
+	}, {
+		"type": "用户类型",
+		"mark": "user_status",
+		"status": "0"
+	}, {
+		"type": "配置类型",
+		"mark": "config_type",
+		"status": "0"
+	}, {
+		"type": "用户性别",
+		"mark": "user_sex",
+		"status": "0"
+	}, {
+		"type": "全局状态",
+		"mark": "sys_status",
+		"status": "0"
+	}]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>录像播放</title>
+  <meta charset="utf-8"/>
+  <link rel="icon" type="image/icon" th:href="@{/static/admin/images/favicon.ico}">
+  <link rel="stylesheet" type="text/css" th:href="@{/static/guacamole/playback.css}">
+  <script th:src="@{/static/js/jquery-2.1.3.min.js}"></script>
+</head>
+<body>
+
+<!-- Guacamole recording player -->
+<div id="player">
+  <!-- Player controls -->
+  <div class="controls">
+    <button id="play-pause">播放</button>
+    <input id="position-slider" type="range">
+    <span id="position">00:00</span>
+    <span>/</span>
+    <span id="duration">00:00</span>
+  </div>
+  <!-- Player display -->
+  <div id="display">
+    <div class="notification-container">
+      <div class="seek-notification">
+        <p>
+          <button id="cancel-seek">Cancel</button>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Guacamole JavaScript API -->
+
+<script type="text/javascript" th:src="@{/static/js/guacamole/all.main.js}"></script>
+<!-- -->
+<script type="text/javascript" th:src="@{/static/js/guacamole/playback.js}"></script>
+
+<script type="application/javascript">
+  var width= document.documentElement.clientWidth-100;
+  var height= document.documentElement.clientHeight-100;
+  $("#player").width(width);
+  $("#player").height(height);
+  function play() {
+    initExamplePlayer("media/"+"[[${path}]]");
+  }
+  play()
+</script>
+</body>
+</html>

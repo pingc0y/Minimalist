@@ -1,0 +1,191 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"605e99e2-1d81-4400-ac77-f3524e53faf1\" name=\"Default Changelist\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/Application.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthority/controller/MtxAuthorityController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthority/entity/MtxAuthority.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthority/mapper/MtxAuthorityMapper.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthority/mapper/xml/MtxAuthorityMapper.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthority/service/MtxAuthorityService.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthority/service/impl/MtxAuthorityServiceImpl.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthorityRoles/controller/MtxAuthorityRolesController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthorityRoles/entity/MtxAuthorityRoles.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthorityRoles/mapper/MtxAuthorityRolesMapper.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthorityRoles/mapper/xml/MtxAuthorityRolesMapper.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthorityRoles/service/MtxAuthorityRolesService.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthorityRoles/service/impl/MtxAuthorityRolesServiceImpl.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxColleges/controller/MtxCollegesController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxColleges/entity/MtxColleges.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxColleges/mapper/MtxCollegesMapper.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxColleges/mapper/xml/MtxCollegesMapper.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxColleges/service/MtxCollegesService.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxColleges/service/impl/MtxCollegesServiceImpl.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProfession/controller/MtxCollegesProfessionController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProfession/entity/MtxCollegesProfession.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProfession/mapper/MtxCollegesProfessionMapper.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProfession/mapper/xml/MtxCollegesProfessionMapper.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProfession/service/MtxCollegesProfessionService.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProfession/service/impl/MtxCollegesProfessionServiceImpl.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProject/controller/MtxCollegesProjectController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProject/entity/MtxCollegesProject.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProject/mapper/MtxCollegesProjectMapper.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProject/mapper/xml/MtxCollegesProjectMapper.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProject/service/MtxCollegesProjectService.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProject/service/impl/MtxCollegesProjectServiceImpl.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxDepartment/controller/MtxDepartmentController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxDepartment/entity/MtxDepartment.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxDepartment/mapper/MtxDepartmentMapper.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxDepartment/mapper/xml/MtxDepartmentMapper.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxDepartment/service/MtxDepartmentService.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxDepartment/service/impl/MtxDepartmentServiceImpl.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxDictionary/controller/MtxDictionaryController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxDictionary/entity/MtxDictionary.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxDictionary/mapper/MtxDictionaryMapper.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxDictionary/mapper/xml/MtxDictionaryMapper.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxDictionary/service/MtxDictionaryService.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxDictionary/service/impl/MtxDictionaryServiceImpl.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxProfession/controller/MtxProfessionController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxProfession/entity/MtxProfession.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxProfession/mapper/MtxProfessionMapper.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxProfession/mapper/xml/MtxProfessionMapper.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxProfession/service/MtxProfessionService.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxProfession/service/impl/MtxProfessionServiceImpl.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxStudent/controller/MtxStudentController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxStudent/entity/MtxStudent.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxStudent/mapper/MtxStudentMapper.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxStudent/mapper/xml/MtxStudentMapper.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxStudent/service/MtxStudentService.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxStudent/service/impl/MtxStudentServiceImpl.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/controller/MtxUserController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/entity/MtxUser.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/mapper/MtxUserMapper.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/mapper/xml/MtxUserMapper.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/service/MtxUserService.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/service/impl/MtxUserServiceImpl.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxUserStudent/controller/MtxUserStudentController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxUserStudent/entity/MtxUserStudent.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxUserStudent/mapper/MtxUserStudentMapper.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxUserStudent/mapper/xml/MtxUserStudentMapper.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxUserStudent/service/MtxUserStudentService.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/mtx/mtxUserStudent/service/impl/MtxUserStudentServiceImpl.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/compiler.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/compiler.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/encodings.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/encodings.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"localRepository\" value=\"D:\\lib_repo\\repository\" />\r\n        <option name=\"mavenHome\" value=\"D:\\IntelliJ IDEA 2020.2\\plugins\\maven\\lib\\maven3\" />\r\n        <option name=\"userSettingsFile\" value=\"D:\\apache-maven-3.6.3\\conf\\settings.xml\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n    <option name=\"importingSettings\">\r\n      <MavenImportingSettings>\r\n        <option name=\"jdkForImporter\" value=\"1.8\" />\r\n        <option name=\"vmOptionsForImporter\" value=\"-Xmx1024m\" />\r\n      </MavenImportingSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1lW1CxgkiTagUrbUBpdjSuoS4Fr\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\r\n    <property name=\"last_directory_selection\" value=\"$PROJECT_DIR$/src/main/java/com\" />\r\n    <property name=\"nodejs_interpreter_path.stuck_in_default_project\" value=\"undefined stuck path\" />\r\n    <property name=\"nodejs_npm_path_reset_for_default_project\" value=\"true\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Modules\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Application\">\r\n    <configuration name=\"Application\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.Application\" />\r\n      <module name=\"mtx-student-system\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"text\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"text\" />\r\n      <module name=\"mtx-student-system\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"ArquillianJUnit\" factoryName=\"\" nameIsGenerated=\"true\">\r\n      <option name=\"arquillianRunConfiguration\">\r\n        <value>\r\n          <option name=\"containerStateName\" value=\"\" />\r\n        </value>\r\n      </option>\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Application\" />\r\n        <item itemvalue=\"Application.text\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"605e99e2-1d81-4400-ac77-f3524e53faf1\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1607697911432</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1607697911432</updated>\r\n      <workItem from=\"1607697914667\" duration=\"1736000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"第一次\">\r\n      <created>1607698047022</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1607698047022</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"第一次\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"第一次\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"505\" y=\"131\" key=\"#Project_Structure\" timestamp=\"1607698322251\">\r\n      <screen x=\"0\" y=\"0\" width=\"2048\" height=\"1112\" />\r\n    </state>\r\n    <state x=\"505\" y=\"131\" key=\"#Project_Structure/0.0.2048.1112@0.0.2048.1112\" timestamp=\"1607698322251\" />\r\n    <state x=\"665\" y=\"479\" key=\"#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog\" timestamp=\"1607698794488\">\r\n      <screen x=\"0\" y=\"0\" width=\"2048\" height=\"1112\" />\r\n    </state>\r\n    <state x=\"665\" y=\"479\" key=\"#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.2048.1112@0.0.2048.1112\" timestamp=\"1607698794488\" />\r\n    <state x=\"623\" y=\"122\" key=\"CommitChangelistDialog2\" timestamp=\"1607698045846\">\r\n      <screen x=\"0\" y=\"0\" width=\"2048\" height=\"1112\" />\r\n    </state>\r\n    <state x=\"623\" y=\"122\" key=\"CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112\" timestamp=\"1607698045846\" />\r\n    <state width=\"2005\" height=\"385\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1607699487289\">\r\n      <screen x=\"0\" y=\"0\" width=\"2048\" height=\"1112\" />\r\n    </state>\r\n    <state width=\"2005\" height=\"385\" key=\"GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112\" timestamp=\"1607699487289\" />\r\n    <state width=\"2005\" height=\"385\" key=\"GridCell.Tab.0.center\" timestamp=\"1607699487289\">\r\n      <screen x=\"0\" y=\"0\" width=\"2048\" height=\"1112\" />\r\n    </state>\r\n    <state width=\"2005\" height=\"385\" key=\"GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112\" timestamp=\"1607699487289\" />\r\n    <state width=\"2005\" height=\"385\" key=\"GridCell.Tab.0.left\" timestamp=\"1607699487289\">\r\n      <screen x=\"0\" y=\"0\" width=\"2048\" height=\"1112\" />\r\n    </state>\r\n    <state width=\"2005\" height=\"385\" key=\"GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112\" timestamp=\"1607699487289\" />\r\n    <state width=\"2005\" height=\"385\" key=\"GridCell.Tab.0.right\" timestamp=\"1607699487289\">\r\n      <screen x=\"0\" y=\"0\" width=\"2048\" height=\"1112\" />\r\n    </state>\r\n    <state width=\"2005\" height=\"385\" key=\"GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112\" timestamp=\"1607699487289\" />\r\n    <state x=\"505\" y=\"131\" key=\"SettingsEditor\" timestamp=\"1607698162025\">\r\n      <screen x=\"0\" y=\"0\" width=\"2048\" height=\"1112\" />\r\n    </state>\r\n    <state x=\"505\" y=\"131\" key=\"SettingsEditor/0.0.2048.1112@0.0.2048.1112\" timestamp=\"1607698162025\" />\r\n    <state x=\"617\" y=\"289\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1607698050195\">\r\n      <screen x=\"0\" y=\"0\" width=\"2048\" height=\"1112\" />\r\n    </state>\r\n    <state x=\"617\" y=\"289\" key=\"Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112\" timestamp=\"1607698050195\" />\r\n    <state x=\"821\" y=\"334\" key=\"chooseDestDirectoryDialog\" timestamp=\"1607698817666\">\r\n      <screen x=\"0\" y=\"0\" width=\"2048\" height=\"1112\" />\r\n    </state>\r\n    <state x=\"821\" y=\"334\" key=\"chooseDestDirectoryDialog/0.0.2048.1112@0.0.2048.1112\" timestamp=\"1607698817666\" />\r\n    <state x=\"1008\" y=\"203\" width=\"600\" height=\"594\" key=\"find.popup\" timestamp=\"1607699550019\">\r\n      <screen x=\"0\" y=\"0\" width=\"2048\" height=\"1112\" />\r\n    </state>\r\n    <state x=\"1008\" y=\"203\" width=\"600\" height=\"594\" key=\"find.popup/0.0.2048.1112@0.0.2048.1112\" timestamp=\"1607699550019\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 583899ed74b88d83d72d4dd592bd6576d9eb3865)
++++ .idea/workspace.xml	(date 1607750864977)
+@@ -4,80 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Application.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthority/controller/MtxAuthorityController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthority/entity/MtxAuthority.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthority/mapper/MtxAuthorityMapper.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthority/mapper/xml/MtxAuthorityMapper.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthority/service/MtxAuthorityService.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthority/service/impl/MtxAuthorityServiceImpl.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthorityRoles/controller/MtxAuthorityRolesController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthorityRoles/entity/MtxAuthorityRoles.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthorityRoles/mapper/MtxAuthorityRolesMapper.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthorityRoles/mapper/xml/MtxAuthorityRolesMapper.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthorityRoles/service/MtxAuthorityRolesService.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxAuthorityRoles/service/impl/MtxAuthorityRolesServiceImpl.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxColleges/controller/MtxCollegesController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxColleges/entity/MtxColleges.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxColleges/mapper/MtxCollegesMapper.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxColleges/mapper/xml/MtxCollegesMapper.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxColleges/service/MtxCollegesService.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxColleges/service/impl/MtxCollegesServiceImpl.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProfession/controller/MtxCollegesProfessionController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProfession/entity/MtxCollegesProfession.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProfession/mapper/MtxCollegesProfessionMapper.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProfession/mapper/xml/MtxCollegesProfessionMapper.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProfession/service/MtxCollegesProfessionService.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProfession/service/impl/MtxCollegesProfessionServiceImpl.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProject/controller/MtxCollegesProjectController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProject/entity/MtxCollegesProject.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProject/mapper/MtxCollegesProjectMapper.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProject/mapper/xml/MtxCollegesProjectMapper.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProject/service/MtxCollegesProjectService.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxCollegesProject/service/impl/MtxCollegesProjectServiceImpl.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxDepartment/controller/MtxDepartmentController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxDepartment/entity/MtxDepartment.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxDepartment/mapper/MtxDepartmentMapper.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxDepartment/mapper/xml/MtxDepartmentMapper.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxDepartment/service/MtxDepartmentService.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxDepartment/service/impl/MtxDepartmentServiceImpl.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxDictionary/controller/MtxDictionaryController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxDictionary/entity/MtxDictionary.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxDictionary/mapper/MtxDictionaryMapper.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxDictionary/mapper/xml/MtxDictionaryMapper.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxDictionary/service/MtxDictionaryService.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxDictionary/service/impl/MtxDictionaryServiceImpl.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxProfession/controller/MtxProfessionController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxProfession/entity/MtxProfession.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxProfession/mapper/MtxProfessionMapper.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxProfession/mapper/xml/MtxProfessionMapper.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxProfession/service/MtxProfessionService.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxProfession/service/impl/MtxProfessionServiceImpl.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxStudent/controller/MtxStudentController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxStudent/entity/MtxStudent.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxStudent/mapper/MtxStudentMapper.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxStudent/mapper/xml/MtxStudentMapper.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxStudent/service/MtxStudentService.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxStudent/service/impl/MtxStudentServiceImpl.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/controller/MtxUserController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/entity/MtxUser.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/mapper/MtxUserMapper.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/mapper/xml/MtxUserMapper.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/service/MtxUserService.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxUser/service/impl/MtxUserServiceImpl.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxUserStudent/controller/MtxUserStudentController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxUserStudent/entity/MtxUserStudent.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxUserStudent/mapper/MtxUserStudentMapper.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxUserStudent/mapper/xml/MtxUserStudentMapper.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxUserStudent/service/MtxUserStudentService.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtx/mtxUserStudent/service/impl/MtxUserStudentServiceImpl.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+-    </list>
++    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -148,17 +75,6 @@
+     <configuration name="text" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="text" />
+       <module name="mtx-student-system" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+-      <option name="arquillianRunConfiguration">
+-        <value>
+-          <option name="containerStateName" value="" />
+-        </value>
+-      </option>
+-      <option name="TEST_OBJECT" value="class" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+@@ -178,7 +94,7 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1607697911432</updated>
+-      <workItem from="1607697914667" duration="1736000" />
++      <workItem from="1607697914667" duration="1955000" />
+     </task>
+     <task id="LOCAL-00001" summary="第一次">
+       <created>1607698047022</created>
+@@ -187,7 +103,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1607698047022</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="初始化">
++      <created>1607699711804</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1607699711804</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -196,7 +119,8 @@
+   <component name="VcsManagerConfiguration">
+     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+     <MESSAGE value="第一次" />
+-    <option name="LAST_COMMIT_MESSAGE" value="第一次" />
++    <MESSAGE value="初始化" />
++    <option name="LAST_COMMIT_MESSAGE" value="初始化" />
+   </component>
+   <component name="WindowStateProjectService">
+     <state x="505" y="131" key="#Project_Structure" timestamp="1607698322251">
+@@ -207,34 +131,34 @@
+       <screen x="0" y="0" width="2048" height="1112" />
+     </state>
+     <state x="665" y="479" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1607698794488" />
+-    <state x="623" y="122" key="CommitChangelistDialog2" timestamp="1607698045846">
++    <state x="623" y="122" key="CommitChangelistDialog2" timestamp="1607699710416">
+       <screen x="0" y="0" width="2048" height="1112" />
+     </state>
+-    <state x="623" y="122" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1607698045846" />
+-    <state width="2005" height="385" key="GridCell.Tab.0.bottom" timestamp="1607699487289">
++    <state x="623" y="122" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1607699710416" />
++    <state width="2005" height="379" key="GridCell.Tab.0.bottom" timestamp="1607699872477">
+       <screen x="0" y="0" width="2048" height="1112" />
+     </state>
+-    <state width="2005" height="385" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1607699487289" />
+-    <state width="2005" height="385" key="GridCell.Tab.0.center" timestamp="1607699487289">
++    <state width="2005" height="379" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1607699872477" />
++    <state width="2005" height="379" key="GridCell.Tab.0.center" timestamp="1607699872477">
+       <screen x="0" y="0" width="2048" height="1112" />
+     </state>
+-    <state width="2005" height="385" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1607699487289" />
+-    <state width="2005" height="385" key="GridCell.Tab.0.left" timestamp="1607699487289">
++    <state width="2005" height="379" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1607699872477" />
++    <state width="2005" height="379" key="GridCell.Tab.0.left" timestamp="1607699872477">
+       <screen x="0" y="0" width="2048" height="1112" />
+     </state>
+-    <state width="2005" height="385" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1607699487289" />
+-    <state width="2005" height="385" key="GridCell.Tab.0.right" timestamp="1607699487289">
++    <state width="2005" height="379" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1607699872477" />
++    <state width="2005" height="379" key="GridCell.Tab.0.right" timestamp="1607699872477">
+       <screen x="0" y="0" width="2048" height="1112" />
+     </state>
+-    <state width="2005" height="385" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1607699487289" />
++    <state width="2005" height="379" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1607699872477" />
+     <state x="505" y="131" key="SettingsEditor" timestamp="1607698162025">
+       <screen x="0" y="0" width="2048" height="1112" />
+     </state>
+     <state x="505" y="131" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1607698162025" />
+-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1607698050195">
++    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1607699714890">
+       <screen x="0" y="0" width="2048" height="1112" />
+     </state>
+-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1607698050195" />
++    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1607699714890" />
+     <state x="821" y="334" key="chooseDestDirectoryDialog" timestamp="1607698817666">
+       <screen x="0" y="0" width="2048" height="1112" />
+     </state>

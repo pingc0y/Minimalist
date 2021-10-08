@@ -12851,14 +12851,14 @@ Guacamole.HTTPTunnel = function(tunnelURL,id,width,height, crossDomain, extraTun
         connect_xmlhttprequest.onreadystatechange = function() {
             if(connect_xmlhttprequest.status == 504 && connect_xmlhttprequest.readyState == 4) {
                 demoErrElem = SnackBar({
-                    message: "服务器错误，未连接到guacd请联系管理员",
+                    message: "连接超时",
                     status: "danger",
                     timeout: false
                 })
             }
-            if(connect_xmlhttprequest.status == 500) {
+            if(connect_xmlhttprequest.status == 500 && connect_xmlhttprequest.readyState == 4) {
                 demoErrElem = SnackBar({
-                    message: "连接超时，连接不到远程桌面",
+                    message: "服务器错误，未连接到guacd请联系管理员",
                     status: "danger",
                     timeout: false
                 })

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>资产列表</title>
+		<link rel="stylesheet" th:href="@{/static/component/pear/css/pear.css}" />
+		<style>
+
+		</style>
+	</head>
+	<body class="pear-container">
+
+	<div class="layui-card">
+		<div class="layui-card-body">
+			<form class="layui-form" action="javascript:void(0);">
+				<div class="layui-form-item">
+					<!--主机名-->
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">主机名</label>
+						<div class="layui-input-inline">
+							<input type="text" name="hostname" placeholder="" class="layui-input">
+						</div>
+					</div>
+					<!--ip/域名-->
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">ip/域名</label>
+						<div class="layui-input-inline">
+							<input type="text" name="address" placeholder="" class="layui-input">
+						</div>
+					</div>
+					<!--协议-->
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">协议</label>
+						<div class="layui-input-inline">
+							<select name="protocol" lay-verify="">
+								<option value="">请选择</option>
+								<option value="rdp">rdp</option>
+								<option value="ssh">ssh</option>
+								<option value="vnc">vnc</option>
+								<option value="telnet">telnet</option>
+							</select>
+						</div>
+					</div>
+					<!--端口-->
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">端口</label>
+						<div class="layui-input-inline">
+							<input type="text" name="port" placeholder="" class="layui-input">
+						</div>
+					</div>
+					<!--激活-->
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">激活</label>
+						<div class="layui-input-inline">
+							<select name="activate" lay-verify="">
+								<option value="">请选择</option>
+								<option value="0">是</option>
+								<option value="1">否</option>
+							</select>
+						</div>
+					</div>
+					<div class="layui-form-item layui-inline">
+						<button class="pear-btn pear-btn-md pear-btn-primary" lay-submit lay-filter="user-query">
+							<i class="layui-icon layui-icon-search"></i>
+							查询
+						</button>
+						<button type="reset" class="pear-btn pear-btn-md">
+							<i class="layui-icon layui-icon-refresh"></i>
+							重置
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="layui-card">
+		<div class="layui-card-body">
+			<table id="assets-table" lay-filter="assets-table"></table>
+		</div>
+	</div>
+
+	<script type="text/html" id="user-toolbar">
+		<button class="pear-btn pear-btn-primary pear-btn-md" lay-event="add">
+			<i class="layui-icon layui-icon-add-1"></i>
+			新增
+		</button>
+		<button class="pear-btn pear-btn-danger pear-btn-md" lay-event="batchRemove">
+			<i class="layui-icon layui-icon-delete"></i>
+			删除
+		</button>
+		<button class="pear-btn pear-btn-warming pear-btn-md" lay-event="batchDisable">
+			<i class="layui-icon layui-icon-close-fill"></i>
+			禁用
+		</button>
+		<button class="pear-btn pear-btn-success pear-btn-md" lay-event="batchActivate">
+			<i class="layui-icon layui-icon-ok-circle"></i>
+			激活
+		</button>
+
+	</script>
+	<script type="text/html" id="user-bar">
+		<button  class="pear-btn pear-btn-primary pear-btn-sm" lay-event="edit"><i class="layui-icon layui-icon-edit"></i></button>
+		{{# if (d.activate == 0) { }}
+		<button  class="pear-btn pear-btn-warming pear-btn-sm" lay-event="disable"><i class="layui-icon layui-icon-close-fill"></i></button>
+		{{# }else { }}
+		<button  class="pear-btn pear-btn-success pear-btn-sm" lay-event="activate"><i class="layui-icon layui-icon-ok-circle"></i></button>
+		{{#   }}}
+		<button  class="pear-btn pear-btn-danger pear-btn-sm" lay-event="remove"><i class="layui-icon layui-icon-delete"></i></button>
+	</script>
+	<script type="text/html" id="createTime">
+		{{layui.util.toDateString(d.cartetime, 'yyyy-MM-dd')}}
+	</script>
+
+	<script type="text/html" id="activate">
+		{{# if (d.activate == 0) { }}
+		已激活
+		{{# }else { }}
+		已禁用
+		{{#   }}}
+	</script>
+	<script type="text/html" id="status">
+		{{# if (d.status == 0) { }}
+		连接畅通
+		{{# }else { }}
+		不可连接
+		{{#   }}}
+	</script>
+
+
+	<script th:src="@{/static/component/pear/layui/layui.js}"></script>
+	<script th:src="@{/static/component/pear/pear.js}"></script>
+		<script>
+			layui.use(['table', 'form', 'jquery','laydate'], function() {
+				let table = layui.table;
+				let form = layui.form;
+				let laydate = layui.laydate;
+				let $ = layui.jquery;
+
+				let MODULE_PATH = "operate/";
+
+
+
+				let cols = [
+					[{
+						type: 'checkbox',
+						fixed: 'left'
+					},
+						{
+							title: '主机名',
+							field: 'hostname',
+							align: 'center',
+							// width: 200,
+						},
+						{
+						title: 'IP/域名',
+						field: 'address',
+						align: 'center',
+						// width: 150,
+						//fixed: 'left'
+						},
+						{
+							title: '协议',
+							field: 'protocol',
+							align: 'center',
+							// width: 150,
+							//fixed: 'left'
+						},
+						{
+							title: '端口',
+							field: 'port',
+							align: 'center',
+							// width: 100,
+							//fixed: 'left'
+						}
+						,
+						{
+						title: '备注',
+						field: 'remark',
+						align: 'center',
+						// width: 100,
+						//fixed: 'left'
+					}
+					,
+						{
+						title: '连接状态',
+						field: 'status',
+						align: 'center',
+						// width: 100,
+						templet: '#status'
+						//fixed: 'left'
+					},
+						{
+							title: '激活',
+							field: 'activate',
+							align: 'center',
+							// width: 100,
+							templet: '#activate'
+							//fixed: 'left'
+						},
+						{
+							title: '创建时间',
+							field: 'createTime',
+							align: 'center',
+							// width: 100,
+							templet: '#createTime'
+							//fixed: 'left'
+						},
+						{
+							title: '操作',
+							toolbar: '#user-bar',
+							align: 'center',
+							width: 200,
+							fixed: 'right'
+						}
+					]
+				]
+
+				laydate.render({
+					elem: '#test16',
+					type: 'datetime',
+					range: '到',
+					format: 'yyyy-MM-dd HH:mm:ss',
+					trigger: 'click'
+				});
+
+				table.render({
+					elem: '#assets-table',
+					url: '/assets/selectAll',
+					page: true,
+					cols: cols,
+					skin: 'line',
+					toolbar: '#user-toolbar',
+					defaultToolbar: [{
+						layEvent: 'refresh',
+						icon: 'layui-icon-refresh',
+					}, 'filter', 'print', 'exports']
+				});
+
+				//监听列表操作
+				table.on('tool(assets-table)', function(obj) {
+					if (obj.event === 'remove') {
+						window.remove(obj);
+					} else if (obj.event === 'edit') {
+						window.edit(obj);
+					} else if (obj.event === 'disable') {
+						window.disable(obj);
+					} else if (obj.event === 'activate') {
+						window.activate(obj);
+					}
+				});
+
+				//监听群体操作
+				table.on('toolbar(assets-table)', function(obj) {
+					if (obj.event === 'add') {
+						window.add();
+					}  else if (obj.event === 'batchRemove') {
+						window.batchRemove(obj);
+					} else if (obj.event === 'batchDisable') {
+						window.batchDisable(obj);
+					}else if (obj.event === 'batchActivate') {
+						window.batchActivate(obj);
+					}else if (obj.event === 'refresh') {
+						window.refresh();
+					}
+				});
+
+
+				form.on('submit(user-query)', function(data) {
+					table.reload('assets-table', {
+						where: data.field
+					})
+					return false;
+				});
+
+				form.on('switch(user-enable)', function(obj) {
+					layer.tips(this.value + ' ' + this.name + ':' + obj.elem.checked, obj.othis);
+				});
+
+
+				//新增
+				window.add = function() {
+					layer.open({
+						type: 2,
+						title: '新增',
+						shade: 0.1,
+						area: ['710px','300px'],
+						content: MODULE_PATH + 'add'
+					});
+				}
+				//修改
+				window.edit = function(obj) {
+					layer.open({
+						type: 2,
+						title: '修改',
+						shade: 0.1,
+						area:['710px','300px'],
+						content: MODULE_PATH + 'drawer/'+obj.data['id']
+					});
+				}
+				//删除
+				window.remove = function(obj) {
+					layer.confirm('确定要删除该用户', {
+						icon: 3,
+						title: '提示'
+					}, function(index) {
+						layer.close(index);
+						let loading = layer.load();
+						$.ajax({
+							url:  "/assets/removeById/" + obj.data['id'],
+							dataType: 'json',
+							type: 'delete',
+							success: function(result) {
+								layer.close(loading);
+								if (result.code == 0) {
+									layer.msg(result.msg, {
+										icon: 1,
+										time: 1000
+									}, function() {
+										table.reload('assets-table');
+									});
+								} else {
+									layer.msg(result.msg, {
+										icon: 2,
+										time: 1000
+									});
+								}
+							}
+						})
+					});
+				}
+				//禁用
+				window.disable = function(obj) {
+					layer.confirm('确定要禁用该用户', {
+						icon: 3,
+						title: '提示'
+					}, function(index) {
+						layer.close(index);
+						let loading = layer.load();
+						$.ajax({
+							url:   "/assets/disabled/" + obj.data['id'],
+							dataType: 'json',
+							type: 'delete',
+							success: function(result) {
+								layer.close(loading);
+								if (result.code == 0) {
+									layer.msg(result.msg, {
+										icon: 1,
+										time: 1000
+									}, function() {
+										table.reload('assets-table');
+									});
+								} else {
+									layer.msg(result.msg, {
+										icon: 2,
+										time: 1000
+
+									});
+								}
+							}
+						})
+					});
+				}
+				//激活
+				window.activate = function(obj) {
+					layer.confirm('确定要激活该用户', {
+						icon: 3,
+						title: '提示'
+					}, function(index) {
+						layer.close(index);
+						let loading = layer.load();
+						$.ajax({
+							url:  "/assets/activate/" + obj.data['id'],
+							dataType: 'json',
+							type: 'delete',
+							success: function(result) {
+								layer.close(loading);
+								if (result.code == 0) {
+									layer.msg(result.msg, {
+										icon: 1,
+										time: 1000
+									}, function() {
+										table.reload('assets-table');
+									});
+								} else {
+									layer.msg(result.msg, {
+										icon: 2,
+										time: 1000
+
+									});
+								}
+							}
+						})
+					});
+				}
+				//删除
+				window.batchRemove = function(obj) {
+					let data = table.checkStatus(obj.config.id).data;
+					if (data.length === 0) {
+						layer.msg("未选中数据", {
+							icon: 3,
+							time: 1000
+						});
+						return false;
+					}
+					let ids = "";
+					for (let i = 0; i < data.length; i++) {
+						ids += data[i].id + ",";
+					}
+					ids = ids.substr(0, ids.length - 1);
+					layer.confirm('确定要删除这些用户', {
+						icon: 3,
+						title: '提示'
+					}, function(index) {
+						layer.close(index);
+						let loading = layer.load();
+						$.ajax({
+							url:  "/assets/removeById/" + ids,
+							dataType: 'json',
+							type: 'delete',
+							success: function(result) {
+								layer.close(loading);
+								if (result.code == 0) {
+									layer.msg(result.msg, {
+										icon: 1,
+										time: 1000
+									}, function() {
+										table.reload('assets-table');
+									});
+								} else {
+									layer.msg(result.msg, {
+										icon: 2,
+										time: 1000
+									});
+								}
+							}
+						})
+					});
+				}
+				//禁用
+				window.batchDisable = function(obj) {
+					let data = table.checkStatus(obj.config.id).data;
+					if (data.length === 0) {
+						layer.msg("未选中数据", {
+							icon: 3,
+							time: 1000
+						});
+						return false;
+					}
+					let ids = "";
+					for (let i = 0; i < data.length; i++) {
+						ids += data[i].id + ",";
+					}
+					ids = ids.substr(0, ids.length - 1);
+					layer.confirm('确定要禁用这些用户', {
+						icon: 3,
+						title: '提示'
+					}, function(index) {
+						layer.close(index);
+						let loading = layer.load();
+						$.ajax({
+							url: "/assets/disabled/" + ids,
+							dataType: 'json',
+							type: 'delete',
+							success: function(result) {
+								layer.close(loading);
+								if (result.code == 0) {
+									layer.msg(result.msg, {
+										icon: 1,
+										time: 1000
+									}, function() {
+										table.reload('assets-table');
+									});
+								} else {
+									layer.msg(result.msg, {
+										icon: 2,
+										time: 1000
+									});
+								}
+							}
+						})
+					});
+				}
+
+				//激活
+				window.batchActivate = function(obj) {
+					let data = table.checkStatus(obj.config.id).data;
+					if (data.length === 0) {
+						layer.msg("未选中数据", {
+							icon: 3,
+							time: 1000
+						});
+						return false;
+					}
+					let ids = "";
+					for (let i = 0; i < data.length; i++) {
+						ids += data[i].id + ",";
+					}
+					ids = ids.substr(0, ids.length - 1);
+					layer.confirm('确定要激活这些用户', {
+						icon: 3,
+						title: '提示'
+					}, function(index) {
+						layer.close(index);
+						let loading = layer.load();
+						$.ajax({
+							url:  "/assets/activate/" + ids,
+							dataType: 'json',
+							type: 'delete',
+							success: function(result) {
+								layer.close(loading);
+								if (result.code == 0) {
+									layer.msg(result.msg, {
+										icon: 1,
+										time: 1000
+									}, function() {
+										table.reload('assets-table');
+									});
+								} else {
+									layer.msg(result.msg, {
+										icon: 2,
+										time: 1000
+									});
+								}
+							}
+						})
+					});
+				}
+
+				window.refresh = function(
+
+						param) {
+					table.reload('assets-table');
+				}
+			})
+		</script>
+	</body>
+</html>

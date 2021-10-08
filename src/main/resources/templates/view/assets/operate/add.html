@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>新增</title>
+    <link rel="stylesheet" th:href="@{/static/component/pear/css/pear.css}" />
+
+    <script th:src="@{/static/component/pear/layui/layui.js}"></script>
+    <script th:src="@{/static/component/pear/pear.js}"></script>
+    <style>
+        .xx{
+            position: absolute;
+            width:700px;
+        }
+        .xx2{
+            position: absolute;
+            left:700px;
+        }
+        .layui-form-label{
+            width: 99px;
+        }
+        @media screen and (max-width: 1400px) {
+            .xx{
+                position: absolute;
+                width:700px;
+            }
+            .xx2{
+                position: absolute;
+                left:665px;
+            }
+        }
+    </style>
+
+</head>
+<body class="pear-container">
+
+<!-- 主体部分 -->
+<div class="layui-form xx"  action="javascript:void(0);" >
+    <div class="content">
+        <form class="layui-form" action="javascript:void(0);" onsubmit="return false">
+            <div class="left">
+                <div class="layui-form-item layui-inline">
+                    <label class="layui-form-label">主机名</label>
+                    <div class="layui-input-inline">
+                        <input type="text"  name="hostname"   autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <label class="layui-form-label">协议</label>
+                    <div class="layui-input-inline">
+                        <select name="protocol" lay-verify="">
+                            <option value="" >请选择</option>
+                            <option value="rdp" >rdp</option>
+                            <option value="ssh" >ssh</option>
+                            <option value="vpn" >vnc</option>
+                            <option value="telnet" >telnet</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <label class="layui-form-label">IP/域名</label>
+                    <div class="layui-input-inline">
+                        <input type="text"  name="address" autocomplete="off" class="layui-input" >
+                    </div>
+                </div>
+
+                <div class="layui-form-item layui-inline"></label>
+                    <label class="layui-form-label">端口</label>
+                    <div class="layui-input-inline">
+                        <input type="text"  name="port"  autocomplete="off" class="layui-input" >
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <label class="layui-form-label">备注</label>
+                    <div class="layui-input-inline">
+                        <div class="layui-col-md12">
+                            <textarea name="remark"  placeholder="请输入" class="layui-textarea"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layui-form-item layui-inline">
+                    <label class="layui-form-label">激活</label>
+                    <div class="layui-input-inline">
+                        <input type="checkbox"  name="activate" lay-skin="switch" value="0" lay-text="ON|OFF" checked="" >
+                        <div class="layui-unselect layui-form-switch layui-form-onswitch" lay-skin="_switch"><em>ON</em><i></i></div>
+                    </div>
+
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit="" lay-filter="ordinarysubmit">提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+</div>
+</div>
+
+<script>
+    layui.use(['form', 'jquery','layer','laydate'], function(){
+        let form = layui.form;
+        let $ = layui.jquery;
+        let layer = layui.layer;
+        let laydate = layui.laydate;
+
+        laydate.render({
+            elem: '#time' //指定元素
+        });
+
+        form.on('submit(ordinarysubmit)',function (data) {
+            $.ajax({
+                url: '/assets/add',
+                dataType: 'json',
+                data:JSON.stringify(data.field),
+                contentType:'application/json',
+                type: 'post',
+                success:function(data){
+                    if(data.code != 0){
+                        layer.msg(data.msg,{icon: 5,time: 2000});//失败的表情
+                    }else{
+                        layer.msg(data.msg, {
+                            icon: 6,//成功的表情
+                            time: 2000 //1秒关闭（如果不配置，默认是3秒）
+                        }, function(){
+                            parent.layer.close(parent.layer.getFrameIndex(window.name));//关闭当前页
+                            parent.layui.table.reload("assets-table");
+                        });
+
+                    }
+
+                }
+            })
+        })
+
+    });
+</script>
+</body>
+</html>
