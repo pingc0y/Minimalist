@@ -13,6 +13,7 @@ import com.minimalist.assetsUser.mapper.AssetsUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,5 +39,13 @@ public class AssetsAuthorizationServiceImpl extends ServiceImpl<AssetsAuthorizat
         map.put("data",page.getRecords());
         map.put("count",(int)page.getTotal());
         return map;
+    }
+
+    @Override
+    public void detectionUpdate() {
+        QueryWrapper wrapper = new QueryWrapper();
+        wrapper.gt("end_time",new Date());
+        wrapper.lt("start_time",new Date());
+         assetsAuthorizationMapper.detectionUpdate(new Date());
     }
 }

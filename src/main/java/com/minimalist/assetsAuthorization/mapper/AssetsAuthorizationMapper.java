@@ -17,4 +17,7 @@ import java.util.Map;
 
 public interface AssetsAuthorizationMapper extends BaseMapper<AssetsAuthorization> {
     IPage<AssetsAuthorization> selectByPgEw(Page<?> page, @Param(Constants.WRAPPER) Wrapper ew);
+
+    @Select("update assets_authorization set activate = 1  where activate = 0 and end_time < #{time} or start_time > #{time}")
+    Integer detectionUpdate(@Param("time") Object endTime);
 }

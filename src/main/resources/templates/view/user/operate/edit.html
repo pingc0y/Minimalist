@@ -5,20 +5,26 @@
     <title>Title</title>
     <link rel="stylesheet" th:href="@{/static/component/pear/css/pear.css}" />
 </head>
+<style>
+    .xxo{
+        color:#FF0000;
+        font-size:18px;
+    }
+</style>
 <body>
 <form class="layui-form" action="javascript:void(0);">
     <div class="mainBox">
         <div class="main-container">
             <div class="main-container">
-                <input type="text" name="id" th:value="${user.id}" lay-verify="title" autocomplete="off" placeholder="Id" class="layui-input" style="display: none">
+                <input type="text" name="id" th:value="${user.id}"  autocomplete="off" placeholder="Id" class="layui-input" style="display: none">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">名称</label>
+                    <label class="layui-form-label"><span class="xxo">*</span>名称</label>
                     <div class="layui-input-block">
-                        <input type="text"  name="name" th:value="${user.name}" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                        <input type="text"  name="name" lay-verify="required"  th:value="${user.name}"  autocomplete="off" placeholder="请输入" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">角色</label>
+                    <label class="layui-form-label"><span class="xxo">*</span>角色</label>
                     <div class="layui-input-block">
                         <input type="radio" name="roles" value="1" title="系统管理员" th:if="${user.roles}==1" checked>
                         <input type="radio" name="roles" value="1" title="系统管理员" th:if="${user.roles}==2">
@@ -29,16 +35,16 @@
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">账号</label>
+                    <label class="layui-form-label"><span class="xxo">*</span>账号</label>
                     <div class="layui-input-block">
-                        <input type="text" name="username" th:value="${user.username}" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                        <input type="text" name="username" lay-verify="required"  th:value="${user.username}"  autocomplete="off" placeholder="请输入" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">密码</label>
+                    <label class="layui-form-label"><span class="xxo">*</span>密码</label>
                     <div class="layui-input-block">
-                        <input type="text"  name="password" th:value="${user.password}" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                        <input type="text"  name="password" lay-verify="required"  th:value="${user.password}"  autocomplete="off" placeholder="请输入" class="layui-input">
                     </div>
                 </div>
 

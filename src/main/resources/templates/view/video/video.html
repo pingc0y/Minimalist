@@ -35,13 +35,13 @@
 					<div class="layui-form-item layui-inline">
 						<label class="layui-form-label">开始时间</label>
 						<div class="layui-input-inline">
-							<input type="text" name="createTime"  id="createTime" class="layui-input"  placeholder="yyyy-MM-dd HH:mm:ss">
+							<input type="text" name="createTime"  id="createTime" class="layui-input"  >
 						</div>
 					</div>
 					<div class="layui-form-item layui-inline">
 						<label class="layui-form-label">结束时间</label>
 						<div class="layui-input-inline">
-							<input type="text" name="updateTime"  id="updateTime" class="layui-input"  placeholder="yyyy-MM-dd HH:mm:ss">
+							<input type="text" name="updateTime"  id="updateTime" class="layui-input"  >
 						</div>
 					</div>
 					<div class="layui-form-item layui-inline">
@@ -66,7 +66,7 @@
 
 	</script>
 	<script type="text/html" id="user-bar">
-		<button  class="pear-btn pear-btn-primary pear-btn-sm" lay-event="edit"><i class="layui-icon layui-icon-link"></i></button>
+		<button  class="pear-btn pear-btn-primary pear-btn-sm" lay-event="edit"><i class="layui-icon layui-icon-triangle-r"></i></button>
 	</script>
 
 	<script th:src="@{/static/component/pear/layui/layui.js}"></script>
@@ -89,10 +89,7 @@
 				});
 
 				let cols = [
-					[{
-						type: 'checkbox',
-						fixed: 'left'
-					},
+					[
 						{
 							title: '用户名',
 							field: 'userName',
@@ -137,13 +134,7 @@
 					]
 				]
 
-				laydate.render({
-					elem: '#test16',
-					type: 'datetime',
-					range: '到',
-					format: 'yyyy-MM-dd HH:mm:ss',
-					trigger: 'click'
-				});
+
 
 				table.render({
 					elem: '#assets-table',

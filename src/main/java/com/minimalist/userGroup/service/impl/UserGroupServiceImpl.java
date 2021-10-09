@@ -29,7 +29,7 @@ public class UserGroupServiceImpl extends ServiceImpl<UserGroupMapper, UserGroup
     UserGroupMapper userGroupMapper;
     @Override
     public Map<String, Object> select(int from, int size, Map<String, String> conditionMap) {
-        Page<User> page = new Page<User>(from,size);
+        Page<UserGroup> page = new Page<UserGroup>(from,size);
         QueryWrapper wrapper = new QueryWrapper();
         wrapper.orderByDesc("creation_time");
         for (String key : conditionMap.keySet()) {
@@ -38,9 +38,13 @@ public class UserGroupServiceImpl extends ServiceImpl<UserGroupMapper, UserGroup
                 wrapper.like(key, value);
             }
         }
-        IPage<UserGroup> userIPage = userGroupMapper.selectByPgEw(page, wrapper);
+        userGroupMapper.selectByPgEw(page, wrapper);
         Map<String,Object> map = new HashMap<>();
-        map.put("data",page.getRecords());
+        List<UserGroup> records = page.getRecords();
+        for (UserGroup record : records) {
+            record.setUserNum(record.getUserId().split(",").length);
+        }
+        map.put("data",records);
         map.put("count",(int)page.getTotal());
         return map;
     }
@@ -52,7 +56,7 @@ public class UserGroupServiceImpl extends ServiceImpl<UserGroupMapper, UserGroup
         List list = userGroupMapper.selectList(wrapper);
         Map<String,Object> map = new HashMap<>();
         map.put("data",list);
-        map.put("count",(int)list.size());
+        map.put("count",list.size());
         return map;
     }
 }

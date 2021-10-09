@@ -1,6 +1,7 @@
 package com.minimalist.userGroup.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,6 +23,9 @@ public class UserGroup implements Serializable {
     private String id;
     private String name;
     private String userId;
+    @TableField(exist = false)
+    private Integer userNum;
+
     private Date creationTime;
 
 

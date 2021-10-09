@@ -39,14 +39,22 @@ public class AssetsAuthorizationController {
             AssetsAuthorization assetsAuthorization = new AssetsAuthorization();
             assetsAuthorization.setId(map.get("id"));
             assetsAuthorization.setName(map.get("name"));
-            assetsAuthorization.setUserId(map.get("userId").toString().replace("\"",""));
-            assetsAuthorization.setAssetsId(map.get("assetsId").toString().replace("\"",""));
-            assetsAuthorization.setAssetsUserId(map.get("assetsUserId").toString().replace("\"",""));
-            assetsAuthorization.setActivate(Integer.parseInt(map.get("activate")));
-            assetsAuthorization.setUserGroupId(map.get("userGroupId").toString().replace("\"",""));
-            assetsAuthorization.setStartTime(simpleDateFormat.parse(map.get("startTime")));
+            if(map.get("userId")!=null && map.get("userId").length() >1){
+                assetsAuthorization.setUserId(map.get("userId").replace("\"",""));
+            }
+            assetsAuthorization.setAssetsId(map.get("assetsId").replace("\"",""));
+            assetsAuthorization.setAssetsUserId(map.get("assetsUserId").replace("\"",""));
+            if(map.get("activate")!=null && map.get("activate").length() !=0) {
+                assetsAuthorization.setActivate(Integer.parseInt(map.get("activate")));
+            } else {
+                assetsAuthorization.setActivate(1);
+            }
+            if(map.get("userGroupId")!=null && map.get("userGroupId").length() >1) {
+                assetsAuthorization.setUserGroupId(map.get("userGroupId").replace("\"", ""));
+            }            assetsAuthorization.setStartTime(simpleDateFormat.parse(map.get("startTime")));
             assetsAuthorization.setEndTime(simpleDateFormat.parse(map.get("endTime")));
             boolean b = assetsAuthorizationService.updateById(assetsAuthorization);
+            assetsAuthorizationService.detectionUpdate();
             return b ? ResultUtil.success() : ResultUtil.error(1, "修改失败");
         }catch (Exception e){
             e.printStackTrace();
@@ -61,14 +69,23 @@ public class AssetsAuthorizationController {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
             AssetsAuthorization assetsAuthorization = new AssetsAuthorization();
             assetsAuthorization.setName(map.get("name"));
-            assetsAuthorization.setUserId(map.get("userId").toString().replace("\"",""));
-            assetsAuthorization.setAssetsId(map.get("assetsId").toString().replace("\"",""));
-            assetsAuthorization.setAssetsUserId(map.get("assetsUserId").toString().replace("\"",""));
-            assetsAuthorization.setActivate(Integer.parseInt(map.get("activate")));
-            assetsAuthorization.setUserGroupId(map.get("userGroupId").toString().replace("\"",""));
+            if(map.get("userId")!=null && map.get("userId").length() >1){
+                assetsAuthorization.setUserId(map.get("userId").replace("\"",""));
+            }
+            assetsAuthorization.setAssetsId(map.get("assetsId").replace("\"",""));
+            assetsAuthorization.setAssetsUserId(map.get("assetsUserId").replace("\"",""));
+            if(map.get("activate")!=null && map.get("activate").length() !=0) {
+                assetsAuthorization.setActivate(Integer.parseInt(map.get("activate")));
+            } else {
+                assetsAuthorization.setActivate(1);
+                }
+            if(map.get("userGroupId")!=null && map.get("userGroupId").length() >1) {
+                assetsAuthorization.setUserGroupId(map.get("userGroupId").replace("\"", ""));
+            }
             assetsAuthorization.setStartTime(simpleDateFormat.parse(map.get("startTime")));
             assetsAuthorization.setEndTime(simpleDateFormat.parse(map.get("endTime")));
             boolean b = assetsAuthorizationService.save(assetsAuthorization);
+            assetsAuthorizationService.detectionUpdate();
             return b ? ResultUtil.success() :ResultUtil.error(1,"新增失败");
         }catch (Exception e){
             e.printStackTrace();

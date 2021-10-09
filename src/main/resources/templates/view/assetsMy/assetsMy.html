@@ -81,7 +81,12 @@
 
 	</script>
 	<script type="text/html" id="user-bar">
-		<button  class="pear-btn pear-btn-primary pear-btn-sm" lay-event="edit"><i class="layui-icon layui-icon-link"></i></button>
+		{{# if (d.activate == 0) { }}
+		<button  class="pear-btn pear-btn-primary pear-btn-sm" lay-event="connect"><i class="layui-icon layui-icon-link"></i></button>
+
+		{{# }else { }}
+		<button  class="pear-btn pear-btn-primary pear-btn-sm" style="pointer-events: none;"><i class="layui-icon layui-icon-unlink" ></i></button>
+		{{#   }}}
 	</script>
 	<script type="text/html" id="createTime">
 		{{layui.util.toDateString(d.cartetime, 'yyyy-MM-dd')}}
@@ -215,8 +220,8 @@
 				table.on('tool(assets-table)', function(obj) {
 					if (obj.event === 'remove') {
 						window.remove(obj);
-					} else if (obj.event === 'edit') {
-						window.edit(obj);
+					} else if (obj.event === 'connect') {
+						window.connect(obj);
 					}
 				});
 
@@ -233,8 +238,8 @@
 				form.on('switch(user-enable)', function(obj) {
 					layer.tips(this.value + ' ' + this.name + ':' + obj.elem.checked, obj.othis);
 				});
-				//修改
-				window.edit = function(obj) {
+				//连接
+				window.connect = function(obj) {
 					window.open("/view/terminal/terminal?assets="+obj.data['assetsId']+"&assetsUser="+obj.data['assetsUserId'],"_blank");
 				}
 

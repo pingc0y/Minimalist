@@ -55,7 +55,9 @@ public class UserGroupController {
         UserGroup userGroup = new UserGroup();
         userGroup.setId(map.get("id"));
         userGroup.setName(map.get("name"));
-        userGroup.setUserId(map.get("userId").toString().replace("\"",""));
+        if(map.get("userId")!=null && map.get("userId").length() >1) {
+            userGroup.setUserId(map.get("userId").replace("\"", ""));
+        }
         boolean b = userGroupService.updateById(userGroup);
         return b ? ResultUtil.success() :ResultUtil.error(1,"修改失败");
     }

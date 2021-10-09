@@ -81,13 +81,15 @@ public class AssetsAuthorizationWebController {
         }
         ArrayList<HashMap<String, Object>> userGroups = new ArrayList<>();
         for (String s : assetsAuthorization.getUserGroupId().split(",")) {
-            UserGroup usegro = userGroupService.getById(s);
-            HashMap<String, Object> maps = new HashMap<>();
-            maps.put("name", usegro.getName());
-            maps.put("value",usegro.getId());
-            maps.put("disabled",false);
-            maps.put("selected",true);
-            userGroups.add(maps);
+            try {
+                UserGroup usegro = userGroupService.getById(s);
+                HashMap<String, Object> maps = new HashMap<>();
+                maps.put("name", usegro.getName());
+                maps.put("value", usegro.getId());
+                maps.put("disabled", false);
+                maps.put("selected", true);
+                userGroups.add(maps);
+            }catch (Exception e){}
         }
         request.setAttribute("assetsAuthorization",assetsAuthorization);
         request.setAttribute("assets", JSONObject.toJSONString(assets));

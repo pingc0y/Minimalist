@@ -7,16 +7,22 @@
     <script th:src="@{/static/component/xm-select.js}"></script>
     <script th:src="@{/static/component/axios.min.js}"></script>
 </head>
+<style>
+    .xxo{
+        color:#FF0000;
+        font-size:18px;
+    }
+</style>
 <body>
 <form class="layui-form" action="javascript:void(0);">
     <div class="mainBox">
         <div class="main-container">
             <div class="main-container">
-                <input type="text" name="id" th:value="${userGroup.id}" lay-verify="title" autocomplete="off" placeholder="Id" class="layui-input" style="display: none">
+                <input type="text" name="id" th:value="${userGroup.id}"  autocomplete="off" placeholder="Id" class="layui-input" style="display: none">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">名称</label>
+                    <label class="layui-form-label"><span class="xxo">*</span>名称</label>
                     <div class="layui-input-block">
-                        <input type="text"  name="name" th:value="${userGroup.name}" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                        <input type="text"  name="name" th:value="${userGroup.name}" lay-verify="required"   autocomplete="off" placeholder="请输入" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">

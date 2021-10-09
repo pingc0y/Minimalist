@@ -13,6 +13,10 @@
             position: absolute;
             width:700px;
         }
+        .xxo{
+            color:#FF0000;
+            font-size:18px;
+        }
         .xx2{
             position: absolute;
             left:700px;
@@ -41,13 +45,13 @@
         <form class="layui-form" action="javascript:void(0);" onsubmit="return false">
             <div class="left">
                 <div class="layui-form-item layui-inline">
-                    <label class="layui-form-label">主机名</label>
+                    <label class="layui-form-label"><span class="xxo">*</span>主机名</label>
                     <div class="layui-input-inline">
-                        <input type="text"  name="hostname"   autocomplete="off" class="layui-input">
+                        <input type="text"  name="hostname" lay-verify="required"   autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item layui-inline">
-                    <label class="layui-form-label">协议</label>
+                    <label class="layui-form-label"><span class="xxo">*</span>协议</label>
                     <div class="layui-input-inline">
                         <select name="protocol" lay-verify="">
                             <option value="" >请选择</option>
@@ -60,16 +64,16 @@
                     </div>
                 </div>
                 <div class="layui-form-item layui-inline">
-                    <label class="layui-form-label">IP/域名</label>
+                    <label class="layui-form-label"><span class="xxo">*</span>IP/域名</label>
                     <div class="layui-input-inline">
-                        <input type="text"  name="address" autocomplete="off" class="layui-input" >
+                        <input type="text"  name="address" lay-verify="required"  autocomplete="off" class="layui-input" >
                     </div>
                 </div>
 
                 <div class="layui-form-item layui-inline"></label>
-                    <label class="layui-form-label">端口</label>
+                    <label class="layui-form-label"><span class="xxo">*</span>端口</label>
                     <div class="layui-input-inline">
-                        <input type="text"  name="port"  autocomplete="off" class="layui-input" >
+                        <input type="text"  name="port" lay-verify="required"  autocomplete="off" class="layui-input" >
                     </div>
                 </div>
                 <div class="layui-form-item layui-inline">

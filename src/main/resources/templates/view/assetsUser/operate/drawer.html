@@ -13,6 +13,10 @@
             position: absolute;
             width:700px;
         }
+        .xxo{
+            color:#FF0000;
+            font-size:18px;
+        }
         .xx2{
             position: absolute;
             left:700px;
@@ -41,21 +45,21 @@
         <form class="layui-form" action="javascript:void(0);" onsubmit="return false">
         <div class="left">
             <div class="layui-form-item layui-inline">
-                <label class="layui-form-label">名称</label>
+                <label class="layui-form-label"><span class="xxo">*</span>名称</label>
                 <div class="layui-input-inline">
-                    <input type="text"  name="name"  th:value="${assetsUser.name}" autocomplete="off" class="layui-input">
+                    <input type="text"  name="name"  th:value="${assetsUser.name}" lay-verify="required"  autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item layui-inline">
-                <label class="layui-form-label">用户名</label>
+                <label class="layui-form-label"><span class="xxo">*</span>用户名</label>
                 <div class="layui-input-inline">
-                    <input type="text"  name="username"  th:value="${assetsUser.username}" autocomplete="off" class="layui-input">
+                    <input type="text"  name="username"  th:value="${assetsUser.username}" lay-verify="required"  autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item layui-inline">
-                <label class="layui-form-label">协议</label>
-                <div class="layui-input-inline">
-                    <select name="protocol" lay-verify="">
+                <label class="layui-form-label"><span class="xxo">*</span>协议</label>
+                <div class="layui-input-inline protocol">
+                    <select name="protocol" id="protocol">
                         <option value="">请选择</option>
                         <option value="rdp"selected="selected" th:if="${assetsUser.protocol} eq 'rdp'">rdp</option>
                         <option value="rdp"th:if="${assetsUser.protocol} ne 'rdp'">rdp</option>
@@ -69,21 +73,21 @@
                 </div>
             </div>
             <div class="layui-form-item layui-inline">
-                <label class="layui-form-label">密码</label>
+                <label class="layui-form-label"><span class="xxo">*</span>密码</label>
                 <div class="layui-input-inline">
-                    <input type="text"  name="password"  th:value="${assetsUser.password}" autocomplete="off" class="layui-input">
+                    <input type="text"  name="password"  th:value="${assetsUser.password}" lay-verify="required"  autocomplete="off" class="layui-input">
                 </div>
             </div>
-            <div class="layui-form-item layui-inline">
+            <div class="layui-form-item layui-inline activeDirectory" style="display:none;">
                 <label class="layui-form-label">域</label>
                 <div class="layui-input-inline">
-                    <input type="text"  name="activeDirectory"  th:value="${assetsUser.activeDirectory}" autocomplete="off" class="layui-input">
+                    <input type="text" id="activeDirectory" name="activeDirectory"  th:value="${assetsUser.activeDirectory}" autocomplete="off" class="layui-input">
                 </div>
             </div>
-            <div class="layui-form-item layui-inline">
+            <div class="layui-form-item layui-inline secretKey" style="display:none;">
                 <label class="layui-form-label">密钥</label>
                 <div class="layui-input-inline">
-                    <input type="text"  name="key" th:value="${assetsUser.secretKey}"  autocomplete="off" class="layui-input">
+                    <input type="text" id="secretKey" name="secretKey" th:value="${assetsUser.secretKey}"   autocomplete="off" class="layui-input ">
                 </div>
             </div>
             <div class="layui-form-item layui-inline">
@@ -116,11 +120,28 @@
         let $ = layui.jquery;
         let layer = layui.layer;
         let laydate = layui.laydate;
-
         laydate.render({
             elem: '#time' //指定元素
         });
 
+        $("dd").click(function (){
+            $(".activeDirectory").hide()
+            $(".secretKey").hide()
+            $("#activeDirectory").attr("lay-verify","")
+            $("#activeDirectory").attr("lay-verify","")
+
+            var rs = $(".layui-this").text();
+            console.log(rs)
+            if(rs == "rdp"){
+                $(".activeDirectory").show()
+                $("#activeDirectory").attr("lay-verify","url")
+            }else if(rs == "ssh"){
+                $(".secretKey").show()
+                $("#activeDirectory").attr("lay-verify","required")
+            }
+        })
+
+        f
         form.on('submit(ordinarysubmit)',function (data) {
             data.field.id = "[[${assetsUser.id}]]";
             $.ajax({

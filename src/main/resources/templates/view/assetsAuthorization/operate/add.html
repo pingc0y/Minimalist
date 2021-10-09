@@ -17,7 +17,11 @@
         }
         .xx2{
             position: absolute;
-            left:700px;
+            width:700px;
+        }
+        .xxo{
+            color:#FF0000;
+            font-size:18px;
         }
         .layui-form-label{
             width: 99px;
@@ -43,9 +47,9 @@
         <form class="layui-form" action="javascript:void(0);" onsubmit="return false">
             <div class="left">
                 <div class="layui-form-item layui-inline">
-                    <label class="layui-form-label">名称</label>
+                    <label class="layui-form-label"><span class="xxo">*</span>名称</label>
                     <div class="layui-input-inline" style="width: 500px">
-                        <input type="text"  name="name" autocomplete="off" class="layui-input">
+                        <input type="text"  name="name" autocomplete="off" lay-verify="required" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item layui-inline">
@@ -65,14 +69,14 @@
                 </div>
                 </div>
                 <div class="layui-form-item layui-inline">
-                    <label class="layui-form-label">资产</label>
+                    <label class="layui-form-label"><span class="xxo">*</span>资产</label>
                     <div class="layui-input-inline" style="width: 500px">
                         <div id="assets">
                     </div>
                 </div>
                 </div>
                 <div class="layui-form-item layui-inline">
-                    <label class="layui-form-label">资产用户</label>
+                    <label class="layui-form-label"><span class="xxo">*</span>资产用户</label>
                     <div class="layui-input-inline" style="width: 500px">
                         <div id="assetsUser">
                     </div>
@@ -80,23 +84,24 @@
                 </div>
 
                 <div class="layui-form-item layui-inline">
-                    <label class="layui-form-label">生效时间</label>
+                    <label class="layui-form-label"><span class="xxo">*</span>生效时间</label>
                     <div class="layui-input-inline">
-                        <input type="text"  name="startTime"  id="startTime" class="layui-input">
+                        <input type="text"  name="startTime" lay-verify="required" id="startTime" class="layui-input">
                     </div>
                 </div>
                 <br/>
                 <div class="layui-form-item layui-inline">
-                    <label class="layui-form-label">失效时间</label>
+                    <label class="layui-form-label"><span class="xxo">*</span>失效时间</label>
                     <div class="layui-input-inline">
-                        <input type="text"  name="endTime"  id="endTime"  class="layui-input">
+                        <input type="text"  name="endTime" lay-verify="required" id="endTime"  class="layui-input">
                     </div>
                 </div>
                 <br/>
                 <div class="layui-form-item layui-inline">
                     <label class="layui-form-label">激活</label>
                     <div class="layui-input-inline">
-                        <input type="checkbox" th:value="0" name="activate" lay-skin="switch" lay-text="ON|OFF" checked="" >
+                        <input type="checkbox"  name="activate" lay-skin="switch" value="0" lay-text="ON|OFF" checked="" >
+
                         <div class="layui-unselect layui-form-switch layui-form-onswitch" lay-skin="_switch"><em>ON</em><i></i></div>
                     </div>
                 </div>
@@ -162,11 +167,13 @@
         //执行一个laydate实例
         laydate.render({
             elem: '#startTime' //指定元素
+            ,value: new Date(new Date())
             ,trigger: 'click'
         });
         //执行一个laydate实例
         laydate.render({
             elem: '#endTime' //指定元素
+            ,value: new Date(new Date().setTime(new Date().getTime()+24*60*60*1000*1000))
             ,trigger: 'click'
         });
 

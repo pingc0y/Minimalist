@@ -58,6 +58,8 @@ server:
         http-only: true
         timeout: 36000000
 
+
+
 guacamole:
   guacd:
     host: 127.0.0.1

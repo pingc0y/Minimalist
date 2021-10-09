@@ -5,6 +5,12 @@
     <title>Title</title>
     <link rel="stylesheet" th:href="@{/static/component/pear/css/pear.css}" />
 </head>
+<style>
+    .xxo{
+        color:#FF0000;
+        font-size:18px;
+    }
+</style>
 <body>
 <form class="layui-form" action="javascript:void(0);" onsubmit="return false">
     <div class="mainBox">
@@ -12,9 +18,9 @@
             <div class="main-container">
                 <div class="layui-form-item">
                     <div class="layui-form-item">
-                        <label class="layui-form-label">名称</label>
+                        <label class="layui-form-label"><span class="xxo">*</span>名称</label>
                         <div class="layui-input-block">
-                            <input type="text"  name="name" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                            <input type="text"  name="name"  lay-verify="required"   autocomplete="off" placeholder="请输入" class="layui-input">
                         </div>
                     </div>
                     <label class="layui-form-label">用户</label>

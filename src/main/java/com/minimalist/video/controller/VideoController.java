@@ -46,14 +46,20 @@ public class VideoController {
             boolean t = true;
             String userName = conditionMap.get("userName");
             if(t && userName!=null && userName.length() >0){
-                if(!video.getUserName().equals(userName)){
+                if(!video.getUserName().contains(userName)){
                     t = false;
                 }
             }
             String assetsName = conditionMap.get("assetsName");
             if(t && assetsName!=null && assetsName.length() >0){
-                if(!video.getAssetsName().equals(assetsName)){
+                if(!video.getAssetsName().contains(assetsName)){
                    t = false;
+                }
+            }
+            String assetsUserName = conditionMap.get("assetsUserName");
+            if(t && assetsUserName!=null && assetsUserName.length() >0){
+                if(!video.getAssetsUserName().contains(assetsUserName)){
+                    t = false;
                 }
             }
             String createTime = conditionMap.get("createTime");
