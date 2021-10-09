@@ -10,7 +10,7 @@
 		<link rel="stylesheet" th:href="@{/static/admin/css/other/console1.css}" />
 	</head>
 	<body class="pear-container">
-		<div>
+		<div th:if="${session.user.roles} eq 1">
 			<div class="layui-row layui-col-space10">
 				<div class="layui-col-xs6 layui-col-md3">
 					<div class="layui-card top-panel">

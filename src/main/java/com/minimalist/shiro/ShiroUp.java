@@ -38,9 +38,8 @@ public class ShiroUp {
         //登陆
         filterChainDefinitionMap.put("/user/login","anon");
         //后台
-        filterChainDefinitionMap.put("/webTelnet/**", "authc");
-        filterChainDefinitionMap.put("/webTelnet/**", "authc");
-        filterChainDefinitionMap.put("/**","perms[1]");
+//        filterChainDefinitionMap.put("/webTelnet/**", "authc");
+        filterChainDefinitionMap.put("/**","authc");
 
         // 不存在什么特别关键的操作，所以直接使用user认证
 

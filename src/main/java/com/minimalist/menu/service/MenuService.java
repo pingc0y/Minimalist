@@ -11,5 +11,6 @@ public interface MenuService extends IService<Menu> {
 
     Menu selectById(String id);
 
-    List<Menu> selectByType0();
+
+    List<Menu> selectUser();
 }

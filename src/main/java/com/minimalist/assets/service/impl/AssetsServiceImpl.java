@@ -72,7 +72,7 @@ public class AssetsServiceImpl extends ServiceImpl<AssetsMapper, Assets> impleme
         List list = assetsMapper.selectList(wrapper);
         Map<String,Object> map = new HashMap<>();
         map.put("data",list);
-        map.put("count",(int)list.size());
+        map.put("count",list.size());
         return map;
     }
 }

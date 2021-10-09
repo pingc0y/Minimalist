@@ -8,47 +8,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="完善terminal部分">
+    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/minimalist.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/assets/service/impl/AssetsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assets/service/impl/AssetsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/controller/AssetsAuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/controller/AssetsAuthorizationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/mapper/AssetsAuthorizationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/mapper/AssetsAuthorizationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/service/AssetsAuthorizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/service/AssetsAuthorizationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/entity/AssetsAuthorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/entity/AssetsAuthorization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/service/impl/AssetsAuthorizationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/service/impl/AssetsAuthorizationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsMy/service/impl/AssetsMyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsMy/service/impl/AssetsMyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/AssetsAuthorizationWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/AssetsAuthorizationWebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/scheduled/MyScheduled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/scheduled/MyScheduled.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/shiro/UserRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/shiro/UserRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/controller/UserGroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/controller/UserGroupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/entity/UserGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/entity/UserGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/service/impl/UserGroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/service/impl/UserGroupServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assets/operate/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assets/operate/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assets/operate/drawer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assets/operate/drawer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsAuthorization/operate/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsAuthorization/operate/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsAuthorization/operate/drawer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsAuthorization/operate/drawer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsMy/assetsMy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsMy/assetsMy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/drawer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/drawer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/system/logging.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/system/logging.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/system/person.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/system/space.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/user/operate/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/user/operate/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/user/operate/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/user/operate/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/operate/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/operate/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/operate/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/operate/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/video/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/video/video.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/minimalist/config/WebSocketConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/minimalist/servlet/HttpTunnelServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/client.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/fileSaver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/guacamole/all.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/guacamole/playback.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery-2.1.3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/play.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/menu/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/menu/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/menu/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/menu/service/MenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/menu/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/menu/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/shiro/ShiroUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/shiro/ShiroUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsAuthorization/assetsAuthorization.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsAuthorization/assetsAuthorization.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/console/console.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/console/console.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +105,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/view/video" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -151,11 +124,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\javaxm\minimalist\src\main\resources" />
       <recent name="D:\javaxm\minimalist\src\main\resources\templates\view\video" />
       <recent name="D:\javaxm\minimalist\src\main\java\com\minimalist\video" />
       <recent name="D:\javaxm\minimalist\src\main\resources\static\js\guacamole" />
       <recent name="D:\javaxm\minimalist\target\classes\static\admin\images" />
-      <recent name="D:\javaxm\minimalist\src\main\resources\static\admin\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\javaxm\minimalist\src\main\resources\static\admin\images" />
@@ -189,6 +162,17 @@
     <configuration name="text" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="text" />
       <module name="mtx-student-system" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -329,14 +313,7 @@
       <workItem from="1633599076089" duration="4287000" />
       <workItem from="1633656357965" duration="28356000" />
       <workItem from="1633690422799" duration="16000" />
-      <workItem from="1633742773888" duration="17172000" />
-    </task>
-    <task id="LOCAL-00005" summary="前端js,css,image整合到static&#10;前端首页访问&#10;首页controller&#10;用户模块controller&#10;新增菜单表 mtx_menu mtx_menu_children&#10;功能菜单: 学生管理,教务管理">
-      <created>1607946372853</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1607946372853</updated>
+      <workItem from="1633742773888" duration="22032000" />
     </task>
     <task id="LOCAL-00006" summary="前端js,css,image整合到static&#10;前端首页访问&#10;首页controller&#10;用户模块controller&#10;新增菜单表 mtx_menu mtx_menu_children&#10;功能菜单: 学生管理,教务管理">
       <created>1608011242038</created>
@@ -674,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633690345003</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="基础功能全部完成，修复部分bug">
+      <created>1633762507135</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1633762507136</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -739,7 +723,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="权限功能实现" />
     <MESSAGE value="角色设置权限部分" />
     <MESSAGE value="行为日志统计" />
     <MESSAGE value="用户新增" />
@@ -764,7 +747,8 @@
     <MESSAGE value="资产部分完成" />
     <MESSAGE value="完善terminal部分" />
     <MESSAGE value="功能完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="功能完成" />
+    <MESSAGE value="基础功能全部完成，修复部分bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="基础功能全部完成，修复部分bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

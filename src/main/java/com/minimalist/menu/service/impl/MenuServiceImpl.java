@@ -27,9 +27,11 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements Me
     }
 
     @Override
-    public List<Menu> selectByType0() {
+    public List<Menu> selectUser() {
         QueryWrapper wrapper = new QueryWrapper();
-        wrapper.eq("type",0);
-        return menuMapper.selectList(wrapper);
+        wrapper.eq("id",100);
+        List list = menuMapper.selectList(wrapper);
+        return list;
     }
+
 }

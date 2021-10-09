@@ -1,6 +1,7 @@
 package com.minimalist.assetsAuthorization.controller;
 
 
+import com.minimalist.assets.service.AssetsService;
 import com.minimalist.assetsAuthorization.entity.AssetsAuthorization;
 import com.minimalist.assetsAuthorization.service.AssetsAuthorizationService;
 import com.minimalist.util.Result;
@@ -18,6 +19,8 @@ import java.util.Map;
 public class AssetsAuthorizationController {
     @Autowired
     AssetsAuthorizationService assetsAuthorizationService;
+    @Autowired
+    AssetsService assetsService;
 
     @RequestMapping("/selectAll")
     public Result selectAll(@RequestParam(required = false) Map<String,String> conditionMap) {
@@ -26,6 +29,10 @@ public class AssetsAuthorizationController {
         Map<String, Object> map = assetsAuthorizationService.select(page, limit, conditionMap);
         if((map.get("data")).toString() == "[]"){
             return ResultUtil.error(1,"无数据");
+        }
+        List<AssetsAuthorization> assetsAuthorizations = (List<AssetsAuthorization>)map.get("data");
+        for (AssetsAuthorization assetsAuthorization : assetsAuthorizations) {
+            assetsAuthorization.setAssetsName(assetsService.getById(assetsAuthorization.getAssetsId()).getHostname());
         }
         return ResultUtil.success(map.get("data"), (int) map.get("count"));
 
