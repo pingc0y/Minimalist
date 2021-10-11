@@ -125,17 +125,17 @@
         $("dd").click(function (){
             $(".activeDirectory").hide()
             $(".secretKey").hide()
-            $("#activeDirectory").attr("lay-verify","")
-            $("#activeDirectory").attr("lay-verify","")
+            // $("#activeDirectory").attr("lay-verify","")
+            // $("#activeDirectory").attr("lay-verify","")
 
             var rs = $(".layui-this").text();
             console.log(rs)
             if(rs == "rdp"){
                 $(".activeDirectory").show()
-                $("#activeDirectory").attr("lay-verify","url")
+                // $("#activeDirectory").attr("lay-verify","url")
             }else if(rs == "ssh"){
                 $(".secretKey").show()
-                $("#activeDirectory").attr("lay-verify","required")
+                // $("#activeDirectory").attr("lay-verify","required")
             }
         })
 

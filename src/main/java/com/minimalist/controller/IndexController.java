@@ -100,7 +100,6 @@ public class IndexController {
             }
         });
 
-        System.out.println(day);
         for (String s : day) {
             Map<String, String> trunneld = stringMapMap.get("trunnel");
             trunnel.add(trunneld.get(s));

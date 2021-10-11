@@ -88,15 +88,17 @@ public class VideoController {
     public Result flushAll(){
         List<Map<String, String>> allFile = FileUtil.getAllFile(uploadPath);
         for (Map<String, String> map : allFile) {
-            String[] ids = map.get("fileName").split(",");
-            String userName = ids[0];
-            String assetsName = assetsService.getById(ids[1]).getHostname();
-            String assetsUserName = assetsUserService.getById(ids[2]).getUsername();
-            String filePath = map.get("filePath");
-            String createTime = ids[3];
-            String updateTime = map.get("fileUpDate");
-            Video video = new Video(map.get("fileName"),userName,assetsName,assetsUserName,filePath,new Date(Long.parseLong(String.valueOf(createTime))),new Date(Long.parseLong(String.valueOf(updateTime))));
-            videos.put(map.get("fileName"),video);
+            try {
+                String[] ids = map.get("fileName").split(",");
+                String userName = ids[0];
+                String assetsName = assetsService.getById(ids[1]).getHostname();
+                String assetsUserName = assetsUserService.getById(ids[2]).getUsername();
+                String filePath = map.get("filePath");
+                String createTime = ids[3];
+                String updateTime = map.get("fileUpDate");
+                Video video = new Video(map.get("fileName"), userName, assetsName, assetsUserName, filePath, new Date(Long.parseLong(String.valueOf(createTime))), new Date(Long.parseLong(String.valueOf(updateTime))));
+                videos.put(map.get("fileName"), video);
+            }catch (Exception e){}
         }
         return ResultUtil.success("成功",0);
     }

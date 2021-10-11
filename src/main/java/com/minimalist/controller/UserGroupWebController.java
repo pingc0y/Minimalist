@@ -46,6 +46,9 @@ public class UserGroupWebController {
 
         ArrayList<HashMap<String, Object>> users = new ArrayList<HashMap<String, Object>>();
         for (String s : userGroup.getUserId().split(",")) {
+            try {
+
+
             User use = userService.getById(s);
             HashMap<String, Object> maps = new HashMap<>();
             maps.put("name", use.getName());
@@ -53,6 +56,7 @@ public class UserGroupWebController {
             maps.put("disabled",false);
             maps.put("selected",true);
             users.add(maps);
+            }catch (Exception e){}
         }
         request.setAttribute("userGroup",userGroup);
         request.setAttribute("user", JSONObject.toJSONString(users));
