@@ -21,9 +21,11 @@ import java.util.Date;
 @Component
 public class LogAspect {
 
-    @Pointcut("execution(public * com.minimalist.*.controller.*.*(..))")
+    @Pointcut("execution(public * com.minimalist.*.controller.*.*(..)) || execution (public * com.minimalist.controller.TerminalWebController.index(..))")
     public void webLog(){}
 
+    @Pointcut(" execution (public * com.minimalist.controller.*.*(..))")
+    public void userCount(){}
 
 
     @Autowired
@@ -31,7 +33,7 @@ public class LogAspect {
 
     //环绕通知,环绕增强，相当于MethodInterceptor
     @Around("webLog()")
-    public Object arround(ProceedingJoinPoint pjp) {
+    public Object webLog(ProceedingJoinPoint pjp) {
         // 接收到请求，记录请求内容
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
@@ -84,5 +86,23 @@ public class LogAspect {
             e.printStackTrace();
             return null;
         }
+    }
+    @Around("userCount()")
+    public Object userCount(ProceedingJoinPoint pjp) throws Throwable {
+        // 接收到请求，记录请求内容
+        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        HttpServletRequest request = attributes.getRequest();
+        User user = (User)request.getSession().getAttribute("user");
+
+        String username = "";
+        if(user!=null){
+            username =  user.getUsername();
+            UserIsTiming.userCount.add(username);
+        }else if(request.getServletPath().equals("/user/login")){
+            username = request.getParameter("username");
+            UserIsTiming.userCount.add(username);
+        }
+        //            System.out.println("用户:"+username);
+        return pjp.proceed();
     }
 }

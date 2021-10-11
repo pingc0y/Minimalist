@@ -83,7 +83,9 @@
 		{{layui.util.toDateString(d.cartetime, 'yyyy-MM-dd')}}
 	</script>
 
-
+	<script type="text/html" id="protocol">
+		<span class="layui-btn layui-btn-xs layui-btn-warm">{{d.protocol}}</span>
+	</script>
 
 
 
@@ -122,6 +124,7 @@
 							title: '协议',
 							field: 'protocol',
 							align: 'center',
+							templet: '#protocol'
 							// width: 150,
 							//fixed: 'left'
 						},

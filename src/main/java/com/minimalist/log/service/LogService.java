@@ -15,4 +15,6 @@ public interface LogService extends IService<Log> {
     Map<String,String> selectByUserKing();
 
     int selectByCount();
+
+    Map<String,Map<String,String>> selectByStatistics();
 }

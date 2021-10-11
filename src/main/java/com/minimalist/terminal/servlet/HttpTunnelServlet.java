@@ -23,7 +23,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.*;
 
 @WebServlet(name="HttpTunnelServlet",urlPatterns="/tunnel")
 public class HttpTunnelServlet extends GuacamoleHTTPTunnelServlet {
@@ -38,7 +38,8 @@ public class HttpTunnelServlet extends GuacamoleHTTPTunnelServlet {
     @Autowired
     AssetsUserService assetsUserService;
 
-    public static GuacamoleConfiguration conf;
+    public static List<Map<String,Object>> tunnels = new ArrayList<>();
+
 
 	/**
 	 * 
@@ -125,9 +126,12 @@ public class HttpTunnelServlet extends GuacamoleHTTPTunnelServlet {
             GuacamoleSocket socket = new ConfiguredGuacamoleSocket(
                     new InetGuacamoleSocket(hostname, port),
                     configuration);
-            conf = configuration;
             GuacamoleTunnel tunnel = new SimpleGuacamoleTunnel(socket);
-            return tunnel;
+
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("tunnel",tunnel);
+        tunnels.add(map);
+        return tunnel;
         }
 
 }

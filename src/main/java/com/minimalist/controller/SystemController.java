@@ -4,9 +4,6 @@ import com.minimalist.menu.service.MenuService;
 import com.minimalist.user.entity.User;
 import com.minimalist.user.service.UserService;
 import com.minimalist.timing.UserIsTiming;
-import com.minimalist.util.GeneratorValidateCode;
-import com.minimalist.util.Result;
-import com.minimalist.util.ResultUtil;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
+
 
 @Controller
 @RequestMapping("/view/system")
@@ -29,6 +26,8 @@ public class SystemController {
 
     @Autowired
     MenuService menuService;
+    //文件路径
+    private static String VIEW_PATH = "view/system/";
 
 
     @RequestMapping(value = "/getValidateCode", method = RequestMethod.GET)
@@ -40,7 +39,7 @@ public class SystemController {
         response.setHeader("Pragma", "no-cache");
         response.setHeader("Cache-Control", "no-cache");
         response.setDateHeader("Expires", 0);
-        GeneratorValidateCode instance = new GeneratorValidateCode();
+        com.lry.web.rests.GeneratorValidateCode instance = new com.lry.web.rests.GeneratorValidateCode();
 
         //储存验证码到session中，key为ValidateCode
         request.getSession().setAttribute("ValidateCode", instance.getCode());
@@ -55,8 +54,6 @@ public class SystemController {
     }
 
 
-    //文件路径
-    private static String VIEW_PATH = "view/system/";
 
 
 

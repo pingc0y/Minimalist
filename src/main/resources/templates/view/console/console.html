@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8">
-		<title>首页</title>
+		<title>仪表盘</title>
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -12,7 +12,7 @@
 	<body class="pear-container">
 		<div th:if="${session.user.roles} eq 1">
 			<div class="layui-row layui-col-space10">
-				<div class="layui-col-xs6 layui-col-md3">
+				<div class="layui-col-xs6 layui-col-md2">
 					<div class="layui-card top-panel">
 						<div class="layui-card-header">在线人数</div>
 						<div class="layui-card-body">
@@ -20,12 +20,12 @@
 								<div class="layui-col-xs8 layui-col-md8 top-panel-number" style="color: #28333E;" id="value1">
 									0
 								</div>
-								<img th:src="@{/static/admin/images/3.png}" height="50" width="50">
+								<img th:src="@{/static/admin/images/1.png}" height="50" width="50">
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="layui-col-xs6 layui-col-md3">
+				<div class="layui-col-xs6 layui-col-md2">
 					<div class="layui-card top-panel">
 						<div class="layui-card-header">最活跃人</div>
 						<div class="layui-card-body">
@@ -38,7 +38,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="layui-col-xs6 layui-col-md3">
+				<div class="layui-col-xs6 layui-col-md2">
 					<div class="layui-card top-panel">
 						<div class="layui-card-header">今日人数</div>
 						<div class="layui-card-body">
@@ -46,51 +46,54 @@
 								<div class="layui-col-xs8 layui-col-md8 top-panel-number" style="color: #28333E;" id="value2">
 									0
 								</div>
-								<img th:src="@{/static/admin/images/4.png}" height="50" width="50">
+								<img th:src="@{/static/admin/images/3.png}" height="50" width="50">
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="layui-col-xs6 layui-col-md3">
+				<div class="layui-col-xs6 layui-col-md2">
 					<div class="layui-card top-panel">
-						<div class="layui-card-header">总活跃值</div>
+						<div class="layui-card-header">在线会话</div>
 						<div class="layui-card-body">
 							<div class="layui-row layui-col-space5">
 								<div class="layui-col-xs8 layui-col-md8 top-panel-number" style="color: #28333E;" id="value4">
 									0
 								</div>
-									<img th:src="@{/static/admin/images/1.png}" height="45" width="45">
+									<img th:src="@{/static/admin/images/4.png}" height="45" width="45">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="layui-col-xs6 layui-col-md2">
+					<div class="layui-card top-panel">
+						<div class="layui-card-header">日活跃值</div>
+						<div class="layui-card-body">
+							<div class="layui-row layui-col-space5">
+								<div class="layui-col-xs8 layui-col-md8 top-panel-number" style="color: #28333E;" id="value5">
+									0
+								</div>
+								<img th:src="@{/static/admin/images/5.png}" height="45" width="45">
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
 			<div class="layui-row layui-col-space10">
 				<div class="layui-col-md9">
-					<div class="layui-card">
-						<div class="layui-card-body">
-							<div class="layui-tab custom-tab layui-tab-brief" lay-filter="docDemoTabBrief">
-								<div id="echarts-records" style="background-color:#ffffff;min-height:400px;padding: 10px"></div>
-							</div>
-						</div>
-					</div>
 <!--					<div class="layui-card">-->
-<!--						<div class="layui-card-header">动态</div>-->
 <!--						<div class="layui-card-body">-->
-<!--							<dl class="layuiadmin-card-status">-->
-<!--								<dd>-->
-<!--									<div class="layui-status-img"><a href="javascript:;"><img style="width: 32px;height: 32px;border-radius: 50px;"-->
-<!--											 src="../../admin/images/avatar.jpg"></a></div>-->
-<!--									<div>-->
-<!--										<p>暂 无 <a lay-href="http://www.baidu.comi">暂 无</a> 暂 无</p>-->
-<!--										<span>暂 无</span>-->
-<!--									</div>-->
-<!--								</dd>-->
-
-<!--							</dl>-->
+<!--							<div class="layui-tab custom-tab layui-tab-brief" lay-filter="docDemoTabBrief">-->
+<!--								<div id="echarts-records" style="background-color:#ffffff;min-height:400px;padding: 10px"></div>-->
+<!--							</div>-->
 <!--						</div>-->
 <!--					</div>-->
-				</div>
+					<div class="layui-card">
+						<div class="layui-card-body">
+							<div id="line2" style="min-height:400px;"></div>
+						</div>
+					</div>
+					</div>
 				<div class="layui-col-md3">
 					<div class="layui-card">
 						<div class="layui-card-header">最近加入</div>
@@ -115,8 +118,8 @@
 				</div>
 			</div>
 		</div>
-		<!--</div>-->
-		<script th:src="@{/static/component/pear/layui/layui.js}"></script>
+
+			<script th:src="@{/static/component/pear/layui/layui.js}"></script>
 		<script th:src="@{/static/component/pear/pear.js}"></script>
 		<script>
 			layui.use(['layer', 'echarts', 'element', 'count','topBar'], function() {
@@ -139,93 +142,349 @@
 					bit: 0,
 					regulator: 50
 				})
-
-
 				count.up("value4", {
+					time: 4000,
+					bit: 0,
+					num: "[[${tunnels}]]",
+					regulator: 50
+				})
+				count.up("value5", {
 					time: 4000,
 					bit: 0,
 					num: "[[${count}]]",
 					regulator: 50
 				})
 
-				var echartsRecords = echarts.init(document.getElementById('echarts-records'), 'walden');
+				layui.use(['echarts'], function() {
+					let echarts = layui.echarts;
 
-				var option = {
-					tooltip: {
-						trigger: 'axis'
-					},
-					xAxis: [{
-						type: 'category',
-						data: ['2020-08', '2020-09', '2020-10', '2020-11', '2020-12', '2021-01'],
-						axisLine: {
-							lineStyle: {
-								color: "#999"
-							}
-						}
-					}],
-					yAxis: [{
-						type: 'value',
-						splitNumber: 4,
-						splitLine: {
-							lineStyle: {
-								type: 'dashed',
-								color: '#DDD'
-							}
-						},
-						axisLine: {
-							show: false,
-							lineStyle: {
-								color: "#333"
+					var line2 = echarts.init(document.getElementById('line2'));
+
+					const colorList = ["#9E87FF", '#73DDFF', '#fe9a8b', '#F56948', '#9E87FF']
+					option = {
+						backgroundColor: '#fff',
+						title: {
+							text: '数据统计',
+							textStyle: {
+								fontSize: 12,
+								fontWeight: 400
 							},
+							left: 'center',
+							top: '5%'
 						},
-						nameTextStyle: {
-							color: "#999"
+						legend: {
+							icon: 'circle',
+							top: '5%',
+							right: '5%',
+							itemWidth: 6,
+							itemGap: 20,
+							textStyle: {
+								color: '#556677'
+							}
 						},
-						splitArea: {
-							show: false
-						}
-					}],
-					series: [{
-						name: '业绩',
-						type: 'line',
-						data: [23, 60, 20, 36, 23, 85],
-						lineStyle: {
-							normal: {
-								width: 8,
-								color: {
-									type: 'linear',
-
-									colorStops: [{
-										offset: 0,
-										color: '#A9F387' // 0% 处的颜色
-									}, {
-										offset: 1,
-										color: '#48D8BF' // 100% 处的颜色
-									}],
-									globalCoord: false // 缺省为 false
+						tooltip: {
+							trigger: 'axis',
+							axisPointer: {
+								label: {
+									show: true,
+									backgroundColor: '#fff',
+									color: '#556677',
+									borderColor: 'rgba(0,0,0,0)',
+									shadowColor: 'rgba(0,0,0,0)',
+									shadowOffsetY: 0
 								},
-								shadowColor: 'rgba(72,216,191, 0.3)',
+								lineStyle: {
+									width: 0
+								}
+							},
+							backgroundColor: '#fff',
+							textStyle: {
+								color: '#5c6c7c'
+							},
+							padding: [10, 10],
+							extraCssText: 'box-shadow: 1px 0 2px 0 rgba(163,163,163,0.5)'
+						},
+						grid: {
+							top: '15%'
+						},
+						xAxis: [{
+							type: 'category',
+							data: ["[(${day[0]})]", "[(${day[1]})]", "[(${day[2]})]","[(${day[3]})]", "[(${day[4]})]", "[(${day[5]})]", "[(${day[6]})]"],
+							axisLine: {
+								lineStyle: {
+									color: '#DCE2E8'
+								}
+							},
+							axisTick: {
+								show: false
+							},
+							axisLabel: {
+								interval: 0,
+								textStyle: {
+									color: '#556677'
+								},
+								// 默认x轴字体大小
+								fontSize: 12,
+								// margin:文字到x轴的距离
+								margin: 20
+							},
+							axisPointer: {
+								label: {
+									// padding: [11, 5, 7],
+									padding: [0, 0, 10, 0],
+
+									// 这里的margin和axisLabel的margin要一致!
+									margin: 15,
+									// 移入时的字体大小
+									fontSize: 12,
+									backgroundColor: {
+										type: 'linear',
+										x: 0,
+										y: 0,
+										x2: 0,
+										y2: 1,
+										colorStops: [{
+											offset: 0,
+											color: '#fff' // 0% 处的颜色
+										}, {
+											// offset: 0.9,
+											offset: 0.86,
+
+											color: '#fff' // 0% 处的颜色
+										}, {
+											offset: 0.86,
+											color: '#33c0cd' // 0% 处的颜色
+										}, {
+											offset: 1,
+											color: '#33c0cd' // 100% 处的颜色
+										}],
+										global: false // 缺省为 false
+									}
+								}
+							},
+							boundaryGap: false
+						}],
+						yAxis: [{
+							type: 'value',
+							axisTick: {
+								show: false
+							},
+							axisLine: {
+								show: true,
+								lineStyle: {
+									color: '#DCE2E8'
+								}
+							},
+							axisLabel: {
+								textStyle: {
+									color: '#556677'
+								}
+							},
+							splitLine: {
+								show: false
+							}
+						}, {
+							type: 'value',
+							position: 'right',
+							axisTick: {
+								show: false
+							},
+							axisLabel: {
+								textStyle: {
+									color: '#556677'
+								},
+								formatter: '{value}'
+							},
+							axisLine: {
+								show: true,
+								lineStyle: {
+									color: '#DCE2E8'
+								}
+							},
+							splitLine: {
+								show: false
+							}
+						}],
+						series: [{
+							name: '连接数',
+							type: 'line',
+							data: [(${trunnel})],
+							symbolSize: 1,
+							symbol: 'circle',
+							smooth: true,
+							yAxisIndex: 0,
+							showSymbol: false,
+							lineStyle: {
+								width: 5,
+								color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+									offset: 0,
+									color: '#9effff'
+								},
+									{
+										offset: 1,
+										color: '#9E87FF'
+									}
+								]),
+								shadowColor: 'rgba(158,135,255, 0.3)',
 								shadowBlur: 10,
 								shadowOffsetY: 20
+							},
+							itemStyle: {
+								normal: {
+									color: colorList[0],
+									borderColor: colorList[0]
+								}
+							}
+						}, {
+							name: '登录数',
+							type: 'line',
+							data: [(${login})],
+							symbolSize: 1,
+							symbol: 'circle',
+							smooth: true,
+							yAxisIndex: 0,
+							showSymbol: false,
+							lineStyle: {
+								width: 5,
+								color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [{
+									offset: 0,
+									color: '#73DD39'
+								},
+									{
+										offset: 1,
+										color: '#73DDFF'
+									}
+								]),
+								shadowColor: 'rgba(115,221,255, 0.3)',
+								shadowBlur: 10,
+								shadowOffsetY: 20
+							},
+							itemStyle: {
+								normal: {
+									color: colorList[1],
+									borderColor: colorList[1]
+								}
 							}
 						},
-						itemStyle: {
-							normal: {
-								color: '#fff',
-								borderWidth: 10,
-								/*shadowColor: 'rgba(72,216,191, 0.3)',
-								shadowBlur: 100,*/
-								borderColor: "#A9F387"
+							{
+								name: '活跃值',
+								type: 'line',
+								data: [(${active})],
+								symbolSize: 1,
+								yAxisIndex: 1,
+								symbol: 'circle',
+								smooth: true,
+								showSymbol: false,
+								lineStyle: {
+									width: 5,
+									color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
+										offset: 0,
+										color: '#fe9a'
+									},
+										{
+											offset: 1,
+											color: '#fe9a8b'
+										}
+									]),
+									shadowColor: 'rgba(254,154,139, 0.3)',
+									shadowBlur: 10,
+									shadowOffsetY: 20
+								},
+								itemStyle: {
+									normal: {
+										color: colorList[2],
+										borderColor: colorList[2]
+									}
+								}
 							}
-						},
-						smooth: true
-					}]
-				};
-				echartsRecords.setOption(option);
+						]
+					};
 
-				window.onresize = function() {
-					echartsRecords.resize();
-				}
+					line2.setOption(option);
+
+					window.onresize = function() {
+						line2.resize();
+					}
+				})
+
+				// var echartsRecords = echarts.init(document.getElementById('echarts-records'), 'walden');
+
+				// var option = {
+				// 	tooltip: {
+				// 		trigger: 'axis'
+				// 	},
+				// 	xAxis: [{
+				// 		type: 'category',
+				// 		data: ['2020-08', '2020-09', '2020-10', '2020-11', '2020-12', '2021-01'],
+				// 		axisLine: {
+				// 			lineStyle: {
+				// 				color: "#999"
+				// 			}
+				// 		}
+				// 	}],
+				// 	yAxis: [{
+				// 		type: 'value',
+				// 		splitNumber: 4,
+				// 		splitLine: {
+				// 			lineStyle: {
+				// 				type: 'dashed',
+				// 				color: '#DDD'
+				// 			}
+				// 		},
+				// 		axisLine: {
+				// 			show: false,
+				// 			lineStyle: {
+				// 				color: "#333"
+				// 			},
+				// 		},
+				// 		nameTextStyle: {
+				// 			color: "#999"
+				// 		},
+				// 		splitArea: {
+				// 			show: false
+				// 		}
+				// 	}],
+				// 	series: [{
+				// 		name: '业绩',
+				// 		type: 'line',
+				// 		data: [23, 60, 20, 36, 23, 85],
+				// 		lineStyle: {
+				// 			normal: {
+				// 				width: 8,
+				// 				color: {
+				// 					type: 'linear',
+				//
+				// 					colorStops: [{
+				// 						offset: 0,
+				// 						color: '#A9F387' // 0% 处的颜色
+				// 					}, {
+				// 						offset: 1,
+				// 						color: '#48D8BF' // 100% 处的颜色
+				// 					}],
+				// 					globalCoord: false // 缺省为 false
+				// 				},
+				// 				shadowColor: 'rgba(72,216,191, 0.3)',
+				// 				shadowBlur: 10,
+				// 				shadowOffsetY: 20
+				// 			}
+				// 		},
+				// 		itemStyle: {
+				// 			normal: {
+				// 				color: '#fff',
+				// 				borderWidth: 10,
+				// 				/*shadowColor: 'rgba(72,216,191, 0.3)',
+				// 				shadowBlur: 100,*/
+				// 				borderColor: "#A9F387"
+				// 			}
+				// 		},
+				// 		smooth: true
+				// 	}]
+				// };
+				// echartsRecords.setOption(option);
+				//
+				// window.onresize = function() {
+				// 	echartsRecords.resize();
+				// }
 
 			});
 		</script>

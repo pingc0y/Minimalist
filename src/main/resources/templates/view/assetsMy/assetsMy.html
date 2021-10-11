@@ -94,17 +94,20 @@
 
 	<script type="text/html" id="activate">
 		{{# if (d.activate == 0) { }}
-		已激活
+		<span class="layui-btn layui-btn-xs layui-btn-normal">激活</span>
 		{{# }else { }}
-		已禁用
+		<span class="layui-btn layui-btn-xs layui-btn-danger">禁用</span>
 		{{#   }}}
 	</script>
 	<script type="text/html" id="status">
 		{{# if (d.status == 0) { }}
-		连接畅通
+		<span class="layui-btn layui-btn-xs layui-btn-normal">通畅</span>
 		{{# }else { }}
-		不可连接
+		<span class="layui-btn layui-btn-xs layui-btn-danger">失败</span>
 		{{#   }}}
+	</script>
+	<script type="text/html" id="protocol">
+		<span class="layui-btn layui-btn-xs layui-btn-warm">{{d.protocol}}</span>
 	</script>
 
 
@@ -143,6 +146,7 @@
 							title: '协议',
 							field: 'protocol',
 							align: 'center',
+							templet: '#protocol'
 							// width: 150,
 							//fixed: 'left'
 						},

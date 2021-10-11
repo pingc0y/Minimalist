@@ -2,6 +2,7 @@ package com.minimalist.video.controller;
 
 import com.minimalist.assets.service.AssetsService;
 import com.minimalist.assetsUser.service.AssetsUserService;
+import com.minimalist.terminal.servlet.HttpTunnelServlet;
 import com.minimalist.user.service.UserService;
 import com.minimalist.userGroup.entity.UserGroup;
 import com.minimalist.userGroup.service.UserGroupService;
@@ -134,6 +135,8 @@ public class VideoController {
 
         return ResultUtil.success("成功",0);
     }
+
+
 
 
 }
