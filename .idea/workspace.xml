@@ -8,15 +8,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="">
+    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="修复细节bug">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/GuacamoleHTTPTunnelServletv.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/UserGroupWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/UserGroupWebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/select.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/component/pear/css/pear-module/select.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/drawer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/drawer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/console/console.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/console/console.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/TerminalWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/TerminalWebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/HttpTunnelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/HttpTunnelServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/userGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/userGroup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +28,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="XML File" />
         <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="AnnotationType" />
+        <option value="Aspect" />
+        <option value="JavaFXApplication" />
         <option value="Class" />
       </list>
     </option>
@@ -161,15 +166,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -311,14 +314,9 @@
       <workItem from="1633656357965" duration="28356000" />
       <workItem from="1633690422799" duration="16000" />
       <workItem from="1633742773888" duration="22099000" />
-      <workItem from="1633914570093" duration="25211000" />
-    </task>
-    <task id="LOCAL-00008" summary="去除无用部分">
-      <created>1608139711934</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1608139711934</updated>
+      <workItem from="1633914570093" duration="26628000" />
+      <workItem from="1634023602159" duration="6460000" />
+      <workItem from="1634116867667" duration="3826000" />
     </task>
     <task id="LOCAL-00009" summary="教务管理视图部分">
       <created>1608297153545</created>
@@ -656,7 +654,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633942568154</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="修复资产用户修改bug，图表部分修改">
+      <created>1633947960764</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1633947960765</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -721,8 +726,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="用户新增" />
-    <MESSAGE value="异动获取" />
     <MESSAGE value="分班按钮权限管理" />
     <MESSAGE value="角色增删改视图" />
     <MESSAGE value="学生普通修改，咨询记录" />
@@ -746,7 +749,9 @@
     <MESSAGE value="基础功能全部完成，修复部分bug" />
     <MESSAGE value="修复授权搜索bug" />
     <MESSAGE value="登录页面更新，仪表盘更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="登录页面更新，仪表盘更新" />
+    <MESSAGE value="修复资产用户修改bug，图表部分修改" />
+    <MESSAGE value="修复细节bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复细节bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

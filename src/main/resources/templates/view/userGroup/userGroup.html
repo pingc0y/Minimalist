@@ -225,7 +225,7 @@
                                 icon: 1,
                                 time: 1000
                             }, function() {
-                                obj.del();
+                                    table.reload('assetsUser-table');
                             });
                         } else {
                             layer.msg(result.msg, {

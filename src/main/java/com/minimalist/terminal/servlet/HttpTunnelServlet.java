@@ -26,7 +26,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 @WebServlet(name="HttpTunnelServlet",urlPatterns="/tunnel")
-public class HttpTunnelServlet extends GuacamoleHTTPTunnelServlet {
+public class HttpTunnelServlet extends GuacamoleHTTPTunnelServletv {
     @Value("${guacamole.guacd.host}")
     String hostname;
     @Value("${guacamole.guacd.port}")
@@ -102,6 +102,8 @@ public class HttpTunnelServlet extends GuacamoleHTTPTunnelServlet {
                 configuration.setParameter("port", String.valueOf(assets.getPort()));
                 configuration.setParameter("username", assetsUser.getUsername());
                 configuration.setParameter("password", assetsUser.getPassword());
+                configuration.setParameter("width", width);
+                configuration.setParameter("height", height);
                 if(assetsUser.getSecretKey()!=null && assetsUser.getSecretKey().length() > 1) {
                     configuration.setParameter("private-key", assetsUser.getSecretKey());
                 }

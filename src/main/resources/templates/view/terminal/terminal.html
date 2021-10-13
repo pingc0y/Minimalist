@@ -58,9 +58,8 @@
             tab = layui.tab,
             $ = layui.jquery,
             form = layui.form;
-        // var assetsUserId = "[[${assetsUserId}]]".split(",")
         var assetsId = "[[${assetsId}]]"
-
+        var protocol = "[[${protocol}]]";
         var login = function (assetsu){
 
             var width= document.documentElement.clientWidth;
@@ -91,27 +90,29 @@
             layer.close(layer.index);//关闭当前页
             login(assetsUserId);
         })
-
-        window.onresize=function() {
-            watchChangeSize();
+        if (protocol == "rdp") {
+            window.onresize=function() {
+                watchChangeSize();
+            }
         }
         function watchChangeSize () {
             var h = document.documentElement.clientHeight / screen.height;
             var w = document.documentElement.clientWidth / screen.width;
-            if(h>w){
+            if (h > w) {
                 // document.getElementById("security").style. = ""+w;
-                document.getElementById("security").style.transform = "scaleX("+w+") scaleY("+w+")";
+                document.getElementById("security").style.transform = "scaleX(" + w + ") scaleY(" + w + ")";
                 // document.getElementById("security").style.transform = "";
 
-            }else{
+            } else {
                 // document.getElementById("security").style.zoom = ""+h;
-                document.getElementById("security").style.transform = "scaleX("+h+") scaleY("+h+")";
+                document.getElementById("security").style.transform = "scaleX(" + h + ") scaleY(" + h + ")";
             }
-            if (window.outerHeight === screen.availHeight){
-                if (window.outerWidth === screen.availWidth){
+            if (window.outerHeight === screen.availHeight) {
+                if (window.outerWidth === screen.availWidth) {
                     document.getElementById("security").style.transform = "scaleX(1) scaleY(1)";
                 }
             }
+
         }
 
     });

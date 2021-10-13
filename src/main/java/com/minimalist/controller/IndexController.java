@@ -80,7 +80,6 @@ public class IndexController {
 
         //获取统计数据
         Map<String, Map<String, String>> stringMapMap = logService.selectByStatistics();
-//        System.out.println(stringMapMap);
         List<String> day = new ArrayList<>();
         List<String> trunnel = new ArrayList<>();
         List<String> login = new ArrayList<>();

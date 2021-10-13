@@ -2,6 +2,7 @@ package com.minimalist.controller;
 
 import com.minimalist.assets.entity.Assets;
 import com.minimalist.assets.service.AssetsService;
+import com.minimalist.assetsUser.entity.AssetsUser;
 import com.minimalist.assetsUser.service.AssetsUserService;
 import com.sun.org.apache.bcel.internal.generic.NEW;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,9 +37,12 @@ public class TerminalWebController {
     public String terminal(String assets,String assetsUser){
         String[] assetsUserId = assetsUser.split(",");
         ArrayList<HashMap<String, String>> hashMaps = new ArrayList<>();
+        String protocol = "";
         for (String s : assetsUserId) {
             HashMap<String, String> map = new HashMap<>();
-            String username = assetsUserService.getById(s).getUsername();
+            AssetsUser assetsU = assetsUserService.getById(s);
+            String username =assetsU.getUsername();
+            protocol = assetsU.getProtocol();
             map.put("id",s);
             map.put("username",username);
             hashMaps.add(map);
@@ -48,6 +52,7 @@ public class TerminalWebController {
         request.setAttribute("hostname",hostname);
         request.setAttribute("assetsUserId",hashMaps);
         request.setAttribute("assetsUserCount",hashMaps.size());
+        request.setAttribute("protocol",protocol);
         return VIEW_PATH+"terminal";
     }
 
