@@ -21,8 +21,8 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `assets`;
 CREATE TABLE `assets` (
   `id` varchar(30) NOT NULL COMMENT 'id',
-  `hostname` varchar(10) NOT NULL COMMENT '主机名',
-  `address` varchar(15) NOT NULL COMMENT '地址',
+  `hostname` varchar(20) NOT NULL COMMENT '主机名',
+  `address` varchar(60) NOT NULL COMMENT '地址',
   `protocol` varchar(10) NOT NULL DEFAULT '0' COMMENT '协议',
   `port` int(5) NOT NULL COMMENT '端口',
   `activate` int(1) NOT NULL DEFAULT '0' COMMENT '激活',
