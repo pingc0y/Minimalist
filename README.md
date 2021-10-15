@@ -65,8 +65,8 @@ vi /usr/lib/systemd/system/guacd.servic
 2.导入sql文件到mysql（src/main/resources/minimalist.sql）
 
 3.修改application.yml配置文件  
-修改mysql信息  
-修改guacamole信息
+修改mysql配置  
+修改guacamole配置
 
 
 #### 使用说明
