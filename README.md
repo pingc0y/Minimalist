@@ -11,6 +11,12 @@
 #### 安装教程
 
 1.  xxxx 
+`    yum install -y libguac-client-kubernetes \
+    libguac-client-rdp \
+    libguac-client-ssh \
+    libguac-client-telnet \
+    libguac-client-vnc \
+    guacd --nogpgcheck`
 2.  xxxx
 3.  xxxx
 
