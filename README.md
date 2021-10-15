@@ -80,7 +80,9 @@ vi /usr/lib/systemd/system/guacd.servic
 默认账号密码：admin/admin
 
 
-#相关截图
+#### 相关截图
 
+仪表盘  
 ![Image text](https://gitee.com/pingc/minimalist/raw/master/img/1.png)
+我的资产  
 ![Image text](https://gitee.com/pingc/minimalist/raw/master/img/2.png)
