@@ -1,44 +1,144 @@
 # Minimalist
 
 #### 介绍
-基于java开发的堡垒机(跳板机)，基本功能都已完成
+基于java开发的堡垒机(跳板机)，简单就是美
 
 
 #### 软件架构
-软件架构说明
+软件架构说明  
+1.基于Spring Boot + Mybatis-Plus + Thymeleaf + Shiro 
 
 
 #### 安装教程
+Centos7环境下
 
-1.  xxxx 
-`    yum install -y libguac-client-kubernetes \
+1.安装Guacd（Guacamole-Server）  
+如果yum没有包，使用阿里云yum源即可
+
+    yum install -y libguac-client-kubernetes \
     libguac-client-rdp \
     libguac-client-ssh \
     libguac-client-telnet \
     libguac-client-vnc \
-    guacd --nogpgcheck`
-2.  xxxx
-3.  xxxx
+    guacd --nogpgcheck
+
+
+配置guacd服务
+
+
+    mkdir /etc/guacamole/ && cat <<EOF >> /etc/guacamole/guacd.conf
+    [daemon]
+    pid_file = /var/run/guacd.pid
+    log_level = info
+
+    [server]
+    # 监听地址
+    bind_host = 0.0.0.0
+    bind_port = 4822
+    EOF
+
+修改启动用户
+vi /usr/lib/systemd/system/guacd.servic
+
+    [Unit]
+    Description=Guacamole proxy daemon
+    Documentation=man:guacd(8)
+    After=network.target
+    
+    [Service]
+    EnvironmentFile=-/etc/sysconfig/guacd
+    Environment=HOME=/var/lib/guacd
+    ExecStart=/usr/sbin/guacd -f $OPTS
+    Restart=on-failure
+    # User=guacd
+    # Group=guacd
+    
+    [Install]
+    WantedBy=multi-user.target
+
+
+启动guacd服务
+
+    systemctl daemon-reload //重载服务
+    systemctl enable guacd  //开机自启
+    systemctl start guacd   //启动服务
+    systemctl status guacd  //查看状态
+2.安装mysql  
+安装前，我们可以检测系统是否自带安装 MySQL
+
+    rpm -qa | grep mysql
+如果你系统有安装，那可以选择进行卸载
+
+    rpm -e mysql　　// 普通删除模式
+    rpm -e --nodeps mysql　　// 强力删除模式，如果使用上面命令删除时，提示有依赖的其它文件，则用该命令可以对其进行强力删除
+下载包并安装
+
+    wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+    rpm -ivh mysql-community-release-el7-5.noarch.rpm
+    yum update
+    yum install mysql-server
+
+权限设置
+
+    chown -R mysql:mysql /var/lib/mysql
+初始化 MySQL
+
+    mysqld --initialize
+启动 MySQL
+
+    systemctl start mysqld
+
+3.导入sql文件（src/main/resources/minimalist.sql）
+
+4.安装javaJDK  
+安装之前先检查一下系统有没有自带open-jdk
+
+    yum list installed | grep [java][jdk]
+卸载系统自带的jdk
+
+    yum -y remove java-1.6.0-openjdk*  //表示卸载所有openjdk相关文件输入
+
+查看JDK软件包列表
+
+    yum search java | grep -i --color jdk
+选择版本安装
+
+    yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel
+    #或者如下命令，安装jdk1.8.0的所有文件
+    yum install -y java-1.8.0-openjdk*
+
+配置环境变量  
+
+JDK默认安装路径/usr/lib/jvm
+在/etc/profile文件添加如下命令
+
+    # set java environment
+    JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64
+    PATH=$PATH:$JAVA_HOME/bin  
+    CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar  
+    export JAVA_HOME  CLASSPATH  PATH
+
+保存关闭profile文件，执行如下命令生效
+
+    source  /etc/profile
+使用如下命令，查看JDK变量
+
+    echo $JAVA_HOME
+    echo $PATH
+    echo $CLASSPATH
+
+4.修改application.yml配置文件  
+修改mysql信息  
+修改guacamole信息
+
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.启动Minimalist  
 
-#### 参与贡献
+    #前台运行
+    java -jar minimalist-1.0.jar
+    #后台运行
+    nohup java -jar minimalist-1.0.jar >/dev/null  2>&1 &
+默认账号密码：admin/admin
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
