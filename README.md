@@ -79,3 +79,8 @@ vi /usr/lib/systemd/system/guacd.servic
     nohup java -jar minimalist-1.0.jar >/dev/null  2>&1 &
 默认账号密码：admin/admin
 
+
+#相关截图
+
+![Image text](https://gitee.com/pingc/minimalist/raw/master/img/1.png)
+![Image text](https://gitee.com/pingc/minimalist/raw/master/img/2.png)
