@@ -8,7 +8,7 @@
 Spring Boot + Mybatis-Plus + Thymeleaf + Shiro 
 
 #### 安装教程
-不建议公网部署
+不建议公网部署  
 Centos7环境下
 
 
