@@ -8,16 +8,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="修复细节bug">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/GuacamoleHTTPTunnelServletv.java" afterDir="false" />
+    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/TerminalWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/TerminalWebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/file/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/file/controller/FileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/HttpTunnelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/HttpTunnelServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/userGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/userGroup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,14 +315,9 @@
       <workItem from="1633742773888" duration="22099000" />
       <workItem from="1633914570093" duration="26628000" />
       <workItem from="1634023602159" duration="6460000" />
-      <workItem from="1634116867667" duration="3826000" />
-    </task>
-    <task id="LOCAL-00009" summary="教务管理视图部分">
-      <created>1608297153545</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1608297153546</updated>
+      <workItem from="1634116867667" duration="3948000" />
+      <workItem from="1634263382655" duration="59000" />
+      <workItem from="1634263615251" duration="3426000" />
     </task>
     <task id="LOCAL-00010" summary="教务管理视图部分">
       <created>1608298040175</created>
@@ -661,7 +655,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633947960765</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="修复细节bug">
+      <created>1634120742179</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1634120742180</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

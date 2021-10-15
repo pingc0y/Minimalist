@@ -31,8 +31,10 @@ public class HttpTunnelServlet extends GuacamoleHTTPTunnelServletv {
     String hostname;
     @Value("${guacamole.guacd.port}")
     Integer port;
-    @Value("${upload.path}")
-    private String uploadPath;
+    @Value("${upload.videoPath}")
+    private String videoPath;
+    @Value("${upload.filePath}")
+    private String filePath;
     @Autowired
     AssetsService assetsService;
     @Autowired
@@ -81,11 +83,11 @@ public class HttpTunnelServlet extends GuacamoleHTTPTunnelServletv {
                 configuration.setParameter("enable-drive", "true");
                 configuration.setParameter("ignore-cert", "true");
                 configuration.setParameter("drive-name", "file transfer");
-                File dir = new File("/opt/minimalist/file/"+((User)request.getSession().getAttribute("user")).getId()+","+request.getParameter("id"));
+                File dir = new File(filePath+((User)request.getSession().getAttribute("user")).getId()+","+request.getParameter("id"));
                 if (!dir.exists()) {// 判断目录是否存在
                     dir.mkdir();
                 }
-                configuration.setParameter("drive-path", "/opt/minimalist/file/"+((User)request.getSession().getAttribute("user")).getId()+","+request.getParameter("id"));
+                configuration.setParameter("drive-path", filePath+((User)request.getSession().getAttribute("user")).getId()+","+request.getParameter("id"));
                 configuration.setParameter("create-drive-path", "true");
 
                 //添加会话录制--录屏
@@ -93,7 +95,7 @@ public class HttpTunnelServlet extends GuacamoleHTTPTunnelServletv {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
                 String date = sdf.format(dt);
                 User user = (User)request.getSession().getAttribute("user");
-                configuration.setParameter("recording-path", uploadPath+date);
+                configuration.setParameter("recording-path", videoPath+date);
                 configuration.setParameter("create-recording-path", "true");
                 configuration.setParameter("recording-name", user.getName()+","+request.getParameter("id")+","+new Date().getTime()+".guac");
                 break;

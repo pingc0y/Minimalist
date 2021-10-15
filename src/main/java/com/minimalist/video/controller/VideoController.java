@@ -22,7 +22,7 @@ import java.util.*;
 @RestController
 @RequestMapping("/video")
 public class VideoController {
-    @Value("${upload.path}")
+    @Value("${upload.videoPath}")
     private String uploadPath;
 
     @Autowired
