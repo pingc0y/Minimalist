@@ -8,18 +8,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="小bug修复">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/config/TomcatHttpConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/keystore.p12" afterDir="false" />
+    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/SystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/SystemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/GuacamoleHTTPTunnelServletv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/GuacamoleHTTPTunnelServletv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/HttpTunnelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/HttpTunnelServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/util/GeneratorValidateCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/GeneratorValidateCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,11 +124,11 @@
       <recent name="D:\javaxm\minimalist\target\classes\static\admin\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\javaxm\minimalist\src\main\resources" />
       <recent name="D:\javaxm\minimalist\src\main\resources\static\admin\images" />
       <recent name="D:\javaxm\minimalist\src\main\resources\templates\view\user" />
       <recent name="D:\javaxm\minimalist\src\main\resources\templates\view\system\operate" />
       <recent name="D:\javaxm\minimalist\src\main\resources\templates\view\assetsAuthorization" />
-      <recent name="E:\项目\mtx_project\src\main\resources\templates\view\system\operate\user" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.minimalist.video.controller" />
@@ -325,14 +316,7 @@
       <workItem from="1634263615251" duration="8794000" />
       <workItem from="1634287604673" duration="2519000" />
       <workItem from="1634519149209" duration="7675000" />
-      <workItem from="1634536876611" duration="711000" />
-    </task>
-    <task id="LOCAL-00011" summary="学员左右边固定,班主任字段增加">
-      <created>1608356098683</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1608356098683</updated>
+      <workItem from="1634536876611" duration="1618000" />
     </task>
     <task id="LOCAL-00012" summary="学员左右边固定,班主任字段增加">
       <created>1608371142423</created>
@@ -670,7 +654,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634267079176</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="优化web操作页面自适应效果，加入全屏显示，改为默认https启动">
+      <created>1634537914937</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1634537914938</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -735,7 +726,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="角色增删改视图" />
     <MESSAGE value="学生普通修改，咨询记录" />
     <MESSAGE value="表单添加学员" />
     <MESSAGE value="院校部分" />
@@ -760,7 +750,8 @@
     <MESSAGE value="修复资产用户修改bug，图表部分修改" />
     <MESSAGE value="修复细节bug" />
     <MESSAGE value="小bug修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="小bug修复" />
+    <MESSAGE value="优化web操作页面自适应效果，加入全屏显示，改为默认https启动" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化web操作页面自适应效果，加入全屏显示，改为默认https启动" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
