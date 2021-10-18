@@ -22,6 +22,7 @@ public abstract class GuacamoleHTTPTunnelServletv extends GuacamoleHTTPTunnelSer
 
 
     protected void handleTunnelRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException {
+
         try {
             String query = request.getQueryString();
             if (query == null) {
@@ -48,7 +49,6 @@ public abstract class GuacamoleHTTPTunnelServletv extends GuacamoleHTTPTunnelSer
                 if (!query.startsWith("write:")) {
                     throw new GuacamoleClientException("Invalid tunnel operation: " + query);
                 }
-
                 this.doWrite(request, response, query.substring(WRITE_PREFIX_LENGTH, WRITE_PREFIX_LENGTH + 36));
             }
         } catch (GuacamoleClientException var7) {

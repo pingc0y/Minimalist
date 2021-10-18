@@ -96,6 +96,8 @@
 									layer.msg(result.msg,{icon:2,time:1000},function(){
 										//重新加载验证码
 										document.getElementById("changeCode").src="/view/system/getValidateCode" + "?" + Math.random();
+										//清空验证码输入框
+										$("input[name='validateCode']").val("");
 									});
 								}
 							})

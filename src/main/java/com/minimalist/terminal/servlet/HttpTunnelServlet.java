@@ -121,9 +121,8 @@ public class HttpTunnelServlet extends GuacamoleHTTPTunnelServletv {
                 configuration.setParameter("hostname", assets.getAddress());
                 configuration.setParameter("port", String.valueOf(assets.getPort()));
                 configuration.setParameter("autoretry", "3");
-                if(assetsUser.getPassword()!=null && assetsUser.getPassword().length()>1) {
-                    configuration.setParameter("password", assetsUser.getPassword());
-                }
+                configuration.setParameter("password", assetsUser.getPassword());
+
                 break;
         }
 

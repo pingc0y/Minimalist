@@ -1,4 +1,4 @@
-package com.lry.web.rests;
+package com.minimalist.util;
 
 import java.awt.Color;
 

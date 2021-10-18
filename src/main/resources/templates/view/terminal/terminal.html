@@ -60,10 +60,10 @@
             form = layui.form;
         var assetsId = "[[${assetsId}]]"
         var protocol = "[[${protocol}]]";
+        var width= document.documentElement.clientWidth;
+        var height= document.documentElement.clientHeight;
         var login = function (assetsu){
 
-            var width= document.documentElement.clientWidth;
-            var height= document.documentElement.clientHeight;
             $("#security").width(width);
             $("#security").height(height);
             $("#security").attr("src","/view/terminal/index/"+assetsId+","+assetsu);
@@ -92,27 +92,23 @@
         })
         if (protocol == "rdp") {
             window.onresize=function() {
-                watchChangeSize();
+                rdpWatchChangeSize();
+            }
+        }else{
+            vncWatchChangeSize()
+            window.onresize=function() {
+                vncWatchChangeSize();
             }
         }
-        function watchChangeSize () {
-            var h = document.documentElement.clientHeight / screen.height;
-            var w = document.documentElement.clientWidth / screen.width;
-            if (h > w) {
-                // document.getElementById("security").style. = ""+w;
-                document.getElementById("security").style.transform = "scaleX(" + w + ") scaleY(" + w + ")";
-                // document.getElementById("security").style.transform = "";
-
-            } else {
-                // document.getElementById("security").style.zoom = ""+h;
-                document.getElementById("security").style.transform = "scaleX(" + h + ") scaleY(" + h + ")";
-            }
-            if (window.outerHeight === screen.availHeight) {
-                if (window.outerWidth === screen.availWidth) {
-                    document.getElementById("security").style.transform = "scaleX(1) scaleY(1)";
-                }
-            }
-
+        function vncWatchChangeSize () {
+            var h = document.documentElement.clientHeight / 768 ;
+            var w = document.documentElement.clientWidth / 1024;
+            document.getElementById("security").style.transform = "scaleX(" + w + ") scaleY(" + h + ")";
+        }
+        function rdpWatchChangeSize () {
+            var h = document.documentElement.clientHeight / height;
+            var w = document.documentElement.clientWidth / width;
+            document.getElementById("security").style.transform = "scaleX(" + w + ") scaleY(" + h + ")";
         }
 
     });

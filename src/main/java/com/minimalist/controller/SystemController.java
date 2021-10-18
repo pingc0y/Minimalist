@@ -4,6 +4,7 @@ import com.minimalist.menu.service.MenuService;
 import com.minimalist.user.entity.User;
 import com.minimalist.user.service.UserService;
 import com.minimalist.timing.UserIsTiming;
+import com.minimalist.util.GeneratorValidateCode;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +40,7 @@ public class SystemController {
         response.setHeader("Pragma", "no-cache");
         response.setHeader("Cache-Control", "no-cache");
         response.setDateHeader("Expires", 0);
-        com.lry.web.rests.GeneratorValidateCode instance = new com.lry.web.rests.GeneratorValidateCode();
+        GeneratorValidateCode instance = new GeneratorValidateCode();
 
         //储存验证码到session中，key为ValidateCode
         request.getSession().setAttribute("ValidateCode", instance.getCode());
