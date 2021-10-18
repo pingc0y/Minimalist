@@ -55,19 +55,28 @@
         'element', 'tab', 'code','jquery'
     ], function() {
         var layer = layui.layer,
-            tab = layui.tab,
-            $ = layui.jquery,
-            form = layui.form;
+            $ = layui.jquery
         var assetsId = "[[${assetsId}]]"
         var protocol = "[[${protocol}]]";
         var width= document.documentElement.clientWidth;
         var height= document.documentElement.clientHeight;
+
+
+        var j = setInterval(function () {
+            if (protocol == "rdp") {
+                clearInterval(j);
+            }
+            var w = $("#security").contents().find("canvas").width();
+            if (w != 0) {
+                vncWatchChangeSize()
+                clearInterval(j);
+            }
+        }, 100)
         var login = function (assetsu){
 
             $("#security").width(width);
             $("#security").height(height);
             $("#security").attr("src","/view/terminal/index/"+assetsId+","+assetsu);
-            // $("#security").contentWindow.document
             $("#security").focus();
         }
 
@@ -95,12 +104,17 @@
                 rdpWatchChangeSize();
             }
         }else{
-            vncWatchChangeSize()
             window.onresize=function() {
                 vncWatchChangeSize();
             }
         }
+
+
+
+
+
         function vncWatchChangeSize () {
+
             var h = document.documentElement.clientHeight / 768 ;
             var w = document.documentElement.clientWidth / 1024;
             document.getElementById("security").style.transform = "scaleX(" + w + ") scaleY(" + h + ")";
