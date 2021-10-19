@@ -171,14 +171,12 @@
 				form.on('switch(user-enable)', function(obj) {
 					layer.tips(this.value + ' ' + this.name + ':' + obj.elem.checked, obj.othis);
 				});
-				//修改
+				//播放
 				window.edit = function(obj) {
 					var split;
 
 					var pathh = obj.data['path']
-
-					split = pathh.split("\\");
-
+					split = pathh.split("/");
 					window.open("/view/video/play?path="+split[split.length-2]+"/"+split[split.length-1]);
 				}
 

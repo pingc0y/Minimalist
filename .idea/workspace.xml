@@ -9,8 +9,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/ListUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/FileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/video/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/video/video.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,15 +164,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -316,14 +319,10 @@
       <workItem from="1634263615251" duration="8794000" />
       <workItem from="1634287604673" duration="2519000" />
       <workItem from="1634519149209" duration="7675000" />
-      <workItem from="1634536876611" duration="6053000" />
-    </task>
-    <task id="LOCAL-00013" summary="所有学员查询功能完善">
-      <created>1608375647151</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1608375647151</updated>
+      <workItem from="1634536876611" duration="9561000" />
+      <workItem from="1634628302818" duration="753000" />
+      <workItem from="1634629262160" duration="410000" />
+      <workItem from="1634630747806" duration="4900000" />
     </task>
     <task id="LOCAL-00014" summary="分班提交ajax">
       <created>1608386354010</created>
@@ -661,7 +660,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634538591829</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="web操作页面自适应效果">
+      <created>1634544501066</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1634544501066</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -726,7 +732,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="表单添加学员" />
     <MESSAGE value="院校部分" />
     <MESSAGE value="院校与专业新增修改" />
     <MESSAGE value="查询院校与专业完善" />
@@ -751,7 +756,8 @@
     <MESSAGE value="小bug修复" />
     <MESSAGE value="优化web操作页面自适应效果，加入全屏显示，改为默认https启动" />
     <MESSAGE value="优化web操作页面自适应效果，改为默认https启动" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化web操作页面自适应效果，改为默认https启动" />
+    <MESSAGE value="web操作页面自适应效果" />
+    <option name="LAST_COMMIT_MESSAGE" value="web操作页面自适应效果" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

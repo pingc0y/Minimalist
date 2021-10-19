@@ -67,7 +67,7 @@
                 clearInterval(j);
             }
             var w = $("#security").contents().find("canvas").width();
-            if (w != 0) {
+            if (w > 0) {
                 vncWatchChangeSize()
                 clearInterval(j);
             }
@@ -122,6 +122,7 @@
         function rdpWatchChangeSize () {
             var h = document.documentElement.clientHeight / height;
             var w = document.documentElement.clientWidth / width;
+
             document.getElementById("security").style.transform = "scaleX(" + w + ") scaleY(" + h + ")";
         }
 

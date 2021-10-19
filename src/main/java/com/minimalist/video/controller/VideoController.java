@@ -6,10 +6,7 @@ import com.minimalist.terminal.servlet.HttpTunnelServlet;
 import com.minimalist.user.service.UserService;
 import com.minimalist.userGroup.entity.UserGroup;
 import com.minimalist.userGroup.service.UserGroupService;
-import com.minimalist.util.DateUtil;
-import com.minimalist.util.FileUtil;
-import com.minimalist.util.Result;
-import com.minimalist.util.ResultUtil;
+import com.minimalist.util.*;
 import com.minimalist.video.entity.Video;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -65,8 +62,6 @@ public class VideoController {
             }
             String createTime = conditionMap.get("createTime");
             if(t && createTime!=null && createTime.length() >0){
-
-
                 if(video.getCreateTime().getTime() < DateUtil.StringToLong(createTime)){
                     t = false;
                 }
@@ -81,7 +76,11 @@ public class VideoController {
                 videoList.add(video);
             }
         }
-            return ResultUtil.success(videoList,videoList.size());
+        String page = conditionMap.get("page");
+        String limit = conditionMap.get("limit");
+        ArrayList<Video> videoLists = ListUtil.pageBySubList(videoList, Integer.valueOf(limit), Integer.valueOf(page));
+
+        return ResultUtil.success(videoLists,videoList.size());
     }
 
     @RequestMapping("/flushAll")

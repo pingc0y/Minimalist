@@ -38,9 +38,9 @@ public class FileUtil {
                 //文件名称
                 String temp[]=filePath.split("\\\\");
                 String fileName = temp[temp.length-1];
-                String filenameq = fileName.substring(0,fileName.lastIndexOf("."));    //去后缀
+                String[] filenameq = fileName.substring(0,fileName.lastIndexOf(".")).split("/");    //去后缀
                 map.put("filePath",filePath);
-                map.put("fileName",filenameq);
+                map.put("fileName",filenameq[filenameq.length-1]);
                 map.put("fileUpDate",String.valueOf(update));
                 list.add(map);
             }
