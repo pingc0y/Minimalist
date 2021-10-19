@@ -78,9 +78,12 @@ public class VideoController {
         }
         String page = conditionMap.get("page");
         String limit = conditionMap.get("limit");
-        ArrayList<Video> videoLists = ListUtil.pageBySubList(videoList, Integer.valueOf(limit), Integer.valueOf(page));
+        if(videoList.size()!=0) {
+            ArrayList<Video> videoLists = ListUtil.pageBySubList(videoList, Integer.valueOf(limit), Integer.valueOf(page));
+            return ResultUtil.success(videoLists,videoList.size());
+        }
+        return ResultUtil.success(videoList,videoList.size());
 
-        return ResultUtil.success(videoLists,videoList.size());
     }
 
     @RequestMapping("/flushAll")
