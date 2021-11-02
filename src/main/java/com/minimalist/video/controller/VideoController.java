@@ -79,6 +79,7 @@ public class VideoController {
         String page = conditionMap.get("page");
         String limit = conditionMap.get("limit");
         if(videoList.size()!=0) {
+            Collections.sort(videoList);
             ArrayList<Video> videoLists = ListUtil.pageBySubList(videoList, Integer.valueOf(limit), Integer.valueOf(page));
             return ResultUtil.success(videoLists,videoList.size());
         }
