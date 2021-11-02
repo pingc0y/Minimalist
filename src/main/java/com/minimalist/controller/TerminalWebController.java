@@ -39,13 +39,15 @@ public class TerminalWebController {
         ArrayList<HashMap<String, String>> hashMaps = new ArrayList<>();
         String protocol = "";
         for (String s : assetsUserId) {
-            HashMap<String, String> map = new HashMap<>();
             AssetsUser assetsU = assetsUserService.getById(s);
-            String username =assetsU.getUsername();
-            protocol = assetsU.getProtocol();
-            map.put("id",s);
-            map.put("username",username);
-            hashMaps.add(map);
+            if(assetsU!=null) {
+                HashMap<String, String> map = new HashMap<>();
+                String username = assetsU.getUsername();
+                protocol = assetsU.getProtocol();
+                map.put("id", s);
+                map.put("username", username);
+                hashMaps.add(map);
+            }
         }
         String hostname = assetsService.getById(assets).getHostname();
         request.setAttribute("assetsId",assets);

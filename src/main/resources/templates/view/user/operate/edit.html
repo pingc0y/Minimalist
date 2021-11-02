@@ -74,7 +74,7 @@
 
         form.on('submit(user-save)', function(data) {
 
-            assets({
+            $.ajax({
                 url: '/user/updateById',
                 dataType: 'json',
                 data:JSON.stringify(data.field),

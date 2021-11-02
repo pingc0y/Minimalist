@@ -134,7 +134,7 @@
                     title: '操作',
                     toolbar: '#user-bar',
                     align: 'center',
-                    width: 130
+
                 }
             ]
         ]
@@ -295,7 +295,7 @@
                                 icon: 1,
                                 time: 1000
                             }, function() {
-                                obj.del();
+                                table.reload('user-table');
                             });
                         } else {
                             layer.msg(result.msg, {

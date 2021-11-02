@@ -69,11 +69,17 @@
             <version>3.3.2</version>
         </dependency>
 
-        <!-- mysql 数据库驱动 -->
+<!--        &lt;!&ndash; mysql5 数据库驱动 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>mysql</groupId>-->
+<!--            <artifactId>mysql-connector-java</artifactId>-->
+<!--            <version>5.1.32</version>-->
+<!--        </dependency>-->
+        <!-- mysql8 数据库驱动 -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.32</version>
+            <version>8.0.19</version>
         </dependency>
 
         <!-- druid 数据库连接池 -->

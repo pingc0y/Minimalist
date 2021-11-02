@@ -54,6 +54,7 @@
     layui.use(['layer', 'form',
         'element', 'tab', 'code','jquery'
     ], function() {
+
         var layer = layui.layer,
             $ = layui.jquery
         var assetsId = "[[${assetsId}]]"
@@ -80,6 +81,7 @@
             $("#security").focus();
         }
 
+
         if([(${assetsUserCount})]>1){
             layer.open({
                 type: 1,
@@ -91,8 +93,11 @@
 
             var index = parent.layer.getFrameIndex(window.name);
             parent.layer.close(index);//关闭当前页
-        }else{
-            login("[[${assetsUserId[0].id}]]");
+        }else if([(${assetsUserCount})]==0){
+            login("0000000000");
+        }else if([(${assetsUserCount})]==1){
+
+            login("[[${assetsUserId.size() > 0 ? assetsUserId[0].id : 0}]]");
         }
         $("#login").click(function (){
             var assetsUserId = $('input[name="assetsUserId"]:checked').val();
@@ -114,7 +119,6 @@
 
 
         function vncWatchChangeSize () {
-
             var h = document.documentElement.clientHeight / 768 ;
             var w = document.documentElement.clientWidth / 1024;
             document.getElementById("security").style.transform = "scaleX(" + w + ") scaleY(" + h + ")";

@@ -50,46 +50,52 @@ public class AssetsAuthorizationWebController {
         ArrayList<HashMap<String, Object>> assets = new ArrayList<>();
         for (String s : assetsAuthorization.getAssetsId().split(",")) {
             Assets ass = assetsService.getById(s);
-            HashMap<String, Object> maps = new HashMap<>();
-            maps.put("name", ass.getHostname());
-            maps.put("value",ass.getId());
-            maps.put("disabled",false);
-            maps.put("selected",true);
-            assets.add(maps);
+            if(ass!=null) {
+                HashMap<String, Object> maps = new HashMap<>();
+                maps.put("name", ass.getHostname());
+                maps.put("value", ass.getId());
+                maps.put("disabled", false);
+                maps.put("selected", true);
+                assets.add(maps);
+            }
         }
 
         ArrayList<HashMap<String, Object>> assetsUsers = new ArrayList<>();
         for (String s : assetsAuthorization.getAssetsUserId().split(",")) {
             AssetsUser assuse = assetsUserService.getById(s);
-            HashMap<String, Object> maps = new HashMap<>();
-            maps.put("name", assuse.getName());
-            maps.put("value",assuse.getId());
-            maps.put("disabled",false);
-            maps.put("selected",true);
-            assetsUsers.add(maps);
+            if(assuse!=null) {
+                HashMap<String, Object> maps = new HashMap<>();
+                maps.put("name", assuse.getName());
+                maps.put("value",assuse.getId());
+                maps.put("disabled",false);
+                maps.put("selected",true);
+                assetsUsers.add(maps);
+            }
+
         }
         ArrayList<HashMap<String, Object>> users = new ArrayList<>();
         for (String s : assetsAuthorization.getUserId().split(",")) {
             User use = userService.getById(s);
-            HashMap<String, Object> maps = new HashMap<>();
-            maps.put("name", use.getName());
-            maps.put("value",use.getId());
-            maps.put("disabled",false);
-            maps.put("selected",true);
-
-            users.add(maps);
+            if(use!=null) {
+                HashMap<String, Object> maps = new HashMap<>();
+                maps.put("name", use.getName());
+                maps.put("value", use.getId());
+                maps.put("disabled", false);
+                maps.put("selected", true);
+                users.add(maps);
+            }
         }
         ArrayList<HashMap<String, Object>> userGroups = new ArrayList<>();
         for (String s : assetsAuthorization.getUserGroupId().split(",")) {
-            try {
-                UserGroup usegro = userGroupService.getById(s);
+            UserGroup usegro = userGroupService.getById(s);
+            if (usegro!=null) {
                 HashMap<String, Object> maps = new HashMap<>();
                 maps.put("name", usegro.getName());
                 maps.put("value", usegro.getId());
                 maps.put("disabled", false);
                 maps.put("selected", true);
                 userGroups.add(maps);
-            }catch (Exception e){}
+            }
         }
         request.setAttribute("assetsAuthorization",assetsAuthorization);
         request.setAttribute("assets", JSONObject.toJSONString(assets));

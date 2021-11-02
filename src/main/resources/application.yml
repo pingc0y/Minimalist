@@ -1,5 +1,5 @@
 server:
-  port: 443
+  port: 8081
   ssl:
     #证书的路径.
     key-store: classpath:keystore.p12
@@ -19,10 +19,16 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://192.168.5.66:3306/minimalist?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=CST
-    username: "root"
+    #  mysql5
+#    url: jdbc:mysql://192.168.5.66:3306/minimalist?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=CST
+#    username: "root"
+#    password: "123456"
+#    driver-class-name: com.mysql.jdbc.Driver
+    #  mysql8
+    url: jdbc:mysql://localhost:3306/minimalist?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&nullCatalogMeansCurrent = true
+    username: "pingc"
     password: "123456"
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       connection-timeout: 30000
       connection-test-query: SELECT 1

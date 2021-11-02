@@ -13,9 +13,9 @@ import com.minimalist.user.mapper.UserMapper;
 import com.minimalist.userGroup.entity.UserGroup;
 import com.minimalist.userGroup.mapper.UserGroupMapper;
 import com.minimalist.userGroup.service.UserGroupService;
-import com.mysql.fabric.ServerGroup;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
+
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

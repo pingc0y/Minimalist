@@ -10,7 +10,19 @@
   <component name="ChangeListManager">
     <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/controller/AssetsAuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/assetsAuthorization/controller/AssetsAuthorizationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/config/TomcatHttpConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/config/TomcatHttpConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/AssetsAuthorizationWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/AssetsAuthorizationWebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/TerminalWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/TerminalWebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/UserGroupWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/UserGroupWebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/HttpTunnelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/HttpTunnelServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/service/impl/UserGroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/service/impl/UserGroupServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/user/operate/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/user/operate/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/user/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/user/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/userGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/userGroup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,13 +34,13 @@
       <list>
         <option value="FxmlFile" />
         <option value="XML File" />
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Enum" />
         <option value="AnnotationType" />
         <option value="Aspect" />
         <option value="JavaFXApplication" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -317,14 +329,11 @@
       <workItem from="1634536876611" duration="9561000" />
       <workItem from="1634628302818" duration="753000" />
       <workItem from="1634629262160" duration="410000" />
-      <workItem from="1634630747806" duration="5474000" />
-    </task>
-    <task id="LOCAL-00015" summary="分班提交ajax">
-      <created>1608444419553</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1608444419553</updated>
+      <workItem from="1634630747806" duration="5810000" />
+      <workItem from="1635212488643" duration="354000" />
+      <workItem from="1635212990837" duration="1283000" />
+      <workItem from="1635316401163" duration="608000" />
+      <workItem from="1635826580241" duration="10403000" />
     </task>
     <task id="LOCAL-00016" summary="分班提交修复成功后无反应,提交成功后刷新父页面">
       <created>1608529757665</created>
@@ -662,7 +671,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634635810736</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="修复回放列表为空时bug">
+      <created>1634636286584</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1634636286584</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -727,7 +743,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="院校与专业新增修改" />
     <MESSAGE value="查询院校与专业完善" />
     <MESSAGE value="学员批量导入，验证部分完善" />
     <MESSAGE value="学员批量导入数据库部分完善" />
@@ -752,7 +767,8 @@
     <MESSAGE value="优化web操作页面自适应效果，改为默认https启动" />
     <MESSAGE value="web操作页面自适应效果" />
     <MESSAGE value="修复web操作细节，修复回放列表bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复web操作细节，修复回放列表bug" />
+    <MESSAGE value="修复回放列表为空时bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复回放列表为空时bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

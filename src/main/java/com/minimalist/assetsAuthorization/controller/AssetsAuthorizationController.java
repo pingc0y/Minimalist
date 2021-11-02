@@ -32,7 +32,10 @@ public class AssetsAuthorizationController {
         }
         List<AssetsAuthorization> assetsAuthorizations = (List<AssetsAuthorization>)map.get("data");
         for (AssetsAuthorization assetsAuthorization : assetsAuthorizations) {
-            assetsAuthorization.setAssetsName(assetsService.getById(assetsAuthorization.getAssetsId()).getHostname());
+            try {
+                assetsAuthorization.setAssetsName(assetsService.getById(assetsAuthorization.getAssetsId()).getHostname());
+
+            }catch (Exception e){}
         }
         return ResultUtil.success(map.get("data"), (int) map.get("count"));
 

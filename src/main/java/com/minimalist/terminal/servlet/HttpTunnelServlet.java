@@ -55,17 +55,22 @@ public class HttpTunnelServlet extends GuacamoleHTTPTunnelServletv {
         String height = request.getParameter("height");
         String[] ids = request.getParameter("id").split(",");
         Assets assets = assetsService.getById(ids[0]);
-        AssetsUser assetsUser = assetsUserService.getById(ids[1]);
+        AssetsUser assetsUser = null;
+        if(ids[1]!="0000000000") {
+            assetsUser = assetsUserService.getById(ids[1]);
+        }
         GuacamoleConfiguration configuration = new GuacamoleConfiguration();
         configuration.setProtocol(assets.getProtocol()); // 远程连接协议
         switch (assets.getProtocol()){
             case "rdp" :
                 configuration.setParameter("hostname", assets.getAddress());
                 configuration.setParameter("port", String.valueOf(assets.getPort()));
-                configuration.setParameter("username", assetsUser.getUsername());
-                configuration.setParameter("password", assetsUser.getPassword());
-                if(assetsUser.getActiveDirectory()!=null && assetsUser.getActiveDirectory().length() > 1) {
-                    configuration.setParameter("domain", assetsUser.getActiveDirectory());
+                if(assetsUser!=null) {
+                    configuration.setParameter("username", assetsUser.getUsername());
+                    configuration.setParameter("password", assetsUser.getPassword());
+                    if (assetsUser.getActiveDirectory() != null && assetsUser.getActiveDirectory().length() > 1) {
+                        configuration.setParameter("domain", assetsUser.getActiveDirectory());
+                    }
                 }
                 //configuration.setParameter("enable-wallpaper", "true");
                 configuration.setParameter("resize-method", "display-update");
@@ -102,26 +107,31 @@ public class HttpTunnelServlet extends GuacamoleHTTPTunnelServletv {
             case "ssh" :
                 configuration.setParameter("hostname", assets.getAddress());
                 configuration.setParameter("port", String.valueOf(assets.getPort()));
+                if(assetsUser!=null) {
                 configuration.setParameter("username", assetsUser.getUsername());
                 configuration.setParameter("password", assetsUser.getPassword());
-                configuration.setParameter("width", width);
-                configuration.setParameter("height", height);
                 if(assetsUser.getSecretKey()!=null && assetsUser.getSecretKey().length() > 1) {
                     configuration.setParameter("private-key", assetsUser.getSecretKey());
                 }
+                }
+
 
                 break;
             case "telnet" :
                 configuration.setParameter("hostname", assets.getAddress());
                 configuration.setParameter("port", String.valueOf(assets.getPort()));
-                configuration.setParameter("username", assetsUser.getUsername());
-                configuration.setParameter("password", assetsUser.getPassword());
+                if(assetsUser!=null) {
+                    configuration.setParameter("username", assetsUser.getUsername());
+                    configuration.setParameter("password", assetsUser.getPassword());
+                }
                 break;
             case "vnc" :
                 configuration.setParameter("hostname", assets.getAddress());
                 configuration.setParameter("port", String.valueOf(assets.getPort()));
                 configuration.setParameter("autoretry", "3");
-                configuration.setParameter("password", assetsUser.getPassword());
+                if(assetsUser!=null) {
+                    configuration.setParameter("password", assetsUser.getPassword());
+                }
 
                 break;
         }
