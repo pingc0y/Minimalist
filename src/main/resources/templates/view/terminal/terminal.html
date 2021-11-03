@@ -62,19 +62,20 @@
         var width= document.documentElement.clientWidth;
         var height= document.documentElement.clientHeight;
 
-
         var j = setInterval(function () {
             if (protocol == "rdp") {
                 clearInterval(j);
-            }
+            }else{
             var w = $("#security").contents().find("canvas").width();
             if (w > 0) {
-                vncWatchChangeSize()
+                restsWatchChangeSize()
                 clearInterval(j);
-            }
+            }}
         }, 100)
-        var login = function (assetsu){
 
+
+
+        var login = function (assetsu){
             $("#security").width(width);
             $("#security").height(height);
             $("#security").attr("src","/view/terminal/index/"+assetsId+","+assetsu);
@@ -104,31 +105,34 @@
             layer.close(layer.index);//关闭当前页
             login(assetsUserId);
         })
+
         if (protocol == "rdp") {
             window.onresize=function() {
                 rdpWatchChangeSize();
             }
         }else{
             window.onresize=function() {
-                vncWatchChangeSize();
+                restsWatchChangeSize();
             }
         }
 
 
-
-
-
-        function vncWatchChangeSize () {
+        function restsWatchChangeSize () {
+            $("#security").width(1024);
+            $("#security").height(768);
             var h = document.documentElement.clientHeight / 768 ;
             var w = document.documentElement.clientWidth / 1024;
             document.getElementById("security").style.transform = "scaleX(" + w + ") scaleY(" + h + ")";
+            console.log(h+","+w);
         }
         function rdpWatchChangeSize () {
             var h = document.documentElement.clientHeight / height;
             var w = document.documentElement.clientWidth / width;
-
             document.getElementById("security").style.transform = "scaleX(" + w + ") scaleY(" + h + ")";
         }
+
+
+
 
     });
 

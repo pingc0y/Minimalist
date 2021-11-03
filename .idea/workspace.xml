@@ -10,8 +10,11 @@
   <component name="ChangeListManager">
     <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsMy/assetsMy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsMy/assetsMy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/video/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/video/video.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/service/impl/UserGroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/userGroup/service/impl/UserGroupServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +159,17 @@
     <configuration name="text" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="text" />
       <module name="mtx-student-system" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -313,14 +327,7 @@
       <workItem from="1635316401163" duration="608000" />
       <workItem from="1635826580241" duration="11976000" />
       <workItem from="1635902521501" duration="896000" />
-      <workItem from="1635903946984" duration="261000" />
-    </task>
-    <task id="LOCAL-00020" summary="录取按钮实现,毕业按钮修改,异动页面添加(根据异动类型加载不同的异动内容)">
-      <created>1608813105408</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1608813105408</updated>
+      <workItem from="1635903946984" duration="4847000" />
     </task>
     <task id="LOCAL-00021" summary="抽屉">
       <created>1609058494725</created>
@@ -658,7 +665,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635903391195</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="部分改动">
+      <created>1635904517957</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1635904517958</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -723,8 +737,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="异动部分完成" />
-    <MESSAGE value="还剩部分删除，与用户基本信息部分" />
     <MESSAGE value="图形报表，柱形完成。" />
     <MESSAGE value="图形报表，部分完成。" />
     <MESSAGE value="图形报表完成" />
@@ -748,7 +760,9 @@
     <MESSAGE value="会话排序" />
     <MESSAGE value="协议设为必选项" />
     <MESSAGE value="会话回放小改" />
-    <option name="LAST_COMMIT_MESSAGE" value="会话回放小改" />
+    <MESSAGE value="会话管理查询时间条件bug修复" />
+    <MESSAGE value="部分改动" />
+    <option name="LAST_COMMIT_MESSAGE" value="部分改动" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

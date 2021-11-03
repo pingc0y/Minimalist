@@ -69,7 +69,7 @@
             <version>3.3.2</version>
         </dependency>
 
-<!--        &lt;!&ndash; mysql5 数据库驱动 &ndash;&gt;-->
+        <!-- mysql5 数据库驱动 -->
 <!--        <dependency>-->
 <!--            <groupId>mysql</groupId>-->
 <!--            <artifactId>mysql-connector-java</artifactId>-->

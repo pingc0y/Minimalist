@@ -130,12 +130,14 @@
             };
 
         //监听堡垒机端往剪切板复制事件，然后写入文本框中
+        var textz;
         guac.onclipboard = function(stream, mimetype){
             if (/^text\//.exec(mimetype)) {
                 var stringReader = new Guacamole.StringReader(stream);
                 stringReader.ontext = function ontext(text) {
                     stringReader.onend = function() {
                         navigator.clipboard.writeText(text);
+                        textz = text;
                     }
                 }
             }
@@ -157,7 +159,7 @@
             try{
             navigator.clipboard.readText()
                 .then(text => {
-                    setClipboard(text);
+                    if(textz != text && text!=null){setClipboard(text);}
                 })
                 .catch(err => {
                 });

@@ -42,7 +42,11 @@ public class UserGroupServiceImpl extends ServiceImpl<UserGroupMapper, UserGroup
         Map<String,Object> map = new HashMap<>();
         List<UserGroup> records = page.getRecords();
         for (UserGroup record : records) {
+            if(record.getUserId().length()>5){
             record.setUserNum(record.getUserId().split(",").length);
+            }else{
+                record.setUserNum(0);
+            }
         }
         map.put("data",records);
         map.put("count",(int)page.getTotal());
