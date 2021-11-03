@@ -8,10 +8,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="会话">
+    <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/video/entity/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/video/entity/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assets/operate/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assets/operate/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assets/operate/drawer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assets/operate/drawer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/drawer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/drawer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,17 +158,6 @@
     <configuration name="text" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="text" />
       <module name="mtx-student-system" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -322,14 +313,8 @@
       <workItem from="1635212488643" duration="354000" />
       <workItem from="1635212990837" duration="1283000" />
       <workItem from="1635316401163" duration="608000" />
-      <workItem from="1635826580241" duration="11805000" />
-    </task>
-    <task id="LOCAL-00017" summary="搜索条件新增2个">
-      <created>1608531472878</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1608531472878</updated>
+      <workItem from="1635826580241" duration="11976000" />
+      <workItem from="1635902521501" duration="343000" />
     </task>
     <task id="LOCAL-00018" summary="数据表格数据不对齐修复, 更换数据库">
       <created>1608722500868</created>
@@ -667,7 +652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635842533500</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="会话排序">
+      <created>1635844279499</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1635844279499</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -732,7 +724,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="学员批量导入，验证部分完善" />
     <MESSAGE value="学员批量导入数据库部分完善" />
     <MESSAGE value="学员批量导入完全体" />
     <MESSAGE value="异动部分完成" />
@@ -757,7 +748,8 @@
     <MESSAGE value="修复web操作细节，修复回放列表bug" />
     <MESSAGE value="修复回放列表为空时bug" />
     <MESSAGE value="修复关联错误bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复关联错误bug" />
+    <MESSAGE value="会话排序" />
+    <option name="LAST_COMMIT_MESSAGE" value="会话排序" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

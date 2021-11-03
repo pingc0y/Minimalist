@@ -59,7 +59,7 @@
             <div class="layui-form-item layui-inline">
                 <label class="layui-form-label"><span class="xxo">*</span>协议</label>
                 <div class="layui-input-inline protocol">
-                    <select name="protocol" id="protocol">
+                    <select name="protocol" id="protocol" lay-verify="required">
                         <option value="">请选择</option>
                         <option value="rdp"selected="selected" th:if="${assetsUser.protocol} eq 'rdp'">rdp</option>
                         <option value="rdp"th:if="${assetsUser.protocol} ne 'rdp'">rdp</option>
