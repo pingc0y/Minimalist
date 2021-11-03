@@ -60,7 +60,7 @@
 	</div>
 	<div class="layui-card">
 		<div class="layui-card-body">
-			<table id="assets-table" lay-filter="assets-table"></table>
+			<table id="video-table" lay-filter="video-table"></table>
 		</div>
 	</div>
 
@@ -80,18 +80,18 @@
 				//日期时间选择器
 				laydate.render({
 					elem: '#createTime'
-					,type: 'datetime'
+					,type: 'date'
 				});
 				//日期时间选择器
 				laydate.render({
 					elem: '#updateTime'
-					,type: 'datetime'
+					,type: 'date'
 				});
 
 				let cols = [
 					[
 						{
-							title: '用户名',
+							title: '用户名称',
 							field: 'userName',
 							align: 'center',
 							// width: 200,
@@ -119,7 +119,7 @@
 						}
 						,
 						{
-							title: '修改时间',
+							title: '结束时间',
 							field: 'updateTime',
 							align: 'center',
 							// width: 100,
@@ -137,7 +137,7 @@
 
 
 				table.render({
-					elem: '#assets-table',
+					elem: '#video-table',
 					url: '/video/selectAll',
 					page: true,
 					cols: cols,
@@ -150,7 +150,7 @@
 				});
 
 				//监听列表操作
-				table.on('tool(assets-table)', function(obj) {
+				table.on('tool(video-table)', function(obj) {
 					if (obj.event === 'remove') {
 						window.remove(obj);
 					} else if (obj.event === 'edit') {
@@ -162,7 +162,7 @@
 
 
 				form.on('submit(user-query)', function(data) {
-					table.reload('assets-table', {
+					table.reload('video-table', {
 						where: data.field
 					})
 					return false;
@@ -183,7 +183,7 @@
 				window.refresh = function(
 
 						param) {
-					table.reload('assets-table');
+					table.reload('video-table');
 				}
 			})
 		</script>
