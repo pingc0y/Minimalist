@@ -9,11 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assets/operate/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assets/operate/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assets/operate/drawer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assets/operate/drawer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/drawer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/operate/drawer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/video/play.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/video/play.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,14 +310,7 @@
       <workItem from="1635212990837" duration="1283000" />
       <workItem from="1635316401163" duration="608000" />
       <workItem from="1635826580241" duration="11976000" />
-      <workItem from="1635902521501" duration="343000" />
-    </task>
-    <task id="LOCAL-00018" summary="数据表格数据不对齐修复, 更换数据库">
-      <created>1608722500868</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1608722500868</updated>
+      <workItem from="1635902521501" duration="844000" />
     </task>
     <task id="LOCAL-00019" summary="数据库连接时间添加">
       <created>1608722980388</created>
@@ -659,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635844279499</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="协议设为必选项">
+      <created>1635902961689</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1635902961690</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -724,7 +720,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="学员批量导入数据库部分完善" />
     <MESSAGE value="学员批量导入完全体" />
     <MESSAGE value="异动部分完成" />
     <MESSAGE value="还剩部分删除，与用户基本信息部分" />
@@ -749,7 +744,8 @@
     <MESSAGE value="修复回放列表为空时bug" />
     <MESSAGE value="修复关联错误bug" />
     <MESSAGE value="会话排序" />
-    <option name="LAST_COMMIT_MESSAGE" value="会话排序" />
+    <MESSAGE value="协议设为必选项" />
+    <option name="LAST_COMMIT_MESSAGE" value="协议设为必选项" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
