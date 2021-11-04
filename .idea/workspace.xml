@@ -9,20 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/PageUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/shiro/UserRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/shiro/UserRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/util/DateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/util/DateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/video/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/video/entity/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/video/entity/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assets/assets.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assets/assets.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsAuthorization/assetsAuthorization.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsAuthorization/assetsAuthorization.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsMy/assetsMy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsMy/assetsMy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/assetsUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsUser/assetsUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/user/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/user/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/userGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/userGroup/userGroup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/video/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/video/video.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/HttpTunnelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/HttpTunnelServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,14 +317,7 @@
       <workItem from="1635920677363" duration="891000" />
       <workItem from="1635921632896" duration="298000" />
       <workItem from="1635924896198" duration="332000" />
-      <workItem from="1636012397412" duration="7814000" />
-    </task>
-    <task id="LOCAL-00022" summary="字典编辑">
-      <created>1609250783750</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1609250783750</updated>
+      <workItem from="1636012397412" duration="8969000" />
     </task>
     <task id="LOCAL-00023" summary="菜单入库">
       <created>1609313106193</created>
@@ -674,7 +655,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635910085524</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="bug修复">
+      <created>1636020259334</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1636020259335</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -739,7 +727,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="图形报表，部分完成。" />
     <MESSAGE value="图形报表完成" />
     <MESSAGE value="图形报表完成,补bug" />
     <MESSAGE value="资产列表完成" />
@@ -764,7 +751,8 @@
     <MESSAGE value="会话管理查询时间条件bug修复" />
     <MESSAGE value="部分改动" />
     <MESSAGE value="部分bug修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="部分bug修复" />
+    <MESSAGE value="bug修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug修复" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

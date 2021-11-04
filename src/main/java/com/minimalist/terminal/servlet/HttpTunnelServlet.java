@@ -72,7 +72,8 @@ public class HttpTunnelServlet extends GuacamoleHTTPTunnelServletv {
                         configuration.setParameter("domain", assetsUser.getActiveDirectory());
                     }
                 }
-                //configuration.setParameter("enable-wallpaper", "true");
+//                configuration.setParameter("enable-wallpaper", "true");
+                configuration.setParameter("security", "any");
                 configuration.setParameter("resize-method", "display-update");
                 configuration.setParameter("width", width);
                 configuration.setParameter("height", height);
