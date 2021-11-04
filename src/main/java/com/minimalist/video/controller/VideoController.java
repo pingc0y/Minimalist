@@ -78,32 +78,46 @@ public class VideoController {
         }
         String page = conditionMap.get("page");
         String limit = conditionMap.get("limit");
+
         if(videoList.size()!=0) {
-            Collections.sort(videoList);
-            ArrayList<Video> videoLists = ListUtil.pageBySubList(videoList, Integer.valueOf(limit), Integer.valueOf(page));
+            Collections.sort(videoList,new Comparator<Video>() {
+
+                @Override
+                public int compare(Video v1, Video v2) {
+                    // 降序
+                    return v2.getCreateTime().compareTo(v1.getCreateTime());
+                }
+            });
+
+
+            List<Video> videoLists = PageUtil.startPage(videoList,Integer.valueOf(page), Integer.valueOf(limit));
             return ResultUtil.success(videoLists,videoList.size());
         }
+
         return ResultUtil.success(videoList,videoList.size());
 
     }
 
     @RequestMapping("/flushAll")
-    public Result flushAll(){
+    public Result flushAll() {
         List<Map<String, String>> allFile = FileUtil.getAllFile(uploadPath);
         for (Map<String, String> map : allFile) {
+            String[] ids = map.get("fileName").split(",");
+            String userName = ids[0];
+            String assetsName = assetsService.getById(ids[1]).getHostname();
+            String assetsUserName = "";
             try {
-                String[] ids = map.get("fileName").split(",");
-                String userName = ids[0];
-                String assetsName = assetsService.getById(ids[1]).getHostname();
-                String assetsUserName = assetsUserService.getById(ids[2]).getUsername();
-                String filePath = map.get("filePath");
-                String createTime = ids[3];
-                String updateTime = map.get("fileUpDate");
-                Video video = new Video(map.get("fileName"), userName, assetsName, assetsUserName, filePath, new Date(Long.parseLong(String.valueOf(createTime))), new Date(Long.parseLong(String.valueOf(updateTime))));
-                videos.put(map.get("fileName"), video);
-            }catch (Exception e){}
+                assetsUserName = assetsUserService.getById(ids[2]).getUsername();
+            } catch (Exception e) {
+            }
+            String filePath = map.get("filePath");
+            String createTime = ids[3];
+            String updateTime = map.get("fileUpDate");
+            Video video = new Video(map.get("fileName"), userName, assetsName, assetsUserName, filePath, new Date(Long.parseLong(String.valueOf(createTime))), new Date(Long.parseLong(String.valueOf(updateTime))));
+            videos.put(map.get("fileName"), video);
         }
-        return ResultUtil.success("成功",0);
+            return ResultUtil.success("成功", 0);
+
     }
 
 
@@ -119,7 +133,10 @@ public class VideoController {
             String[] ids = map.get("fileName").split(",");
             String userName = ids[0];
             String assetsName = assetsService.getById(ids[1]).getHostname();
-            String assetsUserName = assetsUserService.getById(ids[2]).getUsername();
+            String assetsUserName = "";
+            try {
+                assetsUserName = assetsUserService.getById(ids[2]).getUsername();
+            }catch (Exception e){ }
             String filePath = map.get("filePath");
             String createTime = ids[3];
             String updateTime = map.get("fileUpDate");
@@ -130,7 +147,10 @@ public class VideoController {
             String[] ids = map.get("fileName").split(",");
             String userName = ids[0];
             String assetsName = assetsService.getById(ids[1]).getHostname();
-            String assetsUserName = assetsUserService.getById(ids[2]).getUsername();
+            String assetsUserName = "";
+            try {
+                assetsUserName = assetsUserService.getById(ids[2]).getUsername();
+            }catch (Exception e){}
             String filePath = map.get("filePath");
             String createTime = ids[3];
             String updateTime = map.get("fileUpDate");

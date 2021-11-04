@@ -162,9 +162,10 @@
                     if(textz != text && text!=null){setClipboard(text);}
                 })
                 .catch(err => {
+                    console.log("获取当前剪切板内容错误："+err)
                 });
             }catch (e) {
-
+                console.log("获取当前剪切板内容错误："+e)
             }
         },1000);
 

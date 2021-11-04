@@ -135,19 +135,21 @@
 				]
 
 
-
 				table.render({
 					elem: '#video-table',
 					url: '/video/selectAll',
 					page: true,
 					cols: cols,
 					skin: 'line',
-					toolbar: '#user-toolbar',
+					toolbar: '#th-toolbar',
 					defaultToolbar: [{
+						title: '刷新',
 						layEvent: 'refresh',
 						icon: 'layui-icon-refresh',
 					}, 'filter', 'print', 'exports']
 				});
+
+
 
 				//监听列表操作
 				table.on('tool(video-table)', function(obj) {
@@ -158,7 +160,12 @@
 					}
 				});
 
-
+				//监听工具条
+				table.on('toolbar(video-table)', function(obj) {
+					if (obj.event === 'refresh') {
+						window.refresh();
+					}
+				});
 
 
 				form.on('submit(user-query)', function(data) {
@@ -180,11 +187,10 @@
 					window.open("/view/video/play?path="+split[split.length-2]+"/"+split[split.length-1]);
 				}
 
-				window.refresh = function(
-
-						param) {
-					table.reload('video-table');
+				window.refresh = function(obj) {
+					table.reload('video-table')
 				}
+
 			})
 		</script>
 	</body>

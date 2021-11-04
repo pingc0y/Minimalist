@@ -14,7 +14,7 @@ public class DateUtil {
 
     public static Long StringToLong(String data)  {
         try {
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
             Date date = simpleDateFormat.parse(data);
             long ts = date.getTime();
             return ts;

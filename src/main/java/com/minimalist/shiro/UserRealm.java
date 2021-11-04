@@ -48,7 +48,7 @@ public class UserRealm extends AuthorizingRealm {
         //在这做数据库查询验证账号密码是否正确
         User user = userService.selectBynamePassword(username,password);
         AuthenticationInfo authcInfo = null;
-        //模拟登录逻辑，正确返回AuthenticationInfo对象，错误返回null报错
+        //正确返回AuthenticationInfo对象，错误返回null报错
         if(user!=null &&user.getStatus()==0) {
             /**
              * 登录成功

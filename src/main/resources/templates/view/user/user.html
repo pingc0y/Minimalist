@@ -45,7 +45,7 @@
     </div>
 </div>
 
-<script type="text/html" id="user-toolbar">
+<script type="text/html" id="th-toolbar">
     <button class="pear-btn pear-btn-primary pear-btn-md" lay-event="add">
         <i class="layui-icon layui-icon-add-1"></i>
         新增
@@ -145,8 +145,9 @@
             page: true,
             cols: cols,
             skin: 'line',
-            toolbar: '#user-toolbar',
+            toolbar: '#th-toolbar',
             defaultToolbar: [{
+                title: '刷新',
                 layEvent: 'refresh',
                 icon: 'layui-icon-refresh',
             }, 'filter', 'print', 'exports']

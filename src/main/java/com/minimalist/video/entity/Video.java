@@ -14,7 +14,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class Video implements Serializable,Comparable<Video> {
+public class Video implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -27,11 +27,5 @@ public class Video implements Serializable,Comparable<Video> {
     private Date createTime;
     private Date updateTime;
 
-    @Override
-    public int compareTo(Video v) {
-        return ((this.getCreateTime().getTime() > v.getCreateTime().getTime()) ? (-1)
-                : ((this.getCreateTime().getTime() == v.getCreateTime().getTime())
-                ? 1 : 0));
 
-    }
 }
