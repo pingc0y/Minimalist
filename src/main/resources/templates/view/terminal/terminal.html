@@ -78,7 +78,7 @@
         var login = function (assetsu){
             $("#security").width(width);
             $("#security").height(height);
-            $("#security").attr("src","/view/terminal/index/"+assetsId+","+assetsu);
+            $("#security").attr("src","/view/terminal/index/"+assetsId+","+assetsu+"/"+protocol);
             $("#security").focus();
         }
 
@@ -123,7 +123,6 @@
             var h = document.documentElement.clientHeight / 768 ;
             var w = document.documentElement.clientWidth / 1024;
             document.getElementById("security").style.transform = "scaleX(" + w + ") scaleY(" + h + ")";
-            console.log(h+","+w);
         }
         function rdpWatchChangeSize () {
             var h = document.documentElement.clientHeight / height;

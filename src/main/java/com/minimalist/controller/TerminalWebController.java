@@ -59,9 +59,10 @@ public class TerminalWebController {
     }
 
 
-    @RequestMapping("/index/{id}")
-    public String index(@PathVariable String id){
+    @RequestMapping("/index/{id}/{protocol}")
+    public String index(@PathVariable String id,@PathVariable String protocol){
         request.setAttribute("id",id);
+        request.setAttribute("protocol",protocol);
         return VIEW_PATH+"index";
     }
 

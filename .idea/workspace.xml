@@ -10,7 +10,11 @@
   <component name="ChangeListManager">
     <list default="true" id="605e99e2-1d81-4400-ac77-f3524e53faf1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/HttpTunnelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/terminal/servlet/HttpTunnelServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/TerminalWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minimalist/controller/TerminalWebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assets/assets.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assets/assets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/assetsMy/assetsMy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/assetsMy/assetsMy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/terminal/terminal.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,14 +321,8 @@
       <workItem from="1635920677363" duration="891000" />
       <workItem from="1635921632896" duration="298000" />
       <workItem from="1635924896198" duration="332000" />
-      <workItem from="1636012397412" duration="8969000" />
-    </task>
-    <task id="LOCAL-00023" summary="菜单入库">
-      <created>1609313106193</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1609313106193</updated>
+      <workItem from="1636012397412" duration="9048000" />
+      <workItem from="1636077779875" duration="8399000" />
     </task>
     <task id="LOCAL-00024" summary="redis缓存">
       <created>1609328656092</created>
@@ -662,7 +660,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636020259335</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="优化">
+      <created>1636021432562</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1636021432563</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -727,7 +732,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="图形报表完成" />
     <MESSAGE value="图形报表完成,补bug" />
     <MESSAGE value="资产列表完成" />
     <MESSAGE value="资产部分完成" />
@@ -752,7 +756,8 @@
     <MESSAGE value="部分改动" />
     <MESSAGE value="部分bug修复" />
     <MESSAGE value="bug修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug修复" />
+    <MESSAGE value="优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

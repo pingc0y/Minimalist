@@ -144,6 +144,7 @@
         }
 
 
+
         //将内容传送到往堡垒机，data是获取到的文本框中的内容
         function setClipboard(data) {
             var stream = guac.createClipboardStream("text/plain");
@@ -154,159 +155,155 @@
             writer.sendEnd();
         }
 
-        //循环获取当前剪切板内容
-        ref = setInterval(function(){
-            try{
-            navigator.clipboard.readText()
-                .then(text => {
-                    if(textz != text && text!=null){setClipboard(text);}
+        //在页面时，更新剪切板
+        window.onfocus = function(e){
+            getClipboardData();
+        }
+        async function getClipboardData() {
+            try {
+                const {clipboard} = navigator;
+                const text = await clipboard.readText();
+                if(textz != text && text!=null && text!= ""){
+                    setClipboard(text);
+                }
+            } catch (error) {
+                console.error("读取剪贴板失败:", error);
+            }
+        }
+
+
+        if("[[${protocol}]]" == "rdp"){
+            //下载
+            guac.onfile = function(stream, mimetype, filename){
+                //通知服务端，已经收到了stream
+                stream.sendAck('OK', Guacamole.Status.Code.SUCCESS);
+                //开始处理输入流，这里封装了一个downloadFile方法
+                downloadFile(stream, mimetype, filename);
+            }
+            //处理输入流的逻辑
+            downloadFile = (stream, mimetype, filename) => {
+                //拿到的流不能直接使用，先实例化一个处理器，使用blob reader处理数据
+                var blob_builder;
+                if      (window.BlobBuilder)       blob_builder = new BlobBuilder();
+                else if (window.WebKitBlobBuilder) blob_builder = new WebKitBlobBuilder();
+                else if (window.MozBlobBuilder)    blob_builder = new MozBlobBuilder();
+                else
+                    blob_builder = new (function() {
+
+                        var blobs = [];
+
+                        /** @ignore */
+                        this.append = function(data) {
+                            blobs.push(new Blob([data], {"type": mimetype}));
+                        };
+
+                        /** @ignore */
+                        this.getBlob = function() {
+                            return new Blob(blobs, {"type": mimetype});
+                        };
+
+                    })();
+
+                // Append received blobs
+                stream.onblob = function(data) {
+
+                    // Convert to ArrayBuffer
+                    var binary = window.atob(data);
+                    var arrayBuffer = new ArrayBuffer(binary.length);
+                    var bufferView = new Uint8Array(arrayBuffer);
+
+                    for (var i=0; i<binary.length; i++)
+                        bufferView[i] = binary.charCodeAt(i);
+
+                    //收到后就交给blob_builder
+                    blob_builder.append(arrayBuffer);
+                    length += arrayBuffer.byteLength;
+
+                    // Send success response
+                    stream.sendAck("OK", 0x0000);
+
+                };
+
+                stream.onend = function(){
+                    //结束的时候，获取blob_builder里面的可用数据
+                    var blob_data = blob_builder.getBlob();
+
+                    //数据传输完成后进行下载等处理
+                    if(mimetype.indexOf('stream-index+json') != -1){
+                        //如果是文件夹,使用filereader读取blob数据，可以获得该文件夹下的文件和目录的名称和类型，是一个json形式
+                        var blob_reader = new FileReader();
+                        blob_reader.addEventListener("loadend", function() {
+                            let folder_content = JSON.parse(blob_reader.result)
+                            //重新组织当前文件目录，appendFileItem是自己封装的文件系统动态展示
+                            appendFileItem(folder_content)
+                            $("#header_title").text(filename);
+                        });
+                        blob_reader.readAsBinaryString(blob_data);
+                    } else {
+                        //如果是文件，直接下载，但是需要解决个问题，就是如何下载blob数据
+                        //借鉴了https://github.com/eligrey/FileSaver.js这个库
+                        var file_arr = filename.split("/");
+                        var download_file_name = file_arr[file_arr.length - 1];
+                        saveAs(blob_data, download_file_name);
+                    }
+                }
+            }
+
+            //上传文件拖拽
+            var ffobjx=document.getElementsByName("setfilex")[0];//得到文件表单对象
+            var divobjx=document.getElementById("display");//得到文件拖拽框对象
+            //屏蔽系统默认事件
+            divobjx.ondragover=function(e){
+                e.preventDefault();
+            }
+            //监听拖拽事件
+            divobjx.ondrop=function(e){
+                e.preventDefault();
+                ffobjx.files=e.dataTransfer.files;//将拖拽信息设置到表单上
+                var f =ffobjx.files[0];
+                var sj = "sj"+parseInt(Math.random()*100,10)+1 + Math.round(f.size/1024);
+                demoErrElem = SnackBar({
+                    message: f.name+" "+Math.round(f.size/1024)+"KB" +" 准备上传...",
+                    status: "danger",
+                    timeout: false,
+                    id: sj
                 })
-                .catch(err => {
-                    console.log("获取当前剪切板内容错误："+err)
+                $.ajax({
+                    url: "/file/uploadFile/"+"[[${session.user.id}]]"+","+"[[${id}]]",
+                    type: "POST",
+                    data : new FormData($('#form')[0]),
+                    processData: false, // 不要对data参数进行序列化处理，默认为true
+                    contentType: false, // 不要设置Content-Type请求头，因为文件数据是以     multipart/form-data 来编码
+                    xhr: function(){
+                        myXhr = $.ajaxSettings.xhr();
+                        if(myXhr.upload){
+                            myXhr.upload.addEventListener('progress',function(e) {
+                                if (e.lengthComputable) {
+                                    var percent = Math.floor(e.loaded/e.total*100);
+                                    if(percent <= 100) {
+                                        $("#"+sj).text(f.name+" "+Math.round(f.size/1024)+"KB" +" 已上传 "+percent+'%')
+                                    }
+                                    if(percent >= 100) {
+                                        $("#"+sj).text(f.name+" "+Math.round(f.size/1024)+"KB" +" 上传完成 "+percent+'%')
+                                    }
+                                }
+                            }, false);
+                        }
+                        return myXhr;
+                    },
+                    success: function(res){
+                        if (res.code == 0){
+                            $("#"+sj).text(f.name+" 上传成功")
+                        }else{
+                            $("#"+sj).text(f.name+" 上传失败")
+                            console.log(res);
+
+                        }
+                    }
                 });
-            }catch (e) {
-                console.log("获取当前剪切板内容错误："+e)
-            }
-        },1000);
-
-
-
-
-        //下载
-        guac.onfile = function(stream, mimetype, filename){
-            //通知服务端，已经收到了stream
-            stream.sendAck('OK', Guacamole.Status.Code.SUCCESS);
-            //开始处理输入流，这里封装了一个downloadFile方法
-            downloadFile(stream, mimetype, filename);
-        }
-        //处理输入流的逻辑
-        downloadFile = (stream, mimetype, filename) => {
-            //拿到的流不能直接使用，先实例化一个处理器，使用blob reader处理数据
-            var blob_builder;
-            if      (window.BlobBuilder)       blob_builder = new BlobBuilder();
-            else if (window.WebKitBlobBuilder) blob_builder = new WebKitBlobBuilder();
-            else if (window.MozBlobBuilder)    blob_builder = new MozBlobBuilder();
-            else
-                blob_builder = new (function() {
-
-                    var blobs = [];
-
-                    /** @ignore */
-                    this.append = function(data) {
-                        blobs.push(new Blob([data], {"type": mimetype}));
-                    };
-
-                    /** @ignore */
-                    this.getBlob = function() {
-                        return new Blob(blobs, {"type": mimetype});
-                    };
-
-                })();
-
-            // Append received blobs
-            stream.onblob = function(data) {
-
-                // Convert to ArrayBuffer
-                var binary = window.atob(data);
-                var arrayBuffer = new ArrayBuffer(binary.length);
-                var bufferView = new Uint8Array(arrayBuffer);
-
-                for (var i=0; i<binary.length; i++)
-                    bufferView[i] = binary.charCodeAt(i);
-
-                //收到后就交给blob_builder
-                blob_builder.append(arrayBuffer);
-                length += arrayBuffer.byteLength;
-
-                // Send success response
-                stream.sendAck("OK", 0x0000);
-
-            };
-
-            stream.onend = function(){
-                //结束的时候，获取blob_builder里面的可用数据
-                var blob_data = blob_builder.getBlob();
-
-                //数据传输完成后进行下载等处理
-                if(mimetype.indexOf('stream-index+json') != -1){
-                    //如果是文件夹,使用filereader读取blob数据，可以获得该文件夹下的文件和目录的名称和类型，是一个json形式
-                    var blob_reader = new FileReader();
-                    blob_reader.addEventListener("loadend", function() {
-                        let folder_content = JSON.parse(blob_reader.result)
-                        //重新组织当前文件目录，appendFileItem是自己封装的文件系统动态展示
-                        appendFileItem(folder_content)
-                        $("#header_title").text(filename);
-                    });
-                    blob_reader.readAsBinaryString(blob_data);
-                } else {
-                    //如果是文件，直接下载，但是需要解决个问题，就是如何下载blob数据
-                    //借鉴了https://github.com/eligrey/FileSaver.js这个库
-                    var file_arr = filename.split("/");
-                    var download_file_name = file_arr[file_arr.length - 1];
-                    saveAs(blob_data, download_file_name);
-                }
             }
         }
 
-        //上传文件拖拽
-        var ffobjx=document.getElementsByName("setfilex")[0];//得到文件表单对象    （input）
-        var divobjx=document.getElementById("display");//得到文件拖拽框对象
-        //屏蔽系统默认事件
-        divobjx.ondragover=function(e){
-            e.preventDefault();
-        }
-        //监听拖拽事件
-        divobjx.ondrop=function(e){
-            e.preventDefault();
-            ffobjx.files=e.dataTransfer.files;//将拖拽信息设置到表单上
-            var f =ffobjx.files[0];
-            // alert("文件名"+f.name+"  大小："+Math.round(f.size/1024)+"KB");
-            var sj = "sj"+parseInt(Math.random()*100,10)+1 + Math.round(f.size/1024);
-            demoErrElem = SnackBar({
-                message: f.name+" "+Math.round(f.size/1024)+"KB" +" 准备上传...",
-                status: "danger",
-                timeout: false,
-                id: sj
-            })
-            $.ajax({
-                url: "/file/uploadFile/"+"[[${session.user.id}]]"+","+"[[${id}]]",
-                type: "POST",
-                data : new FormData($('#form')[0]),
-                processData: false, // 不要对data参数进行序列化处理，默认为true
-                contentType: false, // 不要设置Content-Type请求头，因为文件数据是以     multipart/form-data 来编码
-                xhr: function(){
-                    myXhr = $.ajaxSettings.xhr();
-                    if(myXhr.upload){
-                        myXhr.upload.addEventListener('progress',function(e) {
-                            if (e.lengthComputable) {
-                                var percent = Math.floor(e.loaded/e.total*100);
-                                if(percent <= 100) {
-                                    // $("#J_progress_bar").progress('set progress', percent);
-                                    // $("#J_progress_label").html();
-                                    $("#"+sj).text(f.name+" "+Math.round(f.size/1024)+"KB" +" 已上传 "+percent+'%')
-
-                                }
-                                if(percent >= 100) {
-                                    $("#"+sj).text(f.name+" "+Math.round(f.size/1024)+"KB" +" 上传完成 "+percent+'%')
-                                }
-                            }
-                        }, false);
-                    }
-                    return myXhr;
-                },
-                success: function(res){
-                    if (res.code == 0){
-                        $("#"+sj).text(f.name+" 上传成功")
-                    }else{
-                        $("#"+sj).text(f.name+" 上传失败")
-                        console.log(res);
-
-
-                    }
-                }
-            });
-        }
-        console.log("[[${session.user.id}]]")
 
 
 

@@ -75,7 +75,7 @@
 	</div>
 	<div class="layui-card">
 		<div class="layui-card-body">
-			<table id="assets-table" lay-filter="assets-table"></table>
+			<table id="assetsMy-table" lay-filter="assetsMy-table"></table>
 		</div>
 	</div>
 
@@ -101,7 +101,7 @@
 	</script>
 	<script type="text/html" id="status">
 		{{# if (d.status == 0) { }}
-		<span class="layui-btn layui-btn-xs layui-btn-normal">通畅</span>
+		<span class="layui-btn layui-btn-xs layui-btn-normal">成功</span>
 		{{# }else { }}
 		<span class="layui-btn layui-btn-xs layui-btn-danger">失败</span>
 		{{#   }}}
@@ -196,16 +196,10 @@
 					]
 				]
 
-				laydate.render({
-					elem: '#test16',
-					type: 'datetime',
-					range: '到',
-					format: 'yyyy-MM-dd HH:mm:ss',
-					trigger: 'click'
-				});
+
 
 				table.render({
-					elem: '#assets-table',
+					elem: '#assetsMy-table',
 					url: '/assetsMy/selectAll',
 					page: true,
 					cols: cols,
@@ -219,19 +213,24 @@
 				});
 
 				//监听列表操作
-				table.on('tool(assets-table)', function(obj) {
+				table.on('tool(assetsMy-table)', function(obj) {
 					if (obj.event === 'remove') {
 						window.remove(obj);
 					} else if (obj.event === 'connect') {
 						window.connect(obj);
 					}
 				});
-
+				//监听工具条
+				table.on('toolbar(assetsMy-table)', function(obj) {
+					if (obj.event === 'refresh') {
+						window.refresh();
+					}
+				});
 
 
 
 				form.on('submit(user-query)', function(data) {
-					table.reload('assets-table', {
+					table.reload('assetsMy-table', {
 						where: data.field
 					})
 					return false;
@@ -246,9 +245,8 @@
 				}
 
 				window.refresh = function(
-
 						param) {
-					table.reload('assets-table');
+					table.reload('assetsMy-table');
 				}
 			})
 		</script>
