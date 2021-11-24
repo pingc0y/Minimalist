@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 9001
   ssl:
     #证书的路径.
     key-store: classpath:keystore.p12
@@ -26,7 +26,7 @@ spring:
 #    driver-class-name: com.mysql.jdbc.Driver
     #  mysql8
     url: jdbc:mysql://localhost:3306/minimalist?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&nullCatalogMeansCurrent = true
-    username: "pingc"
+    username: "root"
     password: "123456"
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
@@ -83,5 +83,5 @@ guacamole:
     port: 4822
 
 upload:
-  filePath: /opt/minimalist/file/
-  videoPath: /opt/minimalist/video/
+  filePath: /home/minimalist/file/
+  videoPath: /home/minimalist/video/

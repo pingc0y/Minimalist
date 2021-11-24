@@ -40,40 +40,44 @@ public class VideoController {
         flushRecently();
         ArrayList<Video> videoList = new ArrayList<>();
         for (String key : this.videos.keySet()) {
-            Video video = videos.get(key);
-            boolean t = true;
-            String userName = conditionMap.get("userName");
-            if(t && userName!=null && userName.length() >0){
-                if(!video.getUserName().contains(userName)){
-                    t = false;
+            try {
+                Video video = videos.get(key);
+                boolean t = true;
+                String userName = conditionMap.get("userName");
+                if (t && userName != null && userName.length() > 0) {
+                    if (!video.getUserName().contains(userName)) {
+                        t = false;
+                    }
                 }
-            }
-            String assetsName = conditionMap.get("assetsName");
-            if(t && assetsName!=null && assetsName.length() >0){
-                if(!video.getAssetsName().contains(assetsName)){
-                   t = false;
+                String assetsName = conditionMap.get("assetsName");
+                if (t && assetsName != null && assetsName.length() > 0) {
+                    if (!video.getAssetsName().contains(assetsName)) {
+                        t = false;
+                    }
                 }
-            }
-            String assetsUserName = conditionMap.get("assetsUserName");
-            if(t && assetsUserName!=null && assetsUserName.length() >0){
-                if(!video.getAssetsUserName().contains(assetsUserName)){
-                    t = false;
+                String assetsUserName = conditionMap.get("assetsUserName");
+                if (t && assetsUserName != null && assetsUserName.length() > 0) {
+                    if (!video.getAssetsUserName().contains(assetsUserName)) {
+                        t = false;
+                    }
                 }
-            }
-            String createTime = conditionMap.get("createTime");
-            if(t && createTime!=null && createTime.length() >0){
-                if(video.getCreateTime().getTime() < DateUtil.StringToLong(createTime)){
-                    t = false;
+                String createTime = conditionMap.get("createTime");
+                if (t && createTime != null && createTime.length() > 0) {
+                    if (video.getCreateTime().getTime() < DateUtil.StringToLong(createTime)) {
+                        t = false;
+                    }
                 }
-            }
-            String updateTime = conditionMap.get("updateTime");
-            if(t && updateTime!=null && updateTime.length() >0){
-                if(video.getUpdateTime().getTime() > DateUtil.StringToLong(updateTime)){
-                    t = false;
+                String updateTime = conditionMap.get("updateTime");
+                if (t && updateTime != null && updateTime.length() > 0) {
+                    if (video.getUpdateTime().getTime() > DateUtil.StringToLong(updateTime)) {
+                        t = false;
+                    }
                 }
-            }
-            if(t){
-                videoList.add(video);
+                if (t) {
+                    videoList.add(video);
+                }
+            }catch (Exception e){
+                e.printStackTrace();
             }
         }
         String page = conditionMap.get("page");
@@ -102,19 +106,23 @@ public class VideoController {
     public Result flushAll() {
         List<Map<String, String>> allFile = FileUtil.getAllFile(uploadPath);
         for (Map<String, String> map : allFile) {
-            String[] ids = map.get("fileName").split(",");
-            String userName = ids[0];
-            String assetsName = assetsService.getById(ids[1]).getHostname();
-            String assetsUserName = "";
             try {
-                assetsUserName = assetsUserService.getById(ids[2]).getUsername();
-            } catch (Exception e) {
+                String[] ids = map.get("fileName").split(",");
+                String userName = ids[0];
+                String assetsName = assetsService.getById(ids[1]).getHostname();
+                String assetsUserName = "";
+                try {
+                    assetsUserName = assetsUserService.getById(ids[2]).getUsername();
+                } catch (Exception e) {
+                }
+                String filePath = map.get("filePath");
+                String createTime = ids[3];
+                String updateTime = map.get("fileUpDate");
+                Video video = new Video(map.get("fileName"), userName, assetsName, assetsUserName, filePath, new Date(Long.parseLong(String.valueOf(createTime))), new Date(Long.parseLong(String.valueOf(updateTime))));
+                videos.put(map.get("fileName"), video);
+            }catch (Exception e){
+                e.printStackTrace();
             }
-            String filePath = map.get("filePath");
-            String createTime = ids[3];
-            String updateTime = map.get("fileUpDate");
-            Video video = new Video(map.get("fileName"), userName, assetsName, assetsUserName, filePath, new Date(Long.parseLong(String.valueOf(createTime))), new Date(Long.parseLong(String.valueOf(updateTime))));
-            videos.put(map.get("fileName"), video);
         }
             return ResultUtil.success("成功", 0);
 
