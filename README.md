@@ -91,6 +91,6 @@ vi /usr/lib/systemd/system/guacd.servic
 #### 相关截图
 
 仪表盘  
-![Image text](https://gitee.com/pingc/minimalist/raw/master/img/1.png)
+![Image text](https://github.com/pingc0y/Minimalist/blob/master/img/1.png)
 我的资产  
-![Image text](https://gitee.com/pingc/minimalist/raw/master/img/2.png)
+![Image text](https://github.com/pingc0y/Minimalist/blob/master/img/2.png)
