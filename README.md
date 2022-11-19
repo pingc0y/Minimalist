@@ -1,15 +1,22 @@
-# Minimalist
+# minimalist
 
 #### 介绍
-使用java开发的堡垒机(跳板机)，朴实无华，功能简单，适合学习使用。
+使用java开发的堡垒机(跳板机)，朴实无华，功能简单，适合学习使用。  
+
+已实现的功能：rdp、vnc、ssh、rdp录屏，查看回放、rdp文件上传下载、rdp复制粘贴文本等  
+
+之前工作中有使用到堡垒机，就萌生了自己开发的想法，结果项目开始没多久就离开公司了，但基本功能都算是实现了（也只是实现了功能，没有做优化） 
+
+拿来学习也许还是不错的  
 
 
 #### 软件架构
 软件架构说明  
-Spring Boot + Mybatis-Plus + Thymeleaf + Shiro
+Spring Boot + Mybatis-Plus + Thymeleaf + Shiro  
 
 #### 安装教程
-不建议公网部署  
+不建议公网部署   
+
 Centos7环境下
 
 
