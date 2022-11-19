@@ -1,4 +1,4 @@
-# minimalist
+# Minimalist
 
 #### 介绍
 使用java开发的堡垒机(跳板机)，朴实无华，功能简单，适合学习使用。  
